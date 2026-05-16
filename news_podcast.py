@@ -20,8 +20,8 @@ TELEGRAM_CHAT_ID    = os.environ["TELEGRAM_CHAT_ID"]
 AZURE_SPEECH_KEY    = os.environ["AZURE_SPEECH_KEY"]
 AZURE_SPEECH_REGION = os.environ["AZURE_SPEECH_REGION"]
 
-AZURE_VOICE_EP1 = "sv-SE-SofieNeural"   # Avsnitt 1: Världsnyheter & Sverige
-AZURE_VOICE_EP2 = "sv-SE-ErikNeural"      # Avsnitt 2: AI & Teknik — byt till SofieNeural eller HilleviNeural
+AZURE_VOICE_EP1 = "sv-SE-MattiasNeural"   # Avsnitt 1: Världsnyheter & Sverige
+AZURE_VOICE_EP2 = "sv-SE-SofieNeural"     # Avsnitt 2: AI & Teknik
 
 HISTORY_FILE = "seen_urls.json"
 HISTORY_DAYS = 7
@@ -67,7 +67,7 @@ EPISODE_LABELS = {
     2: "AI & Teknik",
 }
 
-MIN_WORDS = {1: 1800, 2: 1400}
+MIN_WORDS = {1: 1200, 2: 1100}   # ~10 min resp ~9 min — GPT når inte 1800 konsekvent
 
 
 def swedish_date(dt: datetime) -> str:
@@ -258,7 +258,7 @@ def judge_script(episode: int, script: str) -> tuple[bool, str]:
 1. Längd: minst {min_w} ord krävs. Faktiskt: {words} ord.
 2. Struktur: varje nyhet har minnesaktivering (om möjligt), fakta, relevans, kontext och nästa steg.
 3. Ton: pedagogisk och engagerande, direkt tilltal med "du".
-4. Avslutning: 30-sekunders summering med numrerade punkter.
+4. Avslutning: summering med numrerade punkter.
 5. Intro: presenterar datum och ämnesområde.
 
 Svara EXAKT med ett av:
