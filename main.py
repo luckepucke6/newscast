@@ -128,7 +128,7 @@ def generate_episode(
     if not approved:
         logger.warning("Skickar ändå — %s", verdict)
 
-    audio_path = text_to_speech(script, episode, cfg)
+    audio_path = text_to_speech(script, episode, cfg, openai_client)
     n = len(articles)
     send_audio(audio_path, episode, today_str, n, cfg)
 

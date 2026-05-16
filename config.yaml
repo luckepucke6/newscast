@@ -1,7 +1,8 @@
-azure_tts:
+openai_tts:
+  model: "tts-1"               # tts-1 = snabb/billig, tts-1-hd = högre kvalitet
   voices:
-    ep1: "sv-SE-SofieNeural"   # Kvinnlig röst — Världsnyheter & Sverige
-    ep2: "sv-SE-MattiasNeural" # Manlig röst  — AI & Teknik
+    ep1: "nova"                # Kvinnlig röst — Världsnyheter & Sverige
+    ep2: "onyx"                # Manlig röst  — AI & Teknik
 
 openai:
   model: "gpt-4o"
