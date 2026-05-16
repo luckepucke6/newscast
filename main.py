@@ -116,7 +116,7 @@ def generate_episode(
     ep_min, ep_max, _ = _dynamic_length_params(
         len(articles), ep_cfg["min_words"], ep_cfg["max_words"]
     )
-    max_extend = 2
+    max_extend = 3
     for attempt in range(1, max_extend + 1):
         if len(script.split()) >= ep_min:
             break

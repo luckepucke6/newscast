@@ -11,16 +11,16 @@ openai:
 episodes:
   ep1:
     label: "Världsnyheter & Sverige"
-    min_words: 1300
-    max_words: 1500
+    min_words: 1500
+    max_words: 1700
     target_minutes: 11
     max_articles: 8
     articles_per_feed: 6
     relevance_cutoff: 7
   ep2:
     label: "AI & Teknik"
-    min_words: 1100
-    max_words: 1400
+    min_words: 1300
+    max_words: 1600
     target_minutes: 9
     max_articles: 6
     articles_per_feed: 4
