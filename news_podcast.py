@@ -452,6 +452,28 @@ Manus:
 
 # ── TTS: ElevenLabs Flash v2.5 ───────────────────────────────────────────────
 
+# Siffror som ElevenLabs Flash har svårt med på svenska — skrivs ut som ord
+NUMBER_REPLACEMENTS = {
+    "2020": "två tusen tjugo",
+    "2021": "två tusen tjugoett",
+    "2022": "två tusen tjugotvå",
+    "2023": "två tusen tjugotre",
+    "2024": "två tusen tjugofyra",
+    "2025": "två tusen tjugofem",
+    "2026": "två tusen tjugosex",
+    "2027": "två tusen tjugosju",
+    "2028": "två tusen tjugoåtta",
+    "2029": "två tusen tjugonio",
+    "2030": "två tusen trettio",
+}
+
+def preprocess_script(text: str) -> str:
+    """Skriver ut siffror som ElevenLabs Flash missar på svenska."""
+    for number, spoken in NUMBER_REPLACEMENTS.items():
+        text = text.replace(number, spoken)
+    return text
+
+
 def text_to_speech(script: str, episode: int) -> str:
     """Omvandlar manus till MP3 via ElevenLabs Flash v2.5."""
     voice_id = VOICE_EP1 if episode == 1 else VOICE_EP2
@@ -461,7 +483,7 @@ def text_to_speech(script: str, episode: int) -> str:
     try:
         audio_stream = eleven.text_to_speech.convert(
             voice_id=voice_id,
-            text=script,
+            text=preprocess_script(script),
             model_id=ELEVEN_MODEL,
             language_code="sv",          # Låser svenska
             output_format="mp3_44100_128",
