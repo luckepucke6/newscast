@@ -20,7 +20,8 @@ TELEGRAM_CHAT_ID    = os.environ["TELEGRAM_CHAT_ID"]
 AZURE_SPEECH_KEY    = os.environ["AZURE_SPEECH_KEY"]
 AZURE_SPEECH_REGION = os.environ["AZURE_SPEECH_REGION"]
 
-AZURE_VOICE = "sv-SE-MattiasNeural"   # Byt till sv-SE-ErikNeural för att testa Erik
+AZURE_VOICE_EP1 = "sv-SE-SofieNeural"   # Avsnitt 1: Världsnyheter & Sverige
+AZURE_VOICE_EP2 = "sv-SE-ErikNeural"      # Avsnitt 2: AI & Teknik — byt till SofieNeural eller HilleviNeural
 
 HISTORY_FILE = "seen_urls.json"
 HISTORY_DAYS = 7
@@ -282,14 +283,15 @@ Manus:
 # ── TTS med chunkning ─────────────────────────────────────────────────────────
 
 def text_to_speech(script: str, episode: int) -> str:
-    """Omvandlar manus till MP3 via Azure Cognitive Services Speech (Mattias Neural)."""
-    path = f"/tmp/podcast_ep{episode}.mp3"
+    """Omvandlar manus till MP3 via Azure Cognitive Services Speech."""
+    voice = AZURE_VOICE_EP1 if episode == 1 else AZURE_VOICE_EP2
+    path  = f"/tmp/podcast_ep{episode}.mp3"
 
     speech_config = speechsdk.SpeechConfig(
         subscription=AZURE_SPEECH_KEY,
         region=AZURE_SPEECH_REGION,
     )
-    speech_config.speech_synthesis_voice_name = AZURE_VOICE
+    speech_config.speech_synthesis_voice_name = voice
     speech_config.set_speech_synthesis_output_format(
         speechsdk.SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3
     )
@@ -300,7 +302,7 @@ def text_to_speech(script: str, episode: int) -> str:
         audio_config=audio_config,
     )
 
-    print(f"  Azure TTS: {len(script)} tecken med röst {AZURE_VOICE}...")
+    print(f"  Azure TTS: {len(script)} tecken med röst {voice}...")
     result = synthesizer.speak_text_async(script).get()
 
     if result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
@@ -408,6 +410,7 @@ def main():
     now       = datetime.now()
     weekday   = now.weekday()
     today_str = swedish_date(now)
+    force_ep2 = os.environ.get("FORCE_EPISODE2", "").lower() == "true"
     print(f"\n📰 Nyhetspodd v3 – {today_str}\n")
 
     history = load_history()
@@ -415,11 +418,17 @@ def main():
     # Avsnitt 1: varje dag
     generate_episode(1, FEEDS_EP1, history, today_str, weekday)
 
-    # Avsnitt 2: måndag, onsdag, fredag
-    if weekday in TECH_DAYS:
+    # Avsnitt 2: måndag, onsdag, fredag — eller om FORCE_EPISODE2=true
+    if weekday in TECH_DAYS or force_ep2:
+        if force_ep2 and weekday not in TECH_DAYS:
+            print(f"\n(FORCE_EPISODE2 aktiv — kör avsnitt 2 trots {SWEDISH_DAYS[weekday]})")
         generate_episode(2, FEEDS_EP2, history, today_str, weekday)
     else:
         print(f"\nAvsnitt 2 hoppas över idag ({SWEDISH_DAYS[weekday]}) — sänds mån/ons/fre.")
+
+    print("\nSparar historik...")
+    save_history(history)
+    print(f"\n✅ Klart – {today_str}\n")
 
     print("\nSparar historik...")
     save_history(history)
