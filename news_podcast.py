@@ -46,25 +46,28 @@ NEXT_TECH_DAY = {0: "onsdag", 1: "onsdag", 2: "fredag", 3: "fredag", 4: "måndag
 TECH_DAYS = {0, 2, 4}   # måndag=0, onsdag=2, fredag=4
 
 FEEDS_EP1 = {
-    "Sverige": (
-        "https://news.google.com/rss/search"
-        "?q=Sverige+Swedish+news&hl=sv&gl=SE&ceid=SE:sv"
-    ),
-    "Världsnyheter": (
-        "https://news.google.com/rss/search"
-        "?q=world+news+today&hl=en&gl=US&ceid=US:en"
-    ),
-    "Politik": (
-        "https://news.google.com/rss/search"
-        "?q=politics+world+today&hl=en&gl=US&ceid=US:en"
-    ),
+    # Svenska källor
+    "SVT":          "https://www.svt.se/rss.xml",
+    "Omni":         "https://omni.se/rss",
+    "DN":           "https://www.dn.se/rss/",
+    # Google News aggregat
+    "Sverige":      "https://news.google.com/rss/search?q=Sverige&hl=sv&gl=SE&ceid=SE:sv",
+    "Världsnyheter": "https://news.google.com/rss/search?q=world+news+today&hl=en&gl=US&ceid=US:en",
+    "Politik":      "https://news.google.com/rss/search?q=politics+world+today&hl=en&gl=US&ceid=US:en",
 }
 
 FEEDS_EP2 = {
-    "Tech & AI": (
-        "https://news.google.com/rss/search"
-        "?q=artificial+intelligence+technology&hl=en&gl=US&ceid=US:en"
-    ),
+    # Breda tech-medier
+    "The Verge":          "https://www.theverge.com/rss/index.xml",
+    "Wired":              "https://www.wired.com/feed/rss",
+    "Ars Technica":       "https://feeds.arstechnica.com/arstechnica/index",
+    # Akademiskt / djupare analys
+    "MIT Tech Review":    "https://www.technologyreview.com/feed/",
+    # Startup & business
+    "TechCrunch":         "https://techcrunch.com/feed/",
+    "VentureBeat":        "https://venturebeat.com/feed/",
+    # Google News AI-aggregat som backup
+    "Google AI":          "https://news.google.com/rss/search?q=artificial+intelligence+technology&hl=en&gl=US&ceid=US:en",
 }
 
 EPISODE_LABELS = {
@@ -72,7 +75,7 @@ EPISODE_LABELS = {
     2: "AI & Teknik",
 }
 
-MIN_WORDS = {1: 1200, 2: 1100}   # ~10 min resp ~9 min — GPT når inte 1800 konsekvent
+MIN_WORDS = {1: 1300, 2: 1100}   # EP1: ~11 min, EP2: ~9 min
 
 
 def swedish_date(dt: datetime) -> str:
@@ -283,90 +286,90 @@ nyheter på ett sätt som faktiskt fastnar — engagerande och pedagogisk, \
 inte en torr uppläsare.
 
 Skriv avsnitt 1: Världsnyheter & Sverige för {today_str}.
-Välj ut 4–5 av de viktigaste nyheterna nedan.
 
-VIKTIGT OM LÄNGD: Manuset ska ta ca 15 minuter att läsa upp högt i lugn takt. \
-Det motsvarar 1 800–2 000 ord. Varje nyhet ska behandlas grundligt med \
-bakgrund, analys och kontext — inte bara en kort notis. \
-Räkna dina ord internt. Om du är under 1 800 — fortsätt och bygg ut.
+URVAL OCH ORDNING:
+Välj ut 6–8 av de mest nyhetsvärda artiklarna nedan. \
+Sortera dem själv i den ordning du bedömer ger bäst flöde och nyhetsvärde — \
+börja med det viktigaste, men tänk också på variation mellan ämnen.
 
-STRUKTUR FÖR VARJE NYHET — ge varje del ordentligt utrymme:
-1. Aktivera minnet (2–3 meningar) — koppla om möjligt till en händelse lyssnaren \
-känner till. T.ex: "Om du minns det vi pratade om kring X — det här är nästa kapitel." \
-Hoppa naturligt över om ingen rimlig koppling finns.
-2. Vad hände (3–4 meningar) — kortfattat och tydligt
-3. Varför det spelar roll (4–5 meningar) — för Sverige, för världen, för lyssnaren. \
-Ge konkreta exempel på hur det påverkar vanliga människor.
-4. Kontext (3–4 meningar) — "Det här är en del av ett större mönster där..." \
-Förklara bakgrunden som krävs för att förstå nyheten fullt ut.
-5. Vad händer härnäst (2–3 meningar) — vad ska lyssnaren hålla ögonen på
+LÄNGD: Avsnittet ska ta 10–12 minuter. Det är ca 1 300–1 500 ord totalt. \
+Varje nyhet ska vara kärnfull men inte utdragen — fakta och kort analys, inget utfyllnad.
+
+STRUKTUR FÖR VARJE NYHET:
+1. Vad hände (2–3 meningar) — tydligt och konkret
+2. Varför det spelar roll (2–3 meningar) — för Sverige, världen eller lyssnaren
+3. Kort analys (1–2 meningar) — vad ska lyssnaren hålla ögonen på
 
 OBLIGATORISK INTRO:
 "Hej och välkommen till din dagliga nyhetssammanfattning. Det är {today_str}. \
 {weather_line}\
-Idag går vi igenom [antal] nyheter — från Sverige och resten av världen."
+Idag går vi igenom [antal] nyheter."
 
-OBLIGATORISK AVSLUTNING (ca 80 ord):
-"Innan vi avslutar — de viktigaste sakerna från idag: \
-1. [konkret punkt] 2. [konkret punkt] 3. [konkret punkt om fler]. \
-Kom ihåg dem när du läser nyheter under dagen. Vi hörs imorgon."
+OBLIGATORISK AVSLUTNING (ca 60 ord):
+"Det var nyheterna för idag. De tre viktigaste sakerna att ta med sig: \
+1. [punkt] 2. [punkt] 3. [punkt]. Vi hörs imorgon."
 
 TON OCH STIL:
-— Tala direkt till lyssnaren med "du"
-— Engagerande och pedagogisk, inte en uppläsare
-— Varmt men professionellt — kunnig vän, inte kompis
+— Direkt tilltal med "du"
+— Engagerande och pedagogisk — kunnig vän, inte uppläsare
+— Naturliga övergångar mellan nyheter
 — Förklara begrepp utan jargong
 
 ABSOLUTA KRAV:
-— Minst 1 800 ord — bygg ut varje nyhet om du är under
 — Skriv BARA manustexten — inga rubriker, noter eller parenteser
 — Svenska genomgående
 
-{memory_context}
 NYHETER:
 {articles_text}"""
 
 PROMPT_EP2 = """\
-Du är värd för ett teknik- och AI-poddavsnitt. Fokuset är alltid: \
-vad innebär det här praktiskt för vanliga människor — inte ett pr-blad \
-för produktlanseringar.
+Du är värd för ett bildande tech- och AI-poddavsnitt. Målet är att lyssnaren \
+efter varje avsnitt ska förstå både hur tekniken fungerar och hur den påverkar \
+samhälle och vardag — inte bara vad som hänt.
 
 Skriv avsnitt 2: AI & Teknik för {today_str}.
-Välj ut 3–5 nyheter. Skippa produktlanseringar utan tydlig konsekvens — \
-fokusera på vad som faktiskt förändrar något.
+Välj ut 4–6 nyheter. Skippa rena produktlanseringar utan konsekvens. \
+Sortera efter vad du bedömer ger bäst bildningsvärde och nyhetsvärde.
 
-VIKTIGT OM LÄNGD: Avsnittet ska ta ca 12 minuter att läsa upp i lugn takt, \
-vilket är 1 400–1 600 ord. Varje nyhet ska ha ordentlig fördjupning. \
-Räkna dina ord internt — bygg ut med mer praktiska exempel om du är under 1 400.
+STRUKTUR FÖR VARJE NYHET — alla fyra delar är obligatoriska:
 
-STRUKTUR FÖR VARJE NYHET — ge varje del utrymme:
-1. Aktivera minnet (2–3 meningar) — koppla till något lyssnaren redan vet om AI eller tech.
-2. Vad hände (3–4 meningar) — kortfattat
-3. Vad det praktiskt innebär (5–6 meningar) — detta är kärnan. \
-Ge konkreta exempel: hur påverkas en vanlig person, ett litet företag, en lärare?
-4. Kontext i den större AI-utvecklingen (3–4 meningar)
-5. Vad ska lyssnaren hålla ögonen på härnäst (2–3 meningar)
+1. Vad hände (2–3 meningar) — konkret och tydligt
+
+2. Hur fungerar det? (2–3 meningar) — förklara tekniken bakom på ett enkelt sätt. \
+Tänk: hur skulle du förklara det för en smart 16-åring? \
+Undvik jargong — eller förklara den direkt om du använder den.
+
+3. Samhällspåverkan (3–4 meningar) — vad förändrar detta i stort? \
+Tänk brett: påverkar det jobb och arbetsmarknad? Demokrati och maktbalans? \
+Ekonomi och företag? Miljö? Enskilda människors vardag?
+
+4. Vardagsexempel (2–3 meningar) — ge ett konkret scenario från verkliga livet. \
+T.ex: "Tänk dig att du är lärare och dina elever börjar använda detta — \
+då händer följande..." eller "Om du jobbar inom [bransch] innebär det här att..." \
+Gör det specifikt och igenkännbart.
 
 OBLIGATORISK INTRO:
 "Hej och välkommen till teknikavsnittet. Det är {today_str}. \
-Vi dyker ner i [antal] nyheter från AI- och teknikvärlden — \
-och framför allt vad de faktiskt innebär för dig."
+Idag går vi igenom [antal] nyheter — och som vanligt fokuserar vi på \
+vad de faktiskt innebär för dig och samhället runt om dig."
 
-OBLIGATORISK AVSLUTNING (ca 80 ord):
-"Sammanfattningsvis — de viktigaste sakerna från teknikvärlden idag: \
-1. [punkt] 2. [punkt] 3. [punkt om fler]. Vi hörs {next_tech_day}."
+OBLIGATORISK AVSLUTNING (ca 70 ord):
+"Det var teknikavsnittet för idag. Tre saker att ta med sig: \
+1. [punkt om vad som hänt] 2. [punkt om samhällspåverkan] \
+3. [punkt om vad du kan tänka på eller göra]. Vi hörs {next_tech_day}."
 
-TON:
-— Nyfiken och förklarande — techvän som är bra på att förklara
-— Alltid: vad betyder detta praktiskt? Inte bara vad som lanserades.
+TON OCH STIL:
+— Pedagogisk och nyfiken — som en kunnig vän som genuint tycker det är kul att förklara
 — Direkt tilltal med "du"
+— Aldrig nedlåtande — förklara utan att förenkla för mycket
+— Koppla alltid det abstrakta till det konkreta
 
 ABSOLUTA KRAV:
-— Minst 1 400 ord — bygg ut med fler praktiska exempel om du är under
-— Skriv BARA manustext — inga rubriker
+— Minst 1 400 ord
+— Alla fyra delar per nyhet
+— Skriv BARA manustext — inga rubriker eller noter
 — Svenska genomgående
 
-{memory_context}
 NYHETER:
 {articles_text}"""
 
@@ -379,22 +382,13 @@ def write_script(
     today_str: str,
     weekday: int,
     weather: str = "",
-    memory: list[dict] | None = None,
 ) -> str:
     articles_text = "\n".join([
         f"[{a['category']}] {a['title']}\n{a['summary']}\n"
         for a in articles
     ])
 
-    # Väderrad i intrот (bara avsnitt 1)
     weather_line = f"Det är {weather} idag. " if weather and episode == 1 else ""
-
-    # Minneskontext för genuina "minns du"-kopplingar
-    mem_ctx = memory_to_context(memory or [], episode)
-    memory_context = (
-        f"TIDIGARE SÄNDA NYHETER (använd för 'minns du'-kopplingar om relevant):\n{mem_ctx}\n"
-        if mem_ctx else ""
-    )
 
     template = PROMPT_EP1 if episode == 1 else PROMPT_EP2
     prompt   = template.format(
@@ -402,7 +396,6 @@ def write_script(
         articles_text=articles_text,
         next_tech_day=NEXT_TECH_DAY.get(weekday, "nästa gång"),
         weather_line=weather_line,
-        memory_context=memory_context,
     )
     response = client.chat.completions.create(
         model="gpt-4o",
@@ -423,10 +416,10 @@ def judge_script(episode: int, script: str) -> tuple[bool, str]:
     prompt = f"""Granska detta nyhets-podcast-manus (avsnitt {episode}). Bedöm:
 
 1. Längd: minst {min_w} ord krävs. Faktiskt: {words} ord.
-2. Struktur: varje nyhet har minnesaktivering (om möjligt), fakta, relevans, kontext och nästa steg.
+2. Struktur: varje nyhet har fakta, relevans och kort analys.
 3. Ton: pedagogisk och engagerande, direkt tilltal med "du".
 4. Avslutning: summering med numrerade punkter.
-5. Intro: presenterar datum och ämnesområde.
+5. Intro: presenterar datum och antal nyheter.
 
 Svara EXAKT med ett av:
 GODKÄNT
@@ -555,10 +548,9 @@ MANUS ATT BYGGA UT:
 
 
 def generate_episode(
-    episode:  int,
-    feeds:    dict,
-    history:  dict,
-    memory:   list[dict],
+    episode:   int,
+    feeds:     dict,
+    history:   dict,
     today_str: str,
     weekday:   int,
     weather:   str = "",
@@ -576,7 +568,7 @@ def generate_episode(
     articles = filter_by_relevance(articles, episode)
 
     print("  Skriver manus...")
-    script = write_script(episode, articles, today_str, weekday, weather, memory)
+    script = write_script(episode, articles, today_str, weekday, weather)
 
     for attempt in range(1, MAX_RETRIES + 1):
         if len(script.split()) >= min_w:
@@ -590,15 +582,8 @@ def generate_episode(
         print(f"  Skickar ändå — {verdict}")
 
     audio = text_to_speech(script, episode)
-    n     = min(len(articles), 5)
+    n     = min(len(articles), 8)
     send_to_telegram(audio, episode, today_str, n)
-
-    # Spara till ämnesminne
-    save_memory(memory, {
-        "date":     datetime.now().isoformat(),
-        "episode":  episode,
-        "headlines": extract_headlines(script, articles),
-    })
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -612,15 +597,14 @@ def main():
 
     print("Förbereder...")
     history = load_history()
-    memory  = load_memory()
     weather = fetch_weather()
 
-    generate_episode(1, FEEDS_EP1, history, memory, today_str, weekday, weather)
+    generate_episode(1, FEEDS_EP1, history, today_str, weekday, weather)
 
     if weekday in TECH_DAYS or force_ep2:
         if force_ep2 and weekday not in TECH_DAYS:
             print(f"\n(FORCE_EPISODE2 aktiv — kör avsnitt 2 trots {SWEDISH_DAYS[weekday]})")
-        generate_episode(2, FEEDS_EP2, history, memory, today_str, weekday)
+        generate_episode(2, FEEDS_EP2, history, today_str, weekday)
     else:
         print(f"\nAvsnitt 2 hoppas över idag ({SWEDISH_DAYS[weekday]}) — sänds mån/ons/fre.")
 
