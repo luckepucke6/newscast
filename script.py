@@ -403,6 +403,12 @@ Rubriker:
                     response.usage.completion_tokens,
                 )
             raw = response.choices[0].message.content.strip()
+            # Strip markdown code fences if GPT wraps the JSON in ```json ... ```
+            if raw.startswith("```"):
+                raw = raw.split("```")[1]
+                if raw.startswith("json"):
+                    raw = raw[4:]
+                raw = raw.strip()
             scores = json.loads(raw)["scores"]
             scored = sorted(zip(scores, articles), key=lambda x: x[0], reverse=True)
             filtered = [a for s, a in scored if s >= cutoff][:max_articles]
