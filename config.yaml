@@ -1,0 +1,64 @@
+voices:
+  ep1: "XrExE9yKIg1WjnnlVkGX"
+  ep2: "pNInz6obpgDQGcFmaJgB"
+
+elevenlabs:
+  model: "eleven_flash_v2_5"
+
+openai:
+  model: "gpt-4o"
+  embedding_model: "text-embedding-3-small"
+
+episodes:
+  ep1:
+    label: "Världsnyheter & Sverige"
+    min_words: 1300
+    max_words: 1500
+    target_minutes: 11
+    max_articles: 8
+    articles_per_feed: 6
+    relevance_cutoff: 7
+  ep2:
+    label: "AI & Teknik"
+    min_words: 1100
+    max_words: 1400
+    target_minutes: 9
+    max_articles: 6
+    articles_per_feed: 4
+
+tech_days: [0, 2, 4]
+
+dedup:
+  similarity_threshold: 0.85
+
+history:
+  days: 7
+  file: "seen_urls.json"
+  memory_file: "topic_memory.json"
+
+costs:
+  alert_threshold_sek: 10.0
+  gpt4o_input_per_1k: 0.005
+  gpt4o_output_per_1k: 0.015
+  embedding_per_1k: 0.00002
+  usd_to_sek: 10.5
+
+feeds:
+  ep1:
+    SVT: "https://www.svt.se/rss.xml"
+    Omni: "https://omni.se/rss"
+    DN: "https://www.dn.se/rss/"
+    Aftonbladet: "https://rss.aftonbladet.se/rss2/small/pages/sections/senastenytt/"
+    SR Ekot: "https://api.sr.se/api/rss/program/83"
+    Reuters: "https://feeds.reuters.com/reuters/topNews"
+    Sverige: "https://news.google.com/rss/search?q=Sverige&hl=sv&gl=SE&ceid=SE:sv"
+    Världsnyheter: "https://news.google.com/rss/search?q=world+news+today&hl=en&gl=US&ceid=US:en"
+    Politik: "https://news.google.com/rss/search?q=politics+world+today&hl=en&gl=US&ceid=US:en"
+  ep2:
+    The Verge: "https://www.theverge.com/rss/index.xml"
+    Wired: "https://www.wired.com/feed/rss"
+    Ars Technica: "https://feeds.arstechnica.com/arstechnica/index"
+    MIT Tech Review: "https://www.technologyreview.com/feed/"
+    TechCrunch: "https://techcrunch.com/feed/"
+    VentureBeat: "https://venturebeat.com/feed/"
+    Google AI: "https://news.google.com/rss/search?q=artificial+intelligence+technology&hl=en&gl=US&ceid=US:en"
