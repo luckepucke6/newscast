@@ -34,12 +34,11 @@ jobs:
 
       - name: Generera och skicka podcast
         env:
-          OPENAI_API_KEY:      ${{ secrets.OPENAI_API_KEY }}
-          TELEGRAM_BOT_TOKEN:  ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID:    ${{ secrets.TELEGRAM_CHAT_ID }}
-          AZURE_SPEECH_KEY:    ${{ secrets.AZURE_SPEECH_KEY }}
-          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
-          FORCE_EPISODE2:      ${{ github.event.inputs.force_episode2 }}
+          OPENAI_API_KEY:       ${{ secrets.OPENAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:     ${{ secrets.TELEGRAM_CHAT_ID }}
+          ELEVENLABS_API_KEY:   ${{ secrets.ELEVENLABS_API_KEY }}
+          FORCE_EPISODE2:       ${{ github.event.inputs.force_episode2 }}
         run: python news_podcast.py
 
       - name: Spara historik till repot
