@@ -21,7 +21,7 @@ AZURE_SPEECH_KEY    = os.environ["AZURE_SPEECH_KEY"]
 AZURE_SPEECH_REGION = os.environ["AZURE_SPEECH_REGION"]
 
 AZURE_VOICE_EP1 = "sv-SE-MattiasNeural"   # Avsnitt 1: Världsnyheter & Sverige
-AZURE_VOICE_EP2 = "sv-SE-SofieNeural"     # Avsnitt 2: AI & Teknik
+AZURE_VOICE_EP2 = "sv-SE-MattiasNeural"   # Avsnitt 2 — byt när vi hittat fungerande alternativröst     # Avsnitt 2: AI & Teknik
 
 HISTORY_FILE = "seen_urls.json"
 HISTORY_DAYS = 7
