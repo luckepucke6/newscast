@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Daily News Podcast v4
-Avsnitt 1: Världsnyheter & Sverige  — varje dag        (~15 min)
-Avsnitt 2: AI & Teknik              — mån, ons, fre    (~12 min)
+Daily News Podcast v5
+Avsnitt 1: Världsnyheter & Sverige  — varje dag
+Avsnitt 2: AI & Teknik              — mån, ons, fre
 
-Funktioner: relevansfilter, ämnesminne, väder i intro, felnotifiering via Telegram
+TTS: ElevenLabs Flash v2.5
 """
 
 import os
@@ -13,18 +13,22 @@ import hashlib
 import traceback
 import feedparser
 import requests
-import azure.cognitiveservices.speech as speechsdk
+from elevenlabs.client import ElevenLabs
 from openai import OpenAI
 from datetime import datetime, timedelta
 
-client              = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+openai_client       = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+eleven              = ElevenLabs(api_key=os.environ["ELEVENLABS_API_KEY"])
 TELEGRAM_TOKEN      = os.environ["TELEGRAM_BOT_TOKEN"]
 TELEGRAM_CHAT_ID    = os.environ["TELEGRAM_CHAT_ID"]
-AZURE_SPEECH_KEY    = os.environ["AZURE_SPEECH_KEY"]
-AZURE_SPEECH_REGION = os.environ["AZURE_SPEECH_REGION"]
 
-AZURE_VOICE_EP1  = "sv-SE-HilleviNeural"   # Avsnitt 1: Världsnyheter & Sverige (kvinnlig)
-AZURE_VOICE_EP2  = "sv-SE-MattiasNeural"   # Avsnitt 2: AI & Teknik (manlig)
+# Röst-IDs — byt på elevenlabs.io/voice-library om du vill testa andra
+# EP1 (Världsnyheter): kvinnlig röst
+VOICE_EP1 = os.environ.get("ELEVENLABS_VOICE_EP1", "XrExE9yKIg1WjnnlVkGX")  # Matilda
+# EP2 (AI & Teknik): manlig röst
+VOICE_EP2 = os.environ.get("ELEVENLABS_VOICE_EP2", "pNInz6obpgDQGcFmaJgB")  # Adam
+
+ELEVEN_MODEL = "eleven_flash_v2_5"
 
 HISTORY_FILE     = "seen_urls.json"
 MEMORY_FILE      = "topic_memory.json"   # Ämnesminne: sammanfattningar per dag
@@ -198,7 +202,7 @@ Rubriker:
 {lines}"""
 
     try:
-        response = client.chat.completions.create(
+        response = openai_client.chat.completions.create(
             model="gpt-4o",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=200,
@@ -289,16 +293,16 @@ Skriv avsnitt 1: Världsnyheter & Sverige för {today_str}.
 
 URVAL OCH ORDNING:
 Välj ut 6–8 av de mest nyhetsvärda artiklarna nedan. \
-Sortera dem själv i den ordning du bedömer ger bäst flöde och nyhetsvärde — \
-börja med det viktigaste, men tänk också på variation mellan ämnen.
+Sortera dem i den ordning du bedömer ger bäst flöde och nyhetsvärde — \
+börja med det viktigaste, men tänk på variation mellan ämnen.
 
-LÄNGD: Avsnittet ska ta 10–12 minuter. Det är ca 1 300–1 500 ord totalt. \
-Varje nyhet ska vara kärnfull men inte utdragen — fakta och kort analys, inget utfyllnad.
+LÄNGD: 10–12 minuter, ca 1 300–1 500 ord. Kärnfullt, ingen utfyllnad.
 
-STRUKTUR FÖR VARJE NYHET:
-1. Vad hände (2–3 meningar) — tydligt och konkret
-2. Varför det spelar roll (2–3 meningar) — för Sverige, världen eller lyssnaren
-3. Kort analys (1–2 meningar) — vad ska lyssnaren hålla ögonen på
+STRUKTUR PER NYHET — använd omdöme:
+1. Vad hände (2–3 meningar) — alltid med
+2. Varför det spelar roll / hur det påverkar (2–3 meningar) — bara för viktiga \
+eller komplexa nyheter där det tillför något. Hoppa över för korta notiser.
+3. Kort analys eller vad som händer härnäst (1–2 meningar) — bara om relevant
 
 OBLIGATORISK INTRO:
 "Hej och välkommen till din dagliga nyhetssammanfattning. Det är {today_str}. \
@@ -314,6 +318,13 @@ TON OCH STIL:
 — Engagerande och pedagogisk — kunnig vän, inte uppläsare
 — Naturliga övergångar mellan nyheter
 — Förklara begrepp utan jargong
+
+TALSPRÅK OCH RYTM — viktigt för hur det låter uppläst:
+— Variera meningslängden. Blanda korta och längre meningar medvetet.
+— Lägg in naturliga andningspauser med tankstreck eller punkt där du vill ha paus: \
+"Det här är en stor förändring — och den kommer snabbt."
+— Undvik långa bisatskedjor. Dela upp dem i separata meningar.
+— Skriv som du pratar, inte som du skriver. "Det är" inte "detta är".
 
 ABSOLUTA KRAV:
 — Skriv BARA manustexten — inga rubriker, noter eller parenteser
@@ -357,6 +368,13 @@ TON OCH STIL:
 — Koppla alltid det abstrakta till det konkreta
 — Låt perspektiven flöda naturligt — undvik att det låter som punktlistor
 
+TALSPRÅK OCH RYTM — viktigt för hur det låter uppläst:
+— Variera meningslängden. Blanda korta och längre meningar medvetet.
+— Lägg in naturliga andningspauser med tankstreck eller punkt: \
+"Det här låter tekniskt — men det berör dig direkt."
+— Undvik långa bisatskedjor. Dela upp dem.
+— Skriv som du pratar: "det är" inte "detta är", "du kan" inte "man kan".
+
 ABSOLUTA KRAV:
 — Minst 1 400 ord
 — Skriv BARA manustext — inga rubriker eller noter
@@ -389,7 +407,7 @@ def write_script(
         next_tech_day=NEXT_TECH_DAY.get(weekday, "nästa gång"),
         weather_line=weather_line,
     )
-    response = client.chat.completions.create(
+    response = openai_client.chat.completions.create(
         model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
         max_tokens=3500,
@@ -420,7 +438,7 @@ AVVISAT: [orsak på en rad]
 Manus:
 {script}"""
 
-    response = client.chat.completions.create(
+    response = openai_client.chat.completions.create(
         model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
         max_tokens=80,
@@ -432,58 +450,29 @@ Manus:
     return approved, verdict
 
 
-# ── TTS med chunkning ─────────────────────────────────────────────────────────
+# ── TTS: ElevenLabs Flash v2.5 ───────────────────────────────────────────────
 
 def text_to_speech(script: str, episode: int) -> str:
-    """Omvandlar manus till MP3 via Azure Cognitive Services Speech."""
-    voice = AZURE_VOICE_EP1 if episode == 1 else AZURE_VOICE_EP2
-    path  = f"/tmp/podcast_ep{episode}.mp3"
+    """Omvandlar manus till MP3 via ElevenLabs Flash v2.5."""
+    voice_id = VOICE_EP1 if episode == 1 else VOICE_EP2
+    path     = f"/tmp/podcast_ep{episode}.mp3"
 
-    # Escapa XML-tecken i manuset
-    safe_script = (
-        script
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
-
-    # SSML låser språket till sv-SE så att Azure inte byter till danska
-    # när det stöter på engelska ord eller namn
-    ssml = f"""<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis"
-               xmlns:mstts="http://www.w3.org/2001/mstts" xml:lang="sv-SE">
-  <voice name="{voice}">
-    <lang xml:lang="sv-SE">
-      {safe_script}
-    </lang>
-  </voice>
-</speak>"""
-
-    speech_config = speechsdk.SpeechConfig(
-        subscription=AZURE_SPEECH_KEY,
-        region=AZURE_SPEECH_REGION,
-    )
-    speech_config.set_speech_synthesis_output_format(
-        speechsdk.SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3
-    )
-
-    audio_config = speechsdk.audio.AudioOutputConfig(filename=path)
-    synthesizer  = speechsdk.SpeechSynthesizer(
-        speech_config=speech_config,
-        audio_config=audio_config,
-    )
-
-    print(f"  Azure TTS: {len(script)} tecken med röst {voice} (sv-SE låst)...")
-    result = synthesizer.speak_ssml_async(ssml).get()
-
-    if result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
+    print(f"  ElevenLabs Flash: {len(script)} tecken, röst {voice_id}...")
+    try:
+        audio_stream = eleven.text_to_speech.convert(
+            voice_id=voice_id,
+            text=script,
+            model_id=ELEVEN_MODEL,
+            language_code="sv",          # Låser svenska
+            output_format="mp3_44100_128",
+        )
+        with open(path, "wb") as f:
+            for chunk in audio_stream:
+                f.write(chunk)
         print(f"  Ljud: {os.path.getsize(path) // 1024} KB")
         return path
-    elif result.reason == speechsdk.ResultReason.Canceled:
-        details = result.cancellation_details
-        raise RuntimeError(f"Azure TTS avbruten: {details.reason} – {details.error_details}")
-    else:
-        raise RuntimeError(f"Azure TTS misslyckades: {result.reason}")
+    except Exception as e:
+        raise RuntimeError(f"ElevenLabs TTS misslyckades: {e}")
 
 
 # ── Telegram ──────────────────────────────────────────────────────────────────
@@ -528,7 +517,7 @@ Returnera det kompletta, utbyggda manuset — inget annat.
 MANUS ATT BYGGA UT:
 {script}"""
 
-    response = client.chat.completions.create(
+    response = openai_client.chat.completions.create(
         model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
         max_tokens=4000,
