@@ -23,8 +23,8 @@ TELEGRAM_CHAT_ID    = os.environ["TELEGRAM_CHAT_ID"]
 AZURE_SPEECH_KEY    = os.environ["AZURE_SPEECH_KEY"]
 AZURE_SPEECH_REGION = os.environ["AZURE_SPEECH_REGION"]
 
-AZURE_VOICE_EP1  = "sv-SE-MattiasNeural"
-AZURE_VOICE_EP2  = "sv-SE-MattiasNeural"
+AZURE_VOICE_EP1  = "sv-SE-HilleviNeural"   # Avsnitt 1: Världsnyheter & Sverige (kvinnlig)
+AZURE_VOICE_EP2  = "sv-SE-MattiasNeural"   # Avsnitt 2: AI & Teknik (manlig)
 
 HISTORY_FILE     = "seen_urls.json"
 MEMORY_FILE      = "topic_memory.json"   # Ämnesminne: sammanfattningar per dag
@@ -468,11 +468,9 @@ def text_to_speech(script: str, episode: int) -> str:
     ssml = f"""<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis"
                xmlns:mstts="http://www.w3.org/2001/mstts" xml:lang="sv-SE">
   <voice name="{voice}">
-    <mstts:express-as style="newscast">
-      <lang xml:lang="sv-SE">
-        {safe_script}
-      </lang>
-    </mstts:express-as>
+    <lang xml:lang="sv-SE">
+      {safe_script}
+    </lang>
   </voice>
 </speak>"""
 
