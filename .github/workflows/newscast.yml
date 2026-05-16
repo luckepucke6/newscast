@@ -3,7 +3,16 @@ name: Daily Newscast
 on:
   schedule:
     - cron: "0 5 * * *"   # 07:00 svensk tid (UTC+2 sommartid)
-  workflow_dispatch:       # Tillåter manuell körning från GitHub-webben
+  workflow_dispatch:
+    inputs:
+      force_episode2:
+        description: "Kör även AI & Teknik-avsnittet (EP2)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
 
 jobs:
   generate:
@@ -28,6 +37,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FORCE_EPISODE2: ${{ github.event.inputs.force_episode2 || 'false' }}
         run: python main.py
 
       - name: Commit updated data files
