@@ -1,9 +1,7 @@
-voices:
-  ep1: "XrExE9yKIg1WjnnlVkGX"
-  ep2: "pNInz6obpgDQGcFmaJgB"
-
-elevenlabs:
-  model: "eleven_flash_v2_5"
+azure_tts:
+  voices:
+    ep1: "sv-SE-SofieNeural"   # Kvinnlig röst — Världsnyheter & Sverige
+    ep2: "sv-SE-MattiasNeural" # Manlig röst  — AI & Teknik
 
 openai:
   model: "gpt-4o"

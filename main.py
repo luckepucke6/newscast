@@ -15,7 +15,6 @@ import traceback
 from datetime import datetime
 
 import yaml
-from elevenlabs.client import ElevenLabs
 from openai import OpenAI
 
 from costs import CostTracker
@@ -80,7 +79,6 @@ def generate_episode(
     weekday: int,
     cfg: dict,
     openai_client,
-    eleven_client,
     cost_tracker: CostTracker,
     weather: str = "",
     used_titles: set = None,
@@ -130,7 +128,7 @@ def generate_episode(
     if not approved:
         logger.warning("Skickar ändå — %s", verdict)
 
-    audio_path = text_to_speech(script, episode, cfg, eleven_client)
+    audio_path = text_to_speech(script, episode, cfg)
     n = len(articles)
     send_audio(audio_path, episode, today_str, n, cfg)
 
@@ -141,7 +139,6 @@ def main():
     cfg = _load_config()
 
     openai_client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-    eleven_client = ElevenLabs(api_key=os.environ["ELEVENLABS_API_KEY"])
     cost_tracker = CostTracker.from_config(cfg)
 
     now = datetime.now()
@@ -162,7 +159,7 @@ def main():
     # EP1 — kör alltid
     used_titles = generate_episode(
         1, feeds_ep1, history, today_str, weekday,
-        cfg, openai_client, eleven_client, cost_tracker, weather,
+        cfg, openai_client, cost_tracker, weather,
     )
 
     # EP2 — mån/ons/fre
@@ -171,7 +168,7 @@ def main():
             logger.info("(FORCE_EPISODE2 aktiv — kör avsnitt 2 trots %s)", SWEDISH_DAYS[weekday])
         generate_episode(
             2, feeds_ep2, history, today_str, weekday,
-            cfg, openai_client, eleven_client, cost_tracker,
+            cfg, openai_client, cost_tracker,
             used_titles=used_titles,
         )
     else:
