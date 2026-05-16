@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Daily News Podcast v2
-Hämtar nyheter → deduplicerar mot historik → skriver manus → LLM judge → TTS → Telegram
+Daily News Podcast v3
+Avsnitt 1: Världsnyheter & Sverige  — varje dag        (~15 min)
+Avsnitt 2: AI & Teknik              — mån, ons, fre    (~12 min)
 """
 
 import os
@@ -9,27 +10,39 @@ import json
 import hashlib
 import feedparser
 import requests
+import azure.cognitiveservices.speech as speechsdk
 from openai import OpenAI
 from datetime import datetime, timedelta
 
-client          = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-TELEGRAM_TOKEN  = os.environ["TELEGRAM_BOT_TOKEN"]
-TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
+client              = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+TELEGRAM_TOKEN      = os.environ["TELEGRAM_BOT_TOKEN"]
+TELEGRAM_CHAT_ID    = os.environ["TELEGRAM_CHAT_ID"]
+AZURE_SPEECH_KEY    = os.environ["AZURE_SPEECH_KEY"]
+AZURE_SPEECH_REGION = os.environ["AZURE_SPEECH_REGION"]
 
-HISTORY_FILE  = "seen_urls.json"
-HISTORY_DAYS  = 7
-MAX_RETRIES   = 2
+AZURE_VOICE = "sv-SE-MattiasNeural"   # Byt till sv-SE-ErikNeural för att testa Erik
 
-CATEGORY_ORDER = ["Sverige", "Tech & AI", "Världsnyheter", "Politik"]
+HISTORY_FILE = "seen_urls.json"
+HISTORY_DAYS = 7
+MAX_RETRIES  = 2
 
-FEEDS = {
+SWEDISH_MONTHS = {
+    1: "januari",  2: "februari", 3: "mars",      4: "april",
+    5: "maj",      6: "juni",     7: "juli",       8: "augusti",
+    9: "september", 10: "oktober", 11: "november", 12: "december",
+}
+SWEDISH_DAYS = {
+    0: "måndag", 1: "tisdag", 2: "onsdag",
+    3: "torsdag", 4: "fredag", 5: "lördag", 6: "söndag",
+}
+NEXT_TECH_DAY = {0: "onsdag", 1: "onsdag", 2: "fredag", 3: "fredag", 4: "måndag", 5: "måndag", 6: "onsdag"}
+
+TECH_DAYS = {0, 2, 4}   # måndag=0, onsdag=2, fredag=4
+
+FEEDS_EP1 = {
     "Sverige": (
         "https://news.google.com/rss/search"
         "?q=Sverige+Swedish+news&hl=sv&gl=SE&ceid=SE:sv"
-    ),
-    "Tech & AI": (
-        "https://news.google.com/rss/search"
-        "?q=artificial+intelligence+tech&hl=en&gl=US&ceid=US:en"
     ),
     "Världsnyheter": (
         "https://news.google.com/rss/search"
@@ -41,20 +54,26 @@ FEEDS = {
     ),
 }
 
-ARTICLES_PER_FEED = 3
-
-SWEDISH_MONTHS = {
-    1: "januari",  2: "februari", 3: "mars",      4: "april",
-    5: "maj",      6: "juni",     7: "juli",       8: "augusti",
-    9: "september", 10: "oktober", 11: "november", 12: "december",
+FEEDS_EP2 = {
+    "Tech & AI": (
+        "https://news.google.com/rss/search"
+        "?q=artificial+intelligence+technology&hl=en&gl=US&ceid=US:en"
+    ),
 }
+
+EPISODE_LABELS = {
+    1: "Världsnyheter & Sverige",
+    2: "AI & Teknik",
+}
+
+MIN_WORDS = {1: 1800, 2: 1400}
 
 
 def swedish_date(dt: datetime) -> str:
-    return f"{dt.day} {SWEDISH_MONTHS[dt.month]} {dt.year}"
+    return f"{SWEDISH_DAYS[dt.weekday()]} {dt.day} {SWEDISH_MONTHS[dt.month]} {dt.year}"
 
 
-# ── Historik ──────────────────────────────────────────────────────────────────
+# ── Historik & deduplicering ──────────────────────────────────────────────────
 
 def load_history() -> dict:
     if os.path.exists(HISTORY_FILE):
@@ -68,40 +87,40 @@ def save_history(history: dict) -> None:
     pruned = {k: v for k, v in history.items() if v >= cutoff}
     with open(HISTORY_FILE, "w") as f:
         json.dump(pruned, f, indent=2)
-    print(f"  Historik sparad: {len(pruned)} poster")
+    print(f"  Historik: {len(pruned)} poster sparade")
 
 
 def article_key(title: str, url: str) -> str:
     return hashlib.md5((title + url).lower().encode()).hexdigest()
 
 
-# ── Steg 1: Hämta & filtrera nyheter ─────────────────────────────────────────
+# ── Hämta artiklar ────────────────────────────────────────────────────────────
 
-def fetch_news(history: dict) -> list[dict]:
+def fetch_articles(feeds: dict, history: dict, max_per_feed: int = 4) -> list[dict]:
     articles = []
     now_iso  = datetime.now().isoformat()
     skipped  = 0
 
-    for category in CATEGORY_ORDER:
-        feed  = feedparser.parse(FEEDS[category])
+    for category, url in feeds.items():
+        feed  = feedparser.parse(url)
         count = 0
         for entry in feed.entries:
-            if count >= ARTICLES_PER_FEED:
+            if count >= max_per_feed:
                 break
             title   = entry.title
-            url     = entry.get("link", "")
+            link    = entry.get("link", "")
             summary = (
                 entry.get("summary", "")[:500]
                 .replace("<b>", "").replace("</b>", "")
             )
-            key = article_key(title, url)
+            key = article_key(title, link)
             if key in history:
                 skipped += 1
                 continue
             articles.append({
                 "category": category,
                 "title":    title,
-                "url":      url,
+                "url":      link,
                 "summary":  summary,
             })
             history[key] = now_iso
@@ -111,76 +130,131 @@ def fetch_news(history: dict) -> list[dict]:
     return articles
 
 
-# ── Steg 2: Skriv manus ───────────────────────────────────────────────────────
+# ── Promptmallar ──────────────────────────────────────────────────────────────
 
-def write_script(articles: list[dict], today_str: str) -> str:
-    by_category: dict[str, list] = {cat: [] for cat in CATEGORY_ORDER}
-    for a in articles:
-        by_category[a["category"]].append(a)
+PROMPT_EP1 = """\
+Du är värd för en daglig nyhetspodd. Du är som en kunnig vän som förklarar \
+nyheter på ett sätt som faktiskt fastnar — engagerande och pedagogisk, \
+inte en torr uppläsare.
 
-    articles_text = ""
-    for cat in CATEGORY_ORDER:
-        items = by_category.get(cat, [])
-        if items:
-            articles_text += f"\n=== {cat} ===\n"
-            for a in items:
-                articles_text += f"Rubrik: {a['title']}\nIngress: {a['summary']}\n\n"
+Skriv avsnitt 1: Världsnyheter & Sverige för {today_str}.
+Manuset ska vara ca 15 minuter, vilket kräver MINST 1 800 ord.
+Välj ut 3–5 av de viktigaste nyheterna nedan.
 
-    n = min(len(articles), 10)
-
-    prompt = f"""Du är en erfaren nyhetsuppläsare i stil med Sveriges Radio Ekot. Tonen är saklig, välformulerad och professionell. Inga informella fraser eller vänskapliga tilltal.
-
-Skriv ett podcastmanus på SVENSKA för {today_str}. Manuset ska vara 5–7 minuter långt — det kräver minst 750 ord. Varje nyhet ska behandlas ordentligt med bakgrund och analys, inte bara en mening. Fyll på med mer kontext om du är under.
-
-Välj ut de {n} mest relevanta nyheterna och presentera dem i denna ordning: Sverige → Tech & AI → Världsnyheter → Politik.
-
-STRUKTUR FÖR VARJE NYHET (följ denna för alla):
-1. Vad har hänt — sakligt och tydligt (2–3 meningar)
-2. Bakgrund och kontext — vad lyssnaren behöver veta (1–2 meningar)
-3. Kort analys — vad innebär detta och vad bör man följa framöver (1–2 meningar)
+STRUKTUR FÖR VARJE NYHET (använd för alla):
+1. Aktivera minnet — koppla om möjligt till en händelse lyssnaren känner till sedan \
+tidigare. T.ex: "Om du minns det vi pratade om kring X — det här är nästa kapitel." \
+Gör det naturligt; hoppa över om ingen rimlig koppling finns.
+2. Vad hände — kortfattat och tydligt (2–3 meningar)
+3. Varför det spelar roll — för Sverige, för världen, för dig som lyssnare
+4. Kontext — "Det här är en del av ett större mönster där..." (1–2 meningar)
+5. Vad händer härnäst — vad ska lyssnaren hålla ögonen på
 
 OBLIGATORISK INTRO:
-"God morgon. Det är {today_str} och du lyssnar på din dagliga nyhetssammanfattning. I dag går vi igenom {n} nyheter."
+"Hej och välkommen till din dagliga nyhetssammanfattning. Det är {today_str}. \
+Idag går vi igenom [antal] nyheter — från Sverige och resten av världen."
 
-OBLIGATORISKT OUTRO:
-En mening om vad som är värt att följa den närmaste tiden, sedan:
-"Det var nyheterna för {today_str}. Ha en bra dag."
+OBLIGATORISK AVSLUTNING (30 sekunder, ca 70 ord):
+"Innan vi avslutar — de viktigaste sakerna från idag: \
+1. [kort punkt] 2. [kort punkt] 3. [kort punkt om fler]. \
+Kom ihåg dem när du läser nyheter under dagen. Vi hörs imorgon."
+
+TON OCH STIL:
+— Tala direkt till lyssnaren med "du"
+— Engagerande och pedagogisk, inte en uppläsare
+— Varmt men professionellt — kunnig vän, inte kompis
+— Förklara begrepp utan jargong
 
 KRAV:
-— Minst 800 ord, helst 850–950
-— Professionell ton genomgående
-— Varje nyhet har alla tre delar: fakta, kontext, analys
+— MINST 1 800 ord. Komplettera med mer kontext och fördjupning om du är under.
 — Skriv BARA manustexten — inga rubriker, noter eller parenteser
+— Svenska genomgående
 
-NYHETER ATT ANVÄNDA:
+NYHETER:
 {articles_text}"""
 
+PROMPT_EP2 = """\
+Du är värd för ett teknik- och AI-poddavsnitt. Fokuset är alltid: \
+vad innebär det här praktiskt för vanliga människor — inte ett pr-blad \
+för produktlanseringar.
+
+Skriv avsnitt 2: AI & Teknik för {today_str}.
+Manuset ska vara ca 12 minuter, vilket kräver MINST 1 400 ord.
+Välj ut 3–5 nyheter. Skippa produktlanseringar utan tydlig konsekvens — \
+fokusera på vad som faktiskt förändrar något.
+
+STRUKTUR FÖR VARJE NYHET:
+1. Aktivera minnet — koppla till något lyssnaren redan vet om AI eller tech. \
+T.ex: "Vi pratade förra gången om hur LLM:er funkar — det här är ett praktiskt \
+exempel på det." Gör det naturligt.
+2. Vad hände — kortfattat
+3. Vad det praktiskt innebär för vanliga människor — detta är kärnan, ge det utrymme
+4. Kontext i den större AI-utvecklingen
+5. Vad ska lyssnaren hålla ögonen på härnäst
+
+OBLIGATORISK INTRO:
+"Hej och välkommen till teknikavsnittet. Det är {today_str}. \
+Vi dyker ner i [antal] nyheter från AI- och teknikvärlden — \
+och framför allt vad de faktiskt innebär för dig."
+
+OBLIGATORISK AVSLUTNING (30 sekunder):
+"Sammanfattningsvis — de viktigaste sakerna från teknikvärlden idag: \
+1. [punkt] 2. [punkt] 3. [punkt om fler]. Vi hörs {next_tech_day}."
+
+TON:
+— Nyfiken och förklarande — techvän som är bra på att förklara
+— Alltid: vad betyder detta praktiskt? Inte bara vad som lanserades.
+— Direkt tilltal med "du"
+
+KRAV:
+— MINST 1 400 ord
+— Skriv BARA manustext — inga rubriker
+— Svenska genomgående
+
+NYHETER:
+{articles_text}"""
+
+
+# ── Skriv manus ───────────────────────────────────────────────────────────────
+
+def write_script(episode: int, articles: list[dict], today_str: str, weekday: int) -> str:
+    articles_text = "\n".join([
+        f"[{a['category']}] {a['title']}\n{a['summary']}\n"
+        for a in articles
+    ])
+    template = PROMPT_EP1 if episode == 1 else PROMPT_EP2
+    prompt   = template.format(
+        today_str=today_str,
+        articles_text=articles_text,
+        next_tech_day=NEXT_TECH_DAY.get(weekday, "nästa gång"),
+    )
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
-        max_tokens=2500,
-        temperature=0.5,
+        max_tokens=2800,
+        temperature=0.65,
     )
     script = response.choices[0].message.content
     print(f"  Manus: {len(script.split())} ord")
     return script
 
 
-# ── Steg 3: LLM judge ────────────────────────────────────────────────────────
+# ── LLM judge ─────────────────────────────────────────────────────────────────
 
-def judge_script(script: str) -> tuple[bool, str]:
-    words  = len(script.split())
-    prompt = f"""Du är en strikt redaktör som granskar ett nyhets-podcast-manus. Bedöm dessa punkter:
+def judge_script(episode: int, script: str) -> tuple[bool, str]:
+    words = len(script.split())
+    min_w = MIN_WORDS[episode]
+    prompt = f"""Granska detta nyhets-podcast-manus (avsnitt {episode}). Bedöm:
 
-1. Längd: minst 750 ord krävs. Faktiskt antal: {words} ord.
-2. Ton: saklig och professionell som SR Ekot — inga informella inslag.
-3. Struktur: varje nyhet har fakta + bakgrund/kontext + kort analys.
-4. Intro: börjar med korrekt datum och antal nyheter.
-5. Outro: avslutar med framtidsblick och korrekt datum.
+1. Längd: minst {min_w} ord krävs. Faktiskt: {words} ord.
+2. Struktur: varje nyhet har minnesaktivering (om möjligt), fakta, relevans, kontext och nästa steg.
+3. Ton: pedagogisk och engagerande, direkt tilltal med "du".
+4. Avslutning: 30-sekunders summering med numrerade punkter.
+5. Intro: presenterar datum och ämnesområde.
 
-Svara med EXAKT ett av dessa:
+Svara EXAKT med ett av:
 GODKÄNT
-AVVISAT: [kortfattad orsak, en rad]
+AVVISAT: [orsak på en rad]
 
 Manus:
 {script}"""
@@ -197,106 +271,121 @@ Manus:
     return approved, verdict
 
 
-# ── Steg 4: Text-till-tal ────────────────────────────────────────────────────
+# ── TTS med chunkning ─────────────────────────────────────────────────────────
 
-def split_for_tts(text: str, max_chars: int = 4000) -> list[str]:
-    """Delar upp text vid meningsgränser för att hålla sig under TTS-gränsen."""
-    if len(text) <= max_chars:
-        return [text]
-    chunks, current = [], ""
-    for sentence in text.replace("! ", "!\n").replace("? ", "?\n").replace(". ", ".\n").split("\n"):
-        sentence = sentence.strip()
-        if not sentence:
-            continue
-        if len(current) + len(sentence) + 1 <= max_chars:
-            current += sentence + " "
-        else:
-            if current:
-                chunks.append(current.strip())
-            current = sentence + " "
-    if current:
-        chunks.append(current.strip())
-    return chunks
+def text_to_speech(script: str, episode: int) -> str:
+    """Omvandlar manus till MP3 via Azure Cognitive Services Speech (Mattias Neural)."""
+    path = f"/tmp/podcast_ep{episode}.mp3"
 
+    speech_config = speechsdk.SpeechConfig(
+        subscription=AZURE_SPEECH_KEY,
+        region=AZURE_SPEECH_REGION,
+    )
+    speech_config.speech_synthesis_voice_name = AZURE_VOICE
+    speech_config.set_speech_synthesis_output_format(
+        speechsdk.SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3
+    )
 
-def text_to_speech(script: str) -> str:
-    chunks = split_for_tts(script)
-    print(f"  TTS: {len(chunks)} del(ar), {len(script)} tecken totalt")
-    path = "/tmp/podcast_today.mp3"
-    with open(path, "wb") as f:
-        for i, chunk in enumerate(chunks, 1):
-            print(f"  Genererar del {i}/{len(chunks)}...")
-            response = client.audio.speech.create(
-                model="tts-1",
-                voice="echo",
-                input=chunk,
-                speed=1.0,
-            )
-            f.write(response.content)
-    print(f"  Ljud klart: {os.path.getsize(path) // 1024} KB")
-    return path
+    audio_config = speechsdk.audio.AudioOutputConfig(filename=path)
+    synthesizer  = speechsdk.SpeechSynthesizer(
+        speech_config=speech_config,
+        audio_config=audio_config,
+    )
+
+    print(f"  Azure TTS: {len(script)} tecken med röst {AZURE_VOICE}...")
+    result = synthesizer.speak_text_async(script).get()
+
+    if result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
+        print(f"  Ljud: {os.path.getsize(path) // 1024} KB")
+        return path
+    elif result.reason == speechsdk.ResultReason.Canceled:
+        details = result.cancellation_details
+        raise RuntimeError(f"Azure TTS avbruten: {details.reason} – {details.error_details}")
+    else:
+        raise RuntimeError(f"Azure TTS misslyckades: {result.reason}")
 
 
-# ── Steg 5: Telegram ─────────────────────────────────────────────────────────
+# ── Telegram ──────────────────────────────────────────────────────────────────
 
-def send_to_telegram(path: str, today_str: str, n: int) -> None:
-    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendAudio"
+def send_to_telegram(path: str, episode: int, today_str: str, n: int) -> None:
+    label = EPISODE_LABELS[episode]
+    url   = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendAudio"
     with open(path, "rb") as f:
         resp = requests.post(
             url,
             data={
                 "chat_id":   TELEGRAM_CHAT_ID,
-                "caption":   f"🎙 Nyheter {today_str} · {n} nyheter",
-                "performer": "Daglig nyhetssammanfattning",
-                "title":     f"Nyheter {today_str}",
+                "caption":   f"🎙 Avsnitt {episode}: {label}\n{today_str} · {n} nyheter",
+                "performer": label,
+                "title":     f"Avsnitt {episode} – {today_str}",
             },
-            files={"audio": ("podcast.mp3", f, "audio/mpeg")},
-            timeout=60,
+            files={"audio": (f"avsnitt{episode}.mp3", f, "audio/mpeg")},
+            timeout=120,
         )
     if not resp.ok:
         raise RuntimeError(f"Telegram-fel {resp.status_code}: {resp.text}")
-    print("  Skickat!")
+    print(f"  Avsnitt {episode} skickat till Telegram!")
+
+
+# ── Generera ett avsnitt ──────────────────────────────────────────────────────
+
+def generate_episode(
+    episode: int,
+    feeds:   dict,
+    history: dict,
+    today_str: str,
+    weekday:   int,
+) -> None:
+    label = EPISODE_LABELS[episode]
+    print(f"\n── Avsnitt {episode}: {label} ──")
+
+    articles = fetch_articles(feeds, history)
+    if not articles:
+        print("  Inga nya artiklar. Hoppar över.")
+        return
+
+    print("  Skriver manus...")
+    script = write_script(episode, articles, today_str, weekday)
+
+    print("  Granskar manus...")
+    approved, verdict = False, ""
+    for attempt in range(1, MAX_RETRIES + 1):
+        approved, verdict = judge_script(episode, script)
+        if approved:
+            break
+        if attempt < MAX_RETRIES:
+            print(f"  Skriver om (försök {attempt + 1}/{MAX_RETRIES})...")
+            script = write_script(episode, articles, today_str, weekday)
+    if not approved:
+        print(f"  Skickar ändå — {verdict}")
+
+    audio = text_to_speech(script, episode)
+    n     = min(len(articles), 5)
+    send_to_telegram(audio, episode, today_str, n)
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    today_str = swedish_date(datetime.now())
-    print(f"\n📰 Nyhetspodd v2 – {today_str}\n")
+    now       = datetime.now()
+    weekday   = now.weekday()
+    today_str = swedish_date(now)
+    print(f"\n📰 Nyhetspodd v3 – {today_str}\n")
 
-    print("1/5 Laddar historik & hämtar nyheter...")
-    history  = load_history()
-    articles = fetch_news(history)
-    if not articles:
-        print("Inga nya artiklar. Avslutar.")
-        return
+    history = load_history()
 
-    print("2/5 Skriver manus...")
-    script = write_script(articles, today_str)
+    # Avsnitt 1: varje dag
+    generate_episode(1, FEEDS_EP1, history, today_str, weekday)
 
-    print("3/5 LLM judge granskar...")
-    approved, verdict = False, ""
-    for attempt in range(1, MAX_RETRIES + 1):
-        approved, verdict = judge_script(script)
-        if approved:
-            break
-        if attempt < MAX_RETRIES:
-            print(f"  Skriver om manus (försök {attempt + 1}/{MAX_RETRIES})...")
-            script = write_script(articles, today_str)
-    if not approved:
-        print(f"  Skickar ändå — {verdict}")
+    # Avsnitt 2: måndag, onsdag, fredag
+    if weekday in TECH_DAYS:
+        generate_episode(2, FEEDS_EP2, history, today_str, weekday)
+    else:
+        print(f"\nAvsnitt 2 hoppas över idag ({SWEDISH_DAYS[weekday]}) — sänds mån/ons/fre.")
 
-    print("4/5 Genererar ljud...")
-    audio_path = text_to_speech(script)
-
-    print("5/5 Skickar till Telegram...")
-    n = min(len(articles), 10)
-    send_to_telegram(audio_path, today_str, n)
-
-    print("Sparar historik...")
+    print("\nSparar historik...")
     save_history(history)
-
-    print(f"\n Klart! {n} nyheter för {today_str}.\n")
+    print(f"\n✅ Klart – {today_str}\n")
 
 
 if __name__ == "__main__":
