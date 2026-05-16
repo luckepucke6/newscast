@@ -138,25 +138,31 @@ nyheter på ett sätt som faktiskt fastnar — engagerande och pedagogisk, \
 inte en torr uppläsare.
 
 Skriv avsnitt 1: Världsnyheter & Sverige för {today_str}.
-Manuset ska vara ca 15 minuter, vilket kräver MINST 1 800 ord.
-Välj ut 3–5 av de viktigaste nyheterna nedan.
+Välj ut 4–5 av de viktigaste nyheterna nedan.
 
-STRUKTUR FÖR VARJE NYHET (använd för alla):
-1. Aktivera minnet — koppla om möjligt till en händelse lyssnaren känner till sedan \
-tidigare. T.ex: "Om du minns det vi pratade om kring X — det här är nästa kapitel." \
-Gör det naturligt; hoppa över om ingen rimlig koppling finns.
-2. Vad hände — kortfattat och tydligt (2–3 meningar)
-3. Varför det spelar roll — för Sverige, för världen, för dig som lyssnare
-4. Kontext — "Det här är en del av ett större mönster där..." (1–2 meningar)
-5. Vad händer härnäst — vad ska lyssnaren hålla ögonen på
+VIKTIGT OM LÄNGD: Manuset ska ta ca 15 minuter att läsa upp högt i lugn takt. \
+Det motsvarar 1 800–2 000 ord. Varje nyhet ska behandlas grundligt med \
+bakgrund, analys och kontext — inte bara en kort notis. \
+Räkna dina ord internt. Om du är under 1 800 — fortsätt och bygg ut.
+
+STRUKTUR FÖR VARJE NYHET — ge varje del ordentligt utrymme:
+1. Aktivera minnet (2–3 meningar) — koppla om möjligt till en händelse lyssnaren \
+känner till. T.ex: "Om du minns det vi pratade om kring X — det här är nästa kapitel." \
+Hoppa naturligt över om ingen rimlig koppling finns.
+2. Vad hände (3–4 meningar) — kortfattat och tydligt
+3. Varför det spelar roll (4–5 meningar) — för Sverige, för världen, för lyssnaren. \
+Ge konkreta exempel på hur det påverkar vanliga människor.
+4. Kontext (3–4 meningar) — "Det här är en del av ett större mönster där..." \
+Förklara bakgrunden som krävs för att förstå nyheten fullt ut.
+5. Vad händer härnäst (2–3 meningar) — vad ska lyssnaren hålla ögonen på
 
 OBLIGATORISK INTRO:
 "Hej och välkommen till din dagliga nyhetssammanfattning. Det är {today_str}. \
 Idag går vi igenom [antal] nyheter — från Sverige och resten av världen."
 
-OBLIGATORISK AVSLUTNING (30 sekunder, ca 70 ord):
+OBLIGATORISK AVSLUTNING (ca 80 ord):
 "Innan vi avslutar — de viktigaste sakerna från idag: \
-1. [kort punkt] 2. [kort punkt] 3. [kort punkt om fler]. \
+1. [konkret punkt] 2. [konkret punkt] 3. [konkret punkt om fler]. \
 Kom ihåg dem när du läser nyheter under dagen. Vi hörs imorgon."
 
 TON OCH STIL:
@@ -165,8 +171,8 @@ TON OCH STIL:
 — Varmt men professionellt — kunnig vän, inte kompis
 — Förklara begrepp utan jargong
 
-KRAV:
-— MINST 1 800 ord. Komplettera med mer kontext och fördjupning om du är under.
+ABSOLUTA KRAV:
+— Minst 1 800 ord — bygg ut varje nyhet om du är under
 — Skriv BARA manustexten — inga rubriker, noter eller parenteser
 — Svenska genomgående
 
@@ -179,25 +185,27 @@ vad innebär det här praktiskt för vanliga människor — inte ett pr-blad \
 för produktlanseringar.
 
 Skriv avsnitt 2: AI & Teknik för {today_str}.
-Manuset ska vara ca 12 minuter, vilket kräver MINST 1 400 ord.
 Välj ut 3–5 nyheter. Skippa produktlanseringar utan tydlig konsekvens — \
 fokusera på vad som faktiskt förändrar något.
 
-STRUKTUR FÖR VARJE NYHET:
-1. Aktivera minnet — koppla till något lyssnaren redan vet om AI eller tech. \
-T.ex: "Vi pratade förra gången om hur LLM:er funkar — det här är ett praktiskt \
-exempel på det." Gör det naturligt.
-2. Vad hände — kortfattat
-3. Vad det praktiskt innebär för vanliga människor — detta är kärnan, ge det utrymme
-4. Kontext i den större AI-utvecklingen
-5. Vad ska lyssnaren hålla ögonen på härnäst
+VIKTIGT OM LÄNGD: Avsnittet ska ta ca 12 minuter att läsa upp i lugn takt, \
+vilket är 1 400–1 600 ord. Varje nyhet ska ha ordentlig fördjupning. \
+Räkna dina ord internt — bygg ut med mer praktiska exempel om du är under 1 400.
+
+STRUKTUR FÖR VARJE NYHET — ge varje del utrymme:
+1. Aktivera minnet (2–3 meningar) — koppla till något lyssnaren redan vet om AI eller tech.
+2. Vad hände (3–4 meningar) — kortfattat
+3. Vad det praktiskt innebär (5–6 meningar) — detta är kärnan. \
+Ge konkreta exempel: hur påverkas en vanlig person, ett litet företag, en lärare?
+4. Kontext i den större AI-utvecklingen (3–4 meningar)
+5. Vad ska lyssnaren hålla ögonen på härnäst (2–3 meningar)
 
 OBLIGATORISK INTRO:
 "Hej och välkommen till teknikavsnittet. Det är {today_str}. \
 Vi dyker ner i [antal] nyheter från AI- och teknikvärlden — \
 och framför allt vad de faktiskt innebär för dig."
 
-OBLIGATORISK AVSLUTNING (30 sekunder):
+OBLIGATORISK AVSLUTNING (ca 80 ord):
 "Sammanfattningsvis — de viktigaste sakerna från teknikvärlden idag: \
 1. [punkt] 2. [punkt] 3. [punkt om fler]. Vi hörs {next_tech_day}."
 
@@ -206,8 +214,8 @@ TON:
 — Alltid: vad betyder detta praktiskt? Inte bara vad som lanserades.
 — Direkt tilltal med "du"
 
-KRAV:
-— MINST 1 400 ord
+ABSOLUTA KRAV:
+— Minst 1 400 ord — bygg ut med fler praktiska exempel om du är under
 — Skriv BARA manustext — inga rubriker
 — Svenska genomgående
 
@@ -231,7 +239,7 @@ def write_script(episode: int, articles: list[dict], today_str: str, weekday: in
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
-        max_tokens=2800,
+        max_tokens=3500,
         temperature=0.65,
     )
     script = response.choices[0].message.content
@@ -329,6 +337,35 @@ def send_to_telegram(path: str, episode: int, today_str: str, n: int) -> None:
 
 # ── Generera ett avsnitt ──────────────────────────────────────────────────────
 
+def extend_script(script: str, episode: int, min_words: int) -> str:
+    """Förlänger ett för kort manus utan att skriva om det från grunden."""
+    current_words = len(script.split())
+    extra_needed  = min_words - current_words + 100   # lite marginal
+    prompt = f"""Nedanför finns ett nyhets-podcast-manus på {current_words} ord. \
+Det behöver vara minst {min_words} ord — det saknas ungefär {extra_needed} ord.
+
+Bygg ut manuset genom att:
+— Lägga till mer bakgrund och kontext för varje nyhet
+— Ge fler konkreta exempel på hur nyheterna påverkar vanliga människor
+— Fördjupa analysen där det finns utrymme
+
+Behåll exakt samma struktur, intro och outro. \
+Returnera det kompletta, utbyggda manuset — inget annat.
+
+MANUS ATT BYGGA UT:
+{script}"""
+
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=4000,
+        temperature=0.5,
+    )
+    extended = response.choices[0].message.content
+    print(f"  Utbyggt manus: {len(extended.split())} ord")
+    return extended
+
+
 def generate_episode(
     episode: int,
     feeds:   dict,
@@ -336,7 +373,8 @@ def generate_episode(
     today_str: str,
     weekday:   int,
 ) -> None:
-    label = EPISODE_LABELS[episode]
+    label   = EPISODE_LABELS[episode]
+    min_w   = MIN_WORDS[episode]
     print(f"\n── Avsnitt {episode}: {label} ──")
 
     articles = fetch_articles(feeds, history)
@@ -347,15 +385,15 @@ def generate_episode(
     print("  Skriver manus...")
     script = write_script(episode, articles, today_str, weekday)
 
-    print("  Granskar manus...")
-    approved, verdict = False, ""
+    # Om för kort — försök förlänga (max 2 ggr) innan judge
     for attempt in range(1, MAX_RETRIES + 1):
-        approved, verdict = judge_script(episode, script)
-        if approved:
+        if len(script.split()) >= min_w:
             break
-        if attempt < MAX_RETRIES:
-            print(f"  Skriver om (försök {attempt + 1}/{MAX_RETRIES})...")
-            script = write_script(episode, articles, today_str, weekday)
+        print(f"  För kort ({len(script.split())} ord) — bygger ut (försök {attempt}/{MAX_RETRIES})...")
+        script = extend_script(script, episode, min_w)
+
+    print("  Granskar manus...")
+    approved, verdict = judge_script(episode, script)
     if not approved:
         print(f"  Skickar ändå — {verdict}")
 
