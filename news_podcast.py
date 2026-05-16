@@ -30,7 +30,9 @@ HISTORY_FILE     = "seen_urls.json"
 MEMORY_FILE      = "topic_memory.json"   # Ämnesminne: sammanfattningar per dag
 HISTORY_DAYS     = 7
 MAX_RETRIES      = 2
-RELEVANCE_CUTOFF = 6                     # Filtrera bort artiklar under detta betyg
+RELEVANCE_CUTOFF  = 7    # Hårdare filter för EP1 — bara de bästa artiklarna
+EP1_MAX_ARTICLES  = 8    # Max antal artiklar att ta med i EP1 efter filter
+EP1_ARTICLES_FEED = 6    # Fler kandidater per källa → bättre urval
 
 SWEDISH_MONTHS = {
     1: "januari",  2: "februari", 3: "mars",      4: "april",
@@ -176,22 +178,18 @@ def fetch_weather() -> str:
 
 # ── Relevansfilter ────────────────────────────────────────────────────────────
 
-def filter_by_relevance(articles: list[dict], episode: int) -> list[dict]:
-    """Låter GPT betygsätta varje artikel 1–10 och filtrerar bort dem under RELEVANCE_CUTOFF."""
+def filter_by_relevance(articles: list[dict]) -> list[dict]:
+    """GPT betygsätter EP1-artiklar 1–10, filtrerar bort under cutoff och begränsar till max antal."""
     if not articles:
         return articles
 
-    focus = (
-        "världsnyheter, svensk politik och samhälle"
-        if episode == 1
-        else "AI, teknik och dess praktiska konsekvenser för vanliga människor"
-    )
     lines = "\n".join([
         f"{i+1}. [{a['category']}] {a['title']}"
         for i, a in enumerate(articles)
     ])
-    prompt = f"""Betygsätt följande nyhetsrubriker för en podd om {focus}.
-Ge varje rubrik ett betyg 1–10 där 10 = mycket relevant och viktig, 1 = irrelevant eller ointressant.
+    prompt = f"""Betygsätt följande nyhetsrubriker för en daglig nyhetspodd om världsnyheter, svensk politik och samhälle.
+Ge varje rubrik ett betyg 1–10 där 10 = mycket relevant och viktig nyhet, 1 = irrelevant eller ointressant.
+Var hård — bara genuint viktiga nyheter ska få 7 eller högre.
 
 Svara ENDAST med ett JSON-objekt i detta format (inga förklaringar):
 {{"scores": [8, 3, 7, ...]}}
@@ -208,15 +206,17 @@ Rubriker:
         )
         raw    = response.choices[0].message.content.strip()
         scores = json.loads(raw)["scores"]
-        filtered = [
-            a for a, s in zip(articles, scores) if s >= RELEVANCE_CUTOFF
-        ]
+
+        # Sortera efter betyg, filtrera under cutoff, begränsa till max
+        scored   = sorted(zip(scores, articles), key=lambda x: x[0], reverse=True)
+        filtered = [a for s, a in scored if s >= RELEVANCE_CUTOFF][:EP1_MAX_ARTICLES]
+
         removed = len(articles) - len(filtered)
-        print(f"  Relevansfilter: {len(filtered)} kvar ({removed} filtrerade, cutoff={RELEVANCE_CUTOFF})")
-        return filtered if filtered else articles   # fallback om allt filtreras bort
+        print(f"  Relevansfilter: {len(filtered)} kvar av {len(articles)} (cutoff={RELEVANCE_CUTOFF}, max={EP1_MAX_ARTICLES}, borttagna={removed})")
+        return filtered if filtered else articles[:EP1_MAX_ARTICLES]
     except Exception as e:
-        print(f"  Relevansfilter misslyckades ({e}) — kör med alla artiklar")
-        return articles
+        print(f"  Relevansfilter misslyckades ({e}) — kör med de första {EP1_MAX_ARTICLES}")
+        return articles[:EP1_MAX_ARTICLES]
 
 
 # ── Ämnesminne ────────────────────────────────────────────────────────────────
@@ -325,28 +325,21 @@ NYHETER:
 PROMPT_EP2 = """\
 Du är värd för ett bildande tech- och AI-poddavsnitt. Målet är att lyssnaren \
 efter varje avsnitt ska förstå både hur tekniken fungerar och hur den påverkar \
-samhälle och vardag — inte bara vad som hänt.
+samhälle och vardag.
 
 Skriv avsnitt 2: AI & Teknik för {today_str}.
 Välj ut 4–6 nyheter. Skippa rena produktlanseringar utan konsekvens. \
-Sortera efter vad du bedömer ger bäst bildningsvärde och nyhetsvärde.
+Sortera efter bildningsvärde och nyhetsvärde — börja med det mest signifikanta.
 
-STRUKTUR FÖR VARJE NYHET — alla fyra delar är obligatoriska:
+PERSPEKTIV ATT TÄCKA PER NYHET (väv in naturligt, inte som en lista):
+— Vad hände konkret
+— Hur tekniken bakom fungerar, förklarat enkelt
+— Vad det förändrar i samhället — jobb, demokrati, ekonomi, vardag
+— Ett konkret vardagsscenario: "Tänk dig att du är lärare / småföretagare / \
+förälder — då innebär detta att..."
 
-1. Vad hände (2–3 meningar) — konkret och tydligt
-
-2. Hur fungerar det? (2–3 meningar) — förklara tekniken bakom på ett enkelt sätt. \
-Tänk: hur skulle du förklara det för en smart 16-åring? \
-Undvik jargong — eller förklara den direkt om du använder den.
-
-3. Samhällspåverkan (3–4 meningar) — vad förändrar detta i stort? \
-Tänk brett: påverkar det jobb och arbetsmarknad? Demokrati och maktbalans? \
-Ekonomi och företag? Miljö? Enskilda människors vardag?
-
-4. Vardagsexempel (2–3 meningar) — ge ett konkret scenario från verkliga livet. \
-T.ex: "Tänk dig att du är lärare och dina elever börjar använda detta — \
-då händer följande..." eller "Om du jobbar inom [bransch] innebär det här att..." \
-Gör det specifikt och igenkännbart.
+Inte alla perspektiv passar varje nyhet — använd det som är relevant. \
+Det viktigaste är att det låter naturligt och pedagogiskt, inte som ett formulär.
 
 OBLIGATORISK INTRO:
 "Hej och välkommen till teknikavsnittet. Det är {today_str}. \
@@ -355,18 +348,17 @@ vad de faktiskt innebär för dig och samhället runt om dig."
 
 OBLIGATORISK AVSLUTNING (ca 70 ord):
 "Det var teknikavsnittet för idag. Tre saker att ta med sig: \
-1. [punkt om vad som hänt] 2. [punkt om samhällspåverkan] \
-3. [punkt om vad du kan tänka på eller göra]. Vi hörs {next_tech_day}."
+1. [vad som hänt] 2. [samhällspåverkan] \
+3. [något att tänka på eller följa]. Vi hörs {next_tech_day}."
 
 TON OCH STIL:
-— Pedagogisk och nyfiken — som en kunnig vän som genuint tycker det är kul att förklara
+— Pedagogisk och nyfiken — kunnig vän som tycker det är kul att förklara
 — Direkt tilltal med "du"
-— Aldrig nedlåtande — förklara utan att förenkla för mycket
 — Koppla alltid det abstrakta till det konkreta
+— Låt perspektiven flöda naturligt — undvik att det låter som punktlistor
 
 ABSOLUTA KRAV:
 — Minst 1 400 ord
-— Alla fyra delar per nyhet
 — Skriv BARA manustext — inga rubriker eller noter
 — Svenska genomgående
 
@@ -548,24 +540,36 @@ MANUS ATT BYGGA UT:
 
 
 def generate_episode(
-    episode:   int,
-    feeds:     dict,
-    history:   dict,
-    today_str: str,
-    weekday:   int,
-    weather:   str = "",
-) -> None:
+    episode:    int,
+    feeds:      dict,
+    history:    dict,
+    today_str:  str,
+    weekday:    int,
+    weather:    str = "",
+    used_titles: set | None = None,
+) -> set:
+    """Returnerar set med titlar som användes, så EP2 kan undvika samma nyheter."""
     label = EPISODE_LABELS[episode]
     min_w = MIN_WORDS[episode]
     print(f"\n── Avsnitt {episode}: {label} ──")
 
-    articles = fetch_articles(feeds, history)
+    max_per_feed = EP1_ARTICLES_FEED if episode == 1 else 4
+    articles = fetch_articles(feeds, history, max_per_feed=max_per_feed)
+
+    # Filtrera bort artiklar som EP1 redan använt (koordinering)
+    if used_titles:
+        before = len(articles)
+        articles = [a for a in articles if a["title"] not in used_titles]
+        print(f"  Koordinering: {before - len(articles)} artiklar överlappade med avsnitt 1")
+
     if not articles:
         print("  Inga nya artiklar. Hoppar över.")
-        return
+        return used_titles or set()
 
-    print("  Filtrerar på relevans...")
-    articles = filter_by_relevance(articles, episode)
+    # Relevansfilter bara för EP1
+    if episode == 1:
+        print("  Filtrerar på relevans...")
+        articles = filter_by_relevance(articles)
 
     print("  Skriver manus...")
     script = write_script(episode, articles, today_str, weekday, weather)
@@ -582,8 +586,10 @@ def generate_episode(
         print(f"  Skickar ändå — {verdict}")
 
     audio = text_to_speech(script, episode)
-    n     = min(len(articles), 8)
+    n     = len(articles)
     send_to_telegram(audio, episode, today_str, n)
+
+    return {a["title"] for a in articles}
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -599,12 +605,14 @@ def main():
     history = load_history()
     weather = fetch_weather()
 
-    generate_episode(1, FEEDS_EP1, history, today_str, weekday, weather)
+    # EP1 — kör alltid, returnera titlar som använts
+    used_titles = generate_episode(1, FEEDS_EP1, history, today_str, weekday, weather)
 
+    # EP2 — mån/ons/fre, skickar med used_titles för koordinering
     if weekday in TECH_DAYS or force_ep2:
         if force_ep2 and weekday not in TECH_DAYS:
             print(f"\n(FORCE_EPISODE2 aktiv — kör avsnitt 2 trots {SWEDISH_DAYS[weekday]})")
-        generate_episode(2, FEEDS_EP2, history, today_str, weekday)
+        generate_episode(2, FEEDS_EP2, history, today_str, weekday, used_titles=used_titles)
     else:
         print(f"\nAvsnitt 2 hoppas över idag ({SWEDISH_DAYS[weekday]}) — sänds mån/ons/fre.")
 
