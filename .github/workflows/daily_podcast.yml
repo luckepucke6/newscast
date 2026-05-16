@@ -1,0 +1,31 @@
+name: Daily News Podcast
+
+on:
+  schedule:
+    # 04:00 UTC = 06:00 Stockholm sommartid (CEST = UTC+2)
+    # Justera till 05:00 UTC på vintern (CET = UTC+1)
+    - cron: '0 4 * * *'
+  workflow_dispatch:   # Gör att du kan köra manuellt från GitHub UI (för test)
+
+jobs:
+  generate-podcast:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hämta kod
+        uses: actions/checkout@v4
+
+      - name: Sätt upp Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installera beroenden
+        run: pip install -r requirements.txt
+
+      - name: Generera och skicka podcast
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python news_podcast.py
