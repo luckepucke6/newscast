@@ -130,7 +130,7 @@ def write_script(articles: list[dict], today_str: str) -> str:
 
     prompt = f"""Du är en erfaren nyhetsuppläsare i stil med Sveriges Radio Ekot. Tonen är saklig, välformulerad och professionell. Inga informella fraser eller vänskapliga tilltal.
 
-Skriv ett podcastmanus på SVENSKA för {today_str}. Manuset ska vara 5–7 minuter långt — det kräver minst 800 ord. Kontrollera ordantalet internt och fyll på om du är under.
+Skriv ett podcastmanus på SVENSKA för {today_str}. Manuset ska vara 5–7 minuter långt — det kräver minst 750 ord. Varje nyhet ska behandlas ordentligt med bakgrund och analys, inte bara en mening. Fyll på med mer kontext om du är under.
 
 Välj ut de {n} mest relevanta nyheterna och presentera dem i denna ordning: Sverige → Tech & AI → Världsnyheter → Politik.
 
@@ -158,7 +158,7 @@ NYHETER ATT ANVÄNDA:
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
-        max_tokens=2000,
+        max_tokens=2500,
         temperature=0.5,
     )
     script = response.choices[0].message.content
@@ -172,7 +172,7 @@ def judge_script(script: str) -> tuple[bool, str]:
     words  = len(script.split())
     prompt = f"""Du är en strikt redaktör som granskar ett nyhets-podcast-manus. Bedöm dessa punkter:
 
-1. Längd: minst 800 ord krävs. Faktiskt antal: {words} ord.
+1. Längd: minst 750 ord krävs. Faktiskt antal: {words} ord.
 2. Ton: saklig och professionell som SR Ekot — inga informella inslag.
 3. Struktur: varje nyhet har fakta + bakgrund/kontext + kort analys.
 4. Intro: börjar med korrekt datum och antal nyheter.
@@ -199,17 +199,41 @@ Manus:
 
 # ── Steg 4: Text-till-tal ────────────────────────────────────────────────────
 
+def split_for_tts(text: str, max_chars: int = 4000) -> list[str]:
+    """Delar upp text vid meningsgränser för att hålla sig under TTS-gränsen."""
+    if len(text) <= max_chars:
+        return [text]
+    chunks, current = [], ""
+    for sentence in text.replace("! ", "!\n").replace("? ", "?\n").replace(". ", ".\n").split("\n"):
+        sentence = sentence.strip()
+        if not sentence:
+            continue
+        if len(current) + len(sentence) + 1 <= max_chars:
+            current += sentence + " "
+        else:
+            if current:
+                chunks.append(current.strip())
+            current = sentence + " "
+    if current:
+        chunks.append(current.strip())
+    return chunks
+
+
 def text_to_speech(script: str) -> str:
-    response = client.audio.speech.create(
-        model="tts-1",
-        voice="echo",
-        input=script,
-        speed=1.0,
-    )
+    chunks = split_for_tts(script)
+    print(f"  TTS: {len(chunks)} del(ar), {len(script)} tecken totalt")
     path = "/tmp/podcast_today.mp3"
     with open(path, "wb") as f:
-        f.write(response.content)
-    print(f"  Ljud: {os.path.getsize(path) // 1024} KB")
+        for i, chunk in enumerate(chunks, 1):
+            print(f"  Genererar del {i}/{len(chunks)}...")
+            response = client.audio.speech.create(
+                model="tts-1",
+                voice="echo",
+                input=chunk,
+                speed=1.0,
+            )
+            f.write(response.content)
+    print(f"  Ljud klart: {os.path.getsize(path) // 1024} KB")
     return path
 
 
