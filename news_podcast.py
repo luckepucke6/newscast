@@ -84,8 +84,21 @@ EPISODE_LABELS = {
 MIN_WORDS = {1: 1300, 2: 1100}   # EP1: ~11 min, EP2: ~9 min
 
 
+SWEDISH_NUMBERS = {
+    1: "första", 2: "andra", 3: "tredje", 4: "fjärde", 5: "femte",
+    6: "sjätte", 7: "sjunde", 8: "åttonde", 9: "nionde", 10: "tionde",
+    11: "elfte", 12: "tolfte", 13: "trettonde", 14: "fjortonde", 15: "femtonde",
+    16: "sextonde", 17: "sjuttonde", 18: "artonde", 19: "nittonde", 20: "tjugonde",
+    21: "tjugoförsta", 22: "tjugoandra", 23: "tjugotredje", 24: "tjugofjärde",
+    25: "tjugofemte", 26: "tjugosjätte", 27: "tjugosjunde", 28: "tjugoåttonde",
+    29: "tjugonionde", 30: "trettionde", 31: "trettioförsta",
+}
+
 def swedish_date(dt: datetime) -> str:
-    return f"{SWEDISH_DAYS[dt.weekday()]} {dt.day} {SWEDISH_MONTHS[dt.month]} {dt.year}"
+    day   = SWEDISH_NUMBERS[dt.day]
+    month = SWEDISH_MONTHS[dt.month]
+    year  = NUMBER_REPLACEMENTS.get(str(dt.year), str(dt.year))
+    return f"{SWEDISH_DAYS[dt.weekday()]} den {day} {month} {year}"
 
 
 # ── Historik & deduplicering ──────────────────────────────────────────────────
