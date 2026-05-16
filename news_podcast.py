@@ -20,7 +20,7 @@ TELEGRAM_CHAT_ID    = os.environ["TELEGRAM_CHAT_ID"]
 AZURE_SPEECH_KEY    = os.environ["AZURE_SPEECH_KEY"]
 AZURE_SPEECH_REGION = os.environ["AZURE_SPEECH_REGION"]
 
-AZURE_VOICE_EP1 = "sv-SE-MattiasNeural"   # Avsnitt 1: Världsnyheter & Sverige
+AZURE_VOICE_EP1 = "sv-SE-HilleviNeural"   # Avsnitt 1: Världsnyheter & Sverige
 AZURE_VOICE_EP2 = "sv-SE-MattiasNeural"   # Avsnitt 2 — byt när vi hittat fungerande alternativröst     # Avsnitt 2: AI & Teknik
 
 HISTORY_FILE = "seen_urls.json"
@@ -287,11 +287,32 @@ def text_to_speech(script: str, episode: int) -> str:
     voice = AZURE_VOICE_EP1 if episode == 1 else AZURE_VOICE_EP2
     path  = f"/tmp/podcast_ep{episode}.mp3"
 
+    # Escapa XML-tecken i manuset
+    safe_script = (
+        script
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+    )
+
+    # SSML låser språket till sv-SE så att Azure inte byter till danska
+    # när det stöter på engelska ord eller namn
+    ssml = f"""<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis"
+               xmlns:mstts="http://www.w3.org/2001/mstts" xml:lang="sv-SE">
+  <voice name="{voice}">
+    <mstts:express-as style="newscast">
+      <lang xml:lang="sv-SE">
+        {safe_script}
+      </lang>
+    </mstts:express-as>
+  </voice>
+</speak>"""
+
     speech_config = speechsdk.SpeechConfig(
         subscription=AZURE_SPEECH_KEY,
         region=AZURE_SPEECH_REGION,
     )
-    speech_config.speech_synthesis_voice_name = voice
     speech_config.set_speech_synthesis_output_format(
         speechsdk.SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3
     )
@@ -302,8 +323,8 @@ def text_to_speech(script: str, episode: int) -> str:
         audio_config=audio_config,
     )
 
-    print(f"  Azure TTS: {len(script)} tecken med röst {voice}...")
-    result = synthesizer.speak_text_async(script).get()
+    print(f"  Azure TTS: {len(script)} tecken med röst {voice} (sv-SE låst)...")
+    result = synthesizer.speak_ssml_async(ssml).get()
 
     if result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
         print(f"  Ljud: {os.path.getsize(path) // 1024} KB")
