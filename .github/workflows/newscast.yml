@@ -1,49 +1,51 @@
 name: Daily Newscast
 
 on:
-  schedule:
-    - cron: "0 5 * * *"   # 07:00 svensk tid (UTC+2 sommartid)
-  workflow_dispatch:
-    inputs:
-      force_episode2:
-        description: "Kör även AI & Teknik-avsnittet (EP2)"
-        required: false
-        default: "false"
-        type: choice
-        options:
-          - "false"
-          - "true"
+ schedule:
+   - cron: "0 5 * * *"   # 07:00 svensk tid (UTC+2 sommartid)
+ workflow_dispatch:
+   inputs:
+     force_episode2:
+       description: "Kör även AI & Teknik-avsnittet (EP2)"
+       required: false
+       default: "false"
+       type: choice
+       options:
+         - "false"
+         - "true"
 
 jobs:
-  generate:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+ generate:
+   runs-on: ubuntu-latest
+   permissions:
+     contents: write
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+   steps:
+     - name: Checkout repo
+       uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+     - name: Set up Python
+       uses: actions/setup-python@v5
+       with:
+         python-version: "3.11"
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+     - name: Install dependencies
+       run: pip install -r requirements.txt
 
-      - name: Run newscast
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          FORCE_EPISODE2: ${{ github.event.inputs.force_episode2 || 'false' }}
-        run: python main.py
+     - name: Run newscast
+       env:
+         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+         ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+         FORCE_EPISODE2: ${{ github.event.inputs.force_episode2 || 'false' }}
+       run: python main.py
 
-      - name: Commit updated data files
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add seen_urls.json topic_memory.json costs.json || true
-          git diff --cached --quiet || git commit -m "chore: update data files [skip ci]"
-          git push
+     - name: Commit updated data files
+       run: |
+         git config user.name "github-actions[bot]"
+         git config user.email "github-actions[bot]@users.noreply.github.com"
+         git add seen_urls.json topic_memory.json costs.json || true
+         git diff --cached --quiet || git commit -m "chore: update data files [skip ci]"
+         git pull --rebase
+         git push
