@@ -30,5 +30,13 @@
     "gpt4o_input": 21396,
     "gpt4o_output": 14001,
     "embedding": 9621
+  },
+  {
+    "date": "2026-05-19T06:17:16.954735",
+    "usd": 0.11713422,
+    "sek": 1.22990931,
+    "gpt4o_input": 7729,
+    "gpt4o_output": 5224,
+    "embedding": 6461
   }
 ]
