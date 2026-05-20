@@ -2,7 +2,7 @@ name: Daily Newscast
 
 on:
  schedule:
-   - cron: "0 5 * * *"   # 07:00 svensk tid (UTC+2 sommartid)
+   - cron: "0 3 * * *"   # 05:00 svensk tid (UTC+2 sommartid)
  workflow_dispatch:
    inputs:
      force_episode2:
