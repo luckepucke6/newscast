@@ -1,12 +1,11 @@
-openai_tts:
-  model: "tts-1"               # tts-1 = snabb/billig, tts-1-hd = högre kvalitet
-  voices:
-    ep1: "nova"                # Kvinnlig röst — Världsnyheter & Sverige
-    ep2: "onyx"                # Manlig röst  — AI & Teknik
+claude:
+  model: "claude-sonnet-4-6"
 
-openai:
-  model: "gpt-4o"
-  embedding_model: "text-embedding-3-small"
+azure_tts:
+  region: "swedencentral"
+  voices:
+    ep1: "sv-SE-SofiaNeural"   # Svensk kvinnlig röst — Världsnyheter & Sverige
+    ep2: "sv-SE-MattiasNeural" # Svensk manlig röst  — AI & Teknik
 
 episodes:
   ep1:
@@ -37,9 +36,8 @@ history:
 
 costs:
   alert_threshold_sek: 10.0
-  gpt4o_input_per_1k: 0.005
-  gpt4o_output_per_1k: 0.015
-  embedding_per_1k: 0.00002
+  claude_input_per_1k: 0.003
+  claude_output_per_1k: 0.015
   usd_to_sek: 10.5
 
 feeds:

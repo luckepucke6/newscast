@@ -53,9 +53,8 @@ def _render_html(
         date_str = c.get("date", "")[:16].replace("T", " ")
         sek = c.get("sek", 0)
         usd = c.get("usd", 0)
-        inp = c.get("gpt4o_input", 0)
-        out = c.get("gpt4o_output", 0)
-        embed = c.get("embedding", 0)
+        inp = c.get("claude_input", c.get("gpt4o_input", 0))
+        out = c.get("claude_output", c.get("gpt4o_output", 0))
         cost_rows += f"""
         <tr>
           <td>{date_str}</td>
@@ -63,7 +62,6 @@ def _render_html(
           <td>{usd:.4f} USD</td>
           <td>{inp:,}</td>
           <td>{out:,}</td>
-          <td>{embed:,}</td>
         </tr>"""
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -176,9 +174,8 @@ def _render_html(
           <th>Tidpunkt</th>
           <th>SEK</th>
           <th>USD</th>
-          <th>GPT-4o in</th>
-          <th>GPT-4o ut</th>
-          <th>Embed</th>
+          <th>Claude in</th>
+          <th>Claude ut</th>
         </tr>
       </thead>
       <tbody>{cost_rows}</tbody>

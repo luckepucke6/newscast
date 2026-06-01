@@ -114,7 +114,7 @@ class TestDynamicLengthParams:
 class TestFilterByRelevance:
     def _make_cfg(self):
         return {
-            "openai": {"model": "gpt-4o"},
+            "claude": {"model": "claude-sonnet-4-6"},
             "episodes": {
                 "ep1": {
                     "relevance_cutoff": 7,
@@ -129,7 +129,7 @@ class TestFilterByRelevance:
     def test_returns_max_articles_on_api_failure(self):
         articles = self._make_articles(15)
         mock_client = MagicMock()
-        mock_client.chat.completions.create.side_effect = Exception("API down")
+        mock_client.messages.create.side_effect = Exception("API down")
         cfg = self._make_cfg()
 
         result = filter_by_relevance(articles, cfg, mock_client)
@@ -141,10 +141,10 @@ class TestFilterByRelevance:
         mock_client = MagicMock()
         scores = [9, 3, 8, 2, 7]  # index 1 and 3 below cutoff=7
         mock_response = MagicMock()
-        mock_response.choices[0].message.content = json.dumps({"scores": scores})
-        mock_response.usage.prompt_tokens = 10
-        mock_response.usage.completion_tokens = 10
-        mock_client.chat.completions.create.return_value = mock_response
+        mock_response.content[0].text = json.dumps({"scores": scores})
+        mock_response.usage.input_tokens = 10
+        mock_response.usage.output_tokens = 10
+        mock_client.messages.create.return_value = mock_response
         cfg = self._make_cfg()
 
         result = filter_by_relevance(articles, cfg, mock_client)
@@ -162,10 +162,10 @@ class TestFilterByRelevance:
         mock_client = MagicMock()
         scores = [1, 2, 3, 1, 2]  # all below cutoff=7
         mock_response = MagicMock()
-        mock_response.choices[0].message.content = json.dumps({"scores": scores})
-        mock_response.usage.prompt_tokens = 10
-        mock_response.usage.completion_tokens = 10
-        mock_client.chat.completions.create.return_value = mock_response
+        mock_response.content[0].text = json.dumps({"scores": scores})
+        mock_response.usage.input_tokens = 10
+        mock_response.usage.output_tokens = 10
+        mock_client.messages.create.return_value = mock_response
         cfg = self._make_cfg()
 
         result = filter_by_relevance(articles, cfg, mock_client)

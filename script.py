@@ -194,7 +194,7 @@ def write_script(
     today_str: str,
     weekday: int,
     cfg: dict,
-    openai_client,
+    client,
     weather: str = "",
     cost_tracker=None,
     max_retries: int = 3,
@@ -226,22 +226,22 @@ def write_script(
         length_instruction=length_instruction,
     )
 
-    model = cfg["openai"]["model"]
+    model = cfg["claude"]["model"]
     last_exc = None
     for attempt in range(max_retries):
         try:
-            response = openai_client.chat.completions.create(
+            response = client.messages.create(
                 model=model,
-                messages=[{"role": "user", "content": prompt}],
                 max_tokens=3500,
                 temperature=0.65,
+                messages=[{"role": "user", "content": prompt}],
             )
             if cost_tracker:
-                cost_tracker.add_gpt4o(
-                    response.usage.prompt_tokens,
-                    response.usage.completion_tokens,
+                cost_tracker.add_claude(
+                    response.usage.input_tokens,
+                    response.usage.output_tokens,
                 )
-            script = response.choices[0].message.content
+            script = response.content[0].text
             logger.info("Manus: %d ord", len(script.split()))
             return script
         except Exception as e:
@@ -256,14 +256,14 @@ def judge_script(
     episode: int,
     script: str,
     cfg: dict,
-    openai_client,
+    client,
     cost_tracker=None,
     max_retries: int = 3,
 ) -> tuple:
     ep_cfg = cfg["episodes"][f"ep{episode}"]
     min_w = ep_cfg["min_words"]
     words = len(script.split())
-    model = cfg["openai"]["model"]
+    model = cfg["claude"]["model"]
 
     prompt = f"""Granska detta nyhets-podcast-manus (avsnitt {episode}). Bedöm:
 
@@ -283,18 +283,18 @@ Manus:
     last_exc = None
     for attempt in range(max_retries):
         try:
-            response = openai_client.chat.completions.create(
+            response = client.messages.create(
                 model=model,
-                messages=[{"role": "user", "content": prompt}],
                 max_tokens=80,
                 temperature=0,
+                messages=[{"role": "user", "content": prompt}],
             )
             if cost_tracker:
-                cost_tracker.add_gpt4o(
-                    response.usage.prompt_tokens,
-                    response.usage.completion_tokens,
+                cost_tracker.add_claude(
+                    response.usage.input_tokens,
+                    response.usage.output_tokens,
                 )
-            verdict = response.choices[0].message.content.strip()
+            verdict = response.content[0].text.strip()
             approved = verdict.startswith("GODKÄNT")
             logger.info("Judge: %s", verdict)
             return approved, verdict
@@ -311,13 +311,13 @@ def extend_script(
     episode: int,
     min_words: int,
     cfg: dict,
-    openai_client,
+    client,
     cost_tracker=None,
     max_retries: int = 3,
 ) -> str:
     current_words = len(script.split())
     extra_needed = min_words - current_words + 100
-    model = cfg["openai"]["model"]
+    model = cfg["claude"]["model"]
 
     prompt = f"""Nedanför finns ett nyhets-podcast-manus på {current_words} ord. \
 Det behöver vara minst {min_words} ord — det saknas ungefär {extra_needed} ord.
@@ -336,18 +336,18 @@ MANUS ATT BYGGA UT:
     last_exc = None
     for attempt in range(max_retries):
         try:
-            response = openai_client.chat.completions.create(
+            response = client.messages.create(
                 model=model,
-                messages=[{"role": "user", "content": prompt}],
                 max_tokens=4000,
                 temperature=0.5,
+                messages=[{"role": "user", "content": prompt}],
             )
             if cost_tracker:
-                cost_tracker.add_gpt4o(
-                    response.usage.prompt_tokens,
-                    response.usage.completion_tokens,
+                cost_tracker.add_claude(
+                    response.usage.input_tokens,
+                    response.usage.output_tokens,
                 )
-            extended = response.choices[0].message.content
+            extended = response.content[0].text
             logger.info("Utbyggt manus: %d ord", len(extended.split()))
             return extended
         except Exception as e:
@@ -361,7 +361,7 @@ MANUS ATT BYGGA UT:
 def filter_by_relevance(
     articles: list,
     cfg: dict,
-    openai_client,
+    client,
     cost_tracker=None,
     max_retries: int = 3,
 ) -> list:
@@ -372,7 +372,7 @@ def filter_by_relevance(
     ep_cfg = cfg["episodes"]["ep1"]
     cutoff = ep_cfg["relevance_cutoff"]
     max_articles = ep_cfg["max_articles"]
-    model = cfg["openai"]["model"]
+    model = cfg["claude"]["model"]
 
     lines = "\n".join([
         f"{i+1}. [{a['category']}] {a['title']}"
@@ -391,18 +391,18 @@ Rubriker:
     last_exc = None
     for attempt in range(max_retries):
         try:
-            response = openai_client.chat.completions.create(
+            response = client.messages.create(
                 model=model,
-                messages=[{"role": "user", "content": prompt}],
                 max_tokens=200,
                 temperature=0,
+                messages=[{"role": "user", "content": prompt}],
             )
             if cost_tracker:
-                cost_tracker.add_gpt4o(
-                    response.usage.prompt_tokens,
-                    response.usage.completion_tokens,
+                cost_tracker.add_claude(
+                    response.usage.input_tokens,
+                    response.usage.output_tokens,
                 )
-            raw = response.choices[0].message.content.strip()
+            raw = response.content[0].text.strip()
             # Strip markdown code fences if GPT wraps the JSON in ```json ... ```
             if raw.startswith("```"):
                 raw = raw.split("```")[1]

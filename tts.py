@@ -1,13 +1,15 @@
-"""Text-to-speech via OpenAI TTS med automatisk chunkning (max 4096 tecken/anrop)."""
+"""Text-to-speech via Azure Cognitive Services Speech."""
 import logging
 import os
 import time
+
+import azure.cognitiveservices.speech as speechsdk
 
 from script import preprocess_script
 
 logger = logging.getLogger(__name__)
 
-MAX_CHARS = 4000  # Lite under 4096 för säkerhetsmarginal
+MAX_CHARS = 5000
 
 
 def _split_chunks(text: str, max_chars: int = MAX_CHARS) -> list:
@@ -16,7 +18,6 @@ def _split_chunks(text: str, max_chars: int = MAX_CHARS) -> list:
     current = ""
 
     for paragraph in text.split("\n"):
-        # Om ett enstaka stycke är för långt, dela på meningar
         if len(paragraph) > max_chars:
             sentences = paragraph.replace(". ", ".\n").split("\n")
             for sentence in sentences:
@@ -44,21 +45,27 @@ def text_to_speech(
     script: str,
     episode: int,
     cfg: dict,
-    openai_client,
     max_retries: int = 3,
 ) -> str:
-    """Omvandlar manus till MP3 via OpenAI TTS, med chunkning för långa texter."""
-    tts_cfg = cfg["openai_tts"]
+    """Omvandlar manus till MP3 via Azure Speech, med chunkning för långa texter."""
+    tts_cfg = cfg["azure_tts"]
     voice = tts_cfg["voices"][f"ep{episode}"]
-    model = tts_cfg["model"]
+    region = tts_cfg["region"]
+    key = os.environ["AZURE_SPEECH_KEY"]
     path = f"/tmp/podcast_ep{episode}.mp3"
+
+    speech_config = speechsdk.SpeechConfig(subscription=key, region=region)
+    speech_config.set_speech_synthesis_output_format(
+        speechsdk.SpeechSynthesisOutputFormat.Audio24Khz96KBitRateMonoMp3
+    )
+    speech_config.speech_synthesis_voice_name = voice
 
     processed = preprocess_script(script)
     chunks = _split_chunks(processed)
 
     logger.info(
-        "OpenAI TTS: %d tecken → %d chunk(s), röst %s, modell %s...",
-        len(processed), len(chunks), voice, model,
+        "Azure TTS: %d tecken → %d chunk(s), röst %s...",
+        len(processed), len(chunks), voice,
     )
 
     audio_parts = []
@@ -66,15 +73,16 @@ def text_to_speech(
         last_exc = None
         for attempt in range(max_retries):
             try:
-                response = openai_client.audio.speech.create(
-                    model=model,
-                    voice=voice,
-                    input=chunk,
-                    response_format="mp3",
+                synthesizer = speechsdk.SpeechSynthesizer(
+                    speech_config=speech_config, audio_config=None
                 )
-                audio_parts.append(response.content)
-                logger.info("Chunk %d/%d klar (%d tecken)", i + 1, len(chunks), len(chunk))
-                break
+                result = synthesizer.speak_text_async(chunk).get()
+                if result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
+                    audio_parts.append(result.audio_data)
+                    logger.info("Chunk %d/%d klar (%d tecken)", i + 1, len(chunks), len(chunk))
+                    break
+                else:
+                    raise RuntimeError(f"Azure TTS misslyckades: {result.reason}, {result.cancellation_details.error_details if result.reason == speechsdk.ResultReason.Canceled else ''}")
             except Exception as e:
                 last_exc = e
                 wait = 2 ** attempt
@@ -85,10 +93,9 @@ def text_to_speech(
                 time.sleep(wait)
         else:
             raise RuntimeError(
-                f"OpenAI TTS misslyckades på chunk {i + 1} efter {max_retries} försök: {last_exc}"
+                f"Azure TTS misslyckades på chunk {i + 1} efter {max_retries} försök: {last_exc}"
             )
 
-    # Slå ihop alla MP3-delar till en fil
     with open(path, "wb") as f:
         for part in audio_parts:
             f.write(part)
