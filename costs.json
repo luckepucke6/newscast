@@ -62,5 +62,12 @@
     "gpt4o_input": 10026,
     "gpt4o_output": 6800,
     "embedding": 6292
+  },
+  {
+    "date": "2026-06-04T07:24:36.410136",
+    "usd": 0.195867,
+    "sek": 2.0566035,
+    "claude_input": 18114,
+    "claude_output": 9435
   }
 ]
