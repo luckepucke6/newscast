@@ -10,17 +10,17 @@ azure_tts:
 episodes:
   ep1:
     label: "Världsnyheter & Sverige"
-    min_words: 1500
-    max_words: 1700
-    target_minutes: 11
-    max_articles: 8
-    articles_per_feed: 6
-    relevance_cutoff: 7
+    min_words: 1000
+    max_words: 1200
+    target_minutes: 7
+    max_articles: 10
+    articles_per_feed: 8
+    relevance_cutoff: 6
   ep2:
     label: "AI & Teknik"
-    min_words: 1300
-    max_words: 1600
-    target_minutes: 9
+    min_words: 1700
+    max_words: 1900
+    target_minutes: 11
     max_articles: 6
     articles_per_feed: 4
 

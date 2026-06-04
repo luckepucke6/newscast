@@ -80,26 +80,17 @@ nyheter på ett sätt som faktiskt fastnar — engagerande och pedagogisk, \
 inte en torr uppläsare.
 
 Skriv avsnitt 1: Världsnyheter & Sverige för {today_str}.
+Det här är ett SNABBT nyhetssvep — korta, kärnfulla nyheter, inga djupdykningar.
 
 URVAL OCH ORDNING:
-Välj ut 7–8 av de mest nyhetsvärda artiklarna nedan och dela upp dem i TVÅ block:
+Välj ut 8–10 av de mest nyhetsvärda artiklarna nedan. Börja med den viktigaste.
 
-DJUPDYKNINGAR — de 3 viktigaste nyheterna, ordentligt förklarade. \
-Börja med den allra viktigaste.
-I KORTHET — 4–5 övriga nyheter, snabbt avklarade i ett svep efter djupdykningarna.
+STRUKTUR PER NYHET:
+— 1–2 meningar: vad som hänt, och vid behov en kort halvmening om varför det spelar roll.
+— Ingen längre analys, ingen bakgrund — håll tempot uppe.
+— Naturliga övergångar mellan nyheterna så det flyter, inte en uppläst lista.
 
-LÄNGD: {length_instruction}. Lägg merparten av orden på djupdykningarna. \
-Kärnfullt, ingen utfyllnad.
-
-STRUKTUR FÖR DJUPDYKNINGARNA (de 3 första nyheterna):
-1. Vad hände (2–3 meningar)
-2. Varför det spelar roll / hur det påverkar dig och samhället (2–3 meningar)
-3. Kort analys eller vad som händer härnäst (1–2 meningar)
-
-STRUKTUR FÖR "I KORTHET" (de 4–5 sista nyheterna):
-— Bara det väsentliga: 1–2 meningar per nyhet om vad som hänt. Ingen längre analys.
-— Inled blocket med en naturlig övergång, t.ex. "Och så snabbt det övriga:" \
-eller "Sen några nyheter i korthet:".
+LÄNGD: {length_instruction}. Kärnfullt, inget fyll.
 {continuity_block}
 OBLIGATORISK INTRO:
 "Hej och välkommen till din dagliga nyhetssammanfattning. Det är {today_str}. \
@@ -150,12 +141,17 @@ LÄNGD: {length_instruction}.
 PERSPEKTIV ATT TÄCKA PER NYHET (väv in naturligt, inte som en lista):
 — Vad hände konkret
 — Hur tekniken bakom fungerar, förklarat enkelt
+— Historisk bakgrund: hur kom vi hit, vad ledde fram till det här?
 — Vad det förändrar i samhället — jobb, demokrati, ekonomi, vardag
+— Olika perspektiv / experters syn — var det finns oenighet eller öppna frågor
+— Längre framåtblick: vad händer härnäst, vilka scenarier är troliga på sikt?
 — Ett konkret vardagsscenario: "Tänk dig att du är lärare / småföretagare / \
 förälder — då innebär detta att..."
 
 Inte alla perspektiv passar varje nyhet — använd det som är relevant. \
-Det viktigaste är att det låter naturligt och pedagogiskt, inte som ett formulär.
+Gå på djupet — ta dig tid att verkligen förklara. Det är okej att en nyhet \
+får flera stycken. Det viktigaste är att det låter naturligt och pedagogiskt, \
+inte som ett formulär.
 
 OBLIGATORISK INTRO:
 "Hej och välkommen till teknikavsnittet. Det är {today_str}. \
@@ -285,10 +281,20 @@ def judge_script(
     words = len(script.split())
     model = cfg["claude"]["model"]
 
+    if episode == 1:
+        structure_criterion = (
+            "Struktur: 8–10 korta nyheter, var och en snabbt och tydligt "
+            "sammanfattad (1–2 meningar). Ingen ska vara en lång djupdykning."
+        )
+    else:
+        structure_criterion = (
+            "Struktur: 4–6 nyheter med fakta, bakgrund, analys och framåtblick på djupet."
+        )
+
     prompt = f"""Granska detta nyhets-podcast-manus (avsnitt {episode}). Bedöm:
 
 1. Längd: minst {min_w} ord krävs. Faktiskt: {words} ord.
-2. Struktur: varje nyhet har fakta, relevans och kort analys.
+2. {structure_criterion}
 3. Ton: pedagogisk och engagerande, direkt tilltal med "du".
 4. Avslutning: summering med numrerade punkter.
 5. Intro: presenterar datum och antal nyheter.
@@ -339,13 +345,24 @@ def extend_script(
     extra_needed = min_words - current_words + 100
     model = cfg["claude"]["model"]
 
+    if episode == 1:
+        build_instructions = (
+            "— Lägg till fler korta nyheter från samma dag (om det finns utrymme)\n"
+            "— Ge korta förtydliganden där en nyhet är otydlig\n"
+            "Behåll det snabba formatet — korta nyheter (1–2 meningar), inga djupdykningar."
+        )
+    else:
+        build_instructions = (
+            "— Lägga till mer bakgrund och kontext för varje nyhet\n"
+            "— Ge fler konkreta exempel på hur nyheterna påverkar vanliga människor\n"
+            "— Fördjupa analysen där det finns utrymme"
+        )
+
     prompt = f"""Nedanför finns ett nyhets-podcast-manus på {current_words} ord. \
 Det behöver vara minst {min_words} ord — det saknas ungefär {extra_needed} ord.
 
 Bygg ut manuset genom att:
-— Lägga till mer bakgrund och kontext för varje nyhet
-— Ge fler konkreta exempel på hur nyheterna påverkar vanliga människor
-— Fördjupa analysen där det finns utrymme
+{build_instructions}
 
 Behåll exakt samma struktur, intro och outro. \
 Returnera det kompletta, utbyggda manuset — inget annat.
