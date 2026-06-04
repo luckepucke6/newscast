@@ -82,6 +82,7 @@ def generate_episode(
     cost_tracker: CostTracker,
     weather: str = "",
     used_titles: set = None,
+    memory: list = None,
 ) -> set:
     """Genererar ett avsnitt och returnerar set med använda titlar."""
     ep_cfg = cfg["episodes"][f"ep{episode}"]
@@ -110,7 +111,11 @@ def generate_episode(
         articles = filter_by_relevance(articles, cfg, claude_client, cost_tracker)
 
     logger.info("Skriver manus...")
-    script = write_script(episode, articles, today_str, weekday, cfg, claude_client, weather, cost_tracker)
+    memory_context = memory_to_context(memory, episode) if memory else ""
+    script = write_script(
+        episode, articles, today_str, weekday, cfg, claude_client,
+        weather, cost_tracker, memory_context=memory_context,
+    )
 
     ep_min, ep_max, _ = _dynamic_length_params(
         len(articles), ep_cfg["min_words"], ep_cfg["max_words"]
@@ -130,6 +135,13 @@ def generate_episode(
     audio_path = text_to_speech(script, episode, cfg)
     n = len(articles)
     send_audio(audio_path, episode, today_str, n, cfg)
+
+    if memory is not None:
+        save_memory(memory, {
+            "date": datetime.now().isoformat(),
+            "episode": episode,
+            "headlines": extract_headlines(script, articles),
+        }, cfg)
 
     return {a["title"] for a in articles}
 
@@ -159,6 +171,7 @@ def main():
     used_titles = generate_episode(
         1, feeds_ep1, history, today_str, weekday,
         cfg, claude_client, cost_tracker, weather,
+        memory=memory,
     )
 
     # EP2 — mån/ons/fre
@@ -169,6 +182,7 @@ def main():
             2, feeds_ep2, history, today_str, weekday,
             cfg, claude_client, cost_tracker,
             used_titles=used_titles,
+            memory=memory,
         )
     else:
         logger.info("Avsnitt 2 hoppas över idag (%s) — sänds mån/ons/fre.", SWEDISH_DAYS[weekday])

@@ -56,7 +56,7 @@ def swedish_date(dt: datetime) -> str:
 
 
 def preprocess_script(text: str) -> str:
-    """Skriver ut siffror som ElevenLabs Flash missar på svenska."""
+    """Skriver ut årtal som TTS-rösten annars läser fel på svenska."""
     for number, spoken in NUMBER_REPLACEMENTS.items():
         text = text.replace(number, spoken)
     return text
@@ -82,18 +82,25 @@ inte en torr uppläsare.
 Skriv avsnitt 1: Världsnyheter & Sverige för {today_str}.
 
 URVAL OCH ORDNING:
-Välj ut 6–8 av de mest nyhetsvärda artiklarna nedan. \
-Sortera dem i den ordning du bedömer ger bäst flöde och nyhetsvärde — \
-börja med det viktigaste, men tänk på variation mellan ämnen.
+Välj ut 7–8 av de mest nyhetsvärda artiklarna nedan och dela upp dem i TVÅ block:
 
-LÄNGD: {length_instruction}. Kärnfullt, ingen utfyllnad.
+DJUPDYKNINGAR — de 3 viktigaste nyheterna, ordentligt förklarade. \
+Börja med den allra viktigaste.
+I KORTHET — 4–5 övriga nyheter, snabbt avklarade i ett svep efter djupdykningarna.
 
-STRUKTUR PER NYHET — använd omdöme:
-1. Vad hände (2–3 meningar) — alltid med
-2. Varför det spelar roll / hur det påverkar (2–3 meningar) — bara för viktiga \
-eller komplexa nyheter där det tillför något. Hoppa över för korta notiser.
-3. Kort analys eller vad som händer härnäst (1–2 meningar) — bara om relevant
+LÄNGD: {length_instruction}. Lägg merparten av orden på djupdykningarna. \
+Kärnfullt, ingen utfyllnad.
 
+STRUKTUR FÖR DJUPDYKNINGARNA (de 3 första nyheterna):
+1. Vad hände (2–3 meningar)
+2. Varför det spelar roll / hur det påverkar dig och samhället (2–3 meningar)
+3. Kort analys eller vad som händer härnäst (1–2 meningar)
+
+STRUKTUR FÖR "I KORTHET" (de 4–5 sista nyheterna):
+— Bara det väsentliga: 1–2 meningar per nyhet om vad som hänt. Ingen längre analys.
+— Inled blocket med en naturlig övergång, t.ex. "Och så snabbt det övriga:" \
+eller "Sen några nyheter i korthet:".
+{continuity_block}
 OBLIGATORISK INTRO:
 "Hej och välkommen till din dagliga nyhetssammanfattning. Det är {today_str}. \
 {weather_line}\
@@ -138,6 +145,7 @@ Välj ut 4–6 nyheter. Skippa rena produktlanseringar utan konsekvens. \
 Sortera efter bildningsvärde och nyhetsvärde — börja med det mest signifikanta.
 
 LÄNGD: {length_instruction}.
+{continuity_block}
 
 PERSPEKTIV ATT TÄCKA PER NYHET (väv in naturligt, inte som en lista):
 — Vad hände konkret
@@ -178,7 +186,7 @@ TALSPRÅK OCH RYTM — viktigt för hur det låter uppläst:
 — Skriv som du pratar: "det är" inte "detta är", "du kan" inte "man kan".
 
 ABSOLUTA KRAV:
-— Minst 1 400 ord
+— Håll dig inom den angivna längden ovan
 — Skriv BARA manustext — inga rubriker eller noter
 — Svenska genomgående
 
@@ -197,6 +205,7 @@ def write_script(
     client,
     weather: str = "",
     cost_tracker=None,
+    memory_context: str = "",
     max_retries: int = 3,
 ) -> str:
     ep_cfg = cfg["episodes"][f"ep{episode}"]
@@ -216,6 +225,16 @@ def write_script(
     ])
     weather_line = f"Det är {weather} idag. " if weather and episode == 1 else ""
 
+    continuity_block = ""
+    if memory_context:
+        continuity_block = (
+            "\nKONTINUITET — nyheter från de senaste dagarnas avsnitt:\n"
+            f"{memory_context}\n"
+            "Om någon av dagens nyheter är en uppföljning på dessa — väv in en kort, "
+            "naturlig återkoppling (t.ex. \"som vi tog upp i tisdags\"). "
+            "Tvinga inte in kopplingar som inte finns.\n"
+        )
+
     template = PROMPT_EP1 if episode == 1 else PROMPT_EP2
     prompt = template.format(
         today_str=today_str,
@@ -224,6 +243,7 @@ def write_script(
         weather_line=weather_line,
         slow_day_line=slow_day_line,
         length_instruction=length_instruction,
+        continuity_block=continuity_block,
     )
 
     model = cfg["claude"]["model"]
@@ -381,6 +401,11 @@ def filter_by_relevance(
     prompt = f"""Betygsätt följande nyhetsrubriker för en daglig nyhetspodd om världsnyheter, svensk politik och samhälle.
 Ge varje rubrik ett betyg 1–10 där 10 = mycket relevant och viktig nyhet, 1 = irrelevant eller ointressant.
 Var hård — bara genuint viktiga nyheter ska få 7 eller högre.
+
+Lyssnaren vill förstå viktiga samhällsskeenden. Sänk betyget tydligt för:
+— Sport- och nöjes-/kändisnyheter (ge normalt 1–3).
+— Enskilda brott och olyckor utan större samhällsbetydelse (ge normalt 1–4).
+Nyheter som påverkar många människor — politik, ekonomi, stora skeenden — ska väga tyngst.
 
 Svara ENDAST med ett JSON-objekt i detta format (inga förklaringar):
 {{"scores": [8, 3, 7, ...]}}
