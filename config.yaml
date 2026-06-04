@@ -4,7 +4,7 @@ claude:
 azure_tts:
   region: "swedencentral"
   voices:
-    ep1: "sv-SE-SofiaNeural"   # Svensk kvinnlig röst — Världsnyheter & Sverige
+    ep1: "sv-SE-SofieNeural"   # Svensk kvinnlig röst — Världsnyheter & Sverige
     ep2: "sv-SE-MattiasNeural" # Svensk manlig röst  — AI & Teknik
 
 episodes:
