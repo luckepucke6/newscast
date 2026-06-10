@@ -104,5 +104,12 @@
     "sek": 1.2308625,
     "claude_input": 11310,
     "claude_output": 5553
+  },
+  {
+    "date": "2026-06-10T04:28:13.212310",
+    "usd": 0.215169,
+    "sek": 2.2592745,
+    "claude_input": 20923,
+    "claude_output": 10160
   }
 ]

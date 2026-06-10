@@ -124,5 +124,33 @@
       "[SR Ekot] Barn kan vara omhändertagna i flera år utan bevis",
       "[SR Ekot] EU utökar åtgärder mot ryska skuggflottan"
     ]
+  },
+  {
+    "date": "2026-06-10T04:30:41.740392",
+    "episode": 1,
+    "headlines": [
+      "[SVT] USA: Attackerat Iran i självförsvar",
+      "[SVT] Avslöjar: Här upprustar Ryssland – bara kilometer från Natos gräns",
+      "[DN] Åkessons bokaffär ifrågasätts av korruptionsexpert",
+      "[Aftonbladet] TV4: Åkesson sålde böcker till SD:s dotterbolag",
+      "[Aftonbladet] Åkessons \"boksuccé\" – köptes av SD:s eget bolag",
+      "[Världsnyheter] Iran War Updates: Trump Puts Off ‘Final Determination’ on Iran Proposal - The Ne",
+      "[Världsnyheter] Trump says deal with Iran, including opening Strait of Hormuz, is 'largely negot",
+      "[DN] Ledare: Trump sitter fast i Hormuzsundet – och vi med honom"
+    ]
+  },
+  {
+    "date": "2026-06-10T04:35:17.770266",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] I tried Siri AI, and so far it actually works",
+      "[The Verge] Congress just gave DHS another $70 billion",
+      "[The Verge] The App Store is going to add subscription bundles soon",
+      "[The Verge] GM thinks EVs can help offset AI’s energy suck with vehicle-to-grid tech",
+      "[Wired] Great White Sharks Have Been in the Mediterranean Sea for Millions of Years—but ",
+      "[Wired] GM Wants Your Electric Car to Power Your House—and Your Neighborhood",
+      "[Wired] MacOS 27 Golden Gate: Top New Features",
+      "[Wired] The Top New Features in Apple’s iOS 27 and iPadOS 27"
+    ]
   }
 ]
