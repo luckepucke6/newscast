@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-06-04T07:28:14.038694",
-    "episode": 1,
-    "headlines": [
-      "[SVT] SCB: Oppositionen klart större än Tidöpartierna",
-      "[DN] SCB: Oppositionen leder stort inför valspurten",
-      "[SR Ekot] SCB: Liberalerna under riksdagsspärren",
-      "[Världsnyheter] Iranian strikes in Kuwait kill 1, injure 63 as shaky ceasefire with U.S. is test",
-      "[DN] Bräcklig vapenvila mellan Israel och Libanon förlängs",
-      "[SR Ekot] Pressat läge för L: ”Brukar öka i slutspurten”",
-      "[SR Ekot] Inflationen steg mer än väntat i maj",
-      "[Sverige] Busch: ”Jag tror på en comeback” – Senaste nytt om valet 2026 - SVT Nyheter"
-    ]
-  },
-  {
-    "date": "2026-06-04T07:31:33.894965",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Shokz upgraded its open earbuds with better sound and a lighter design",
-      "[The Verge] Nintendo confirms it will sell a new Switch 2 with replaceable battery in the EU",
-      "[The Verge] Apple is bringing age verification to Texas this week",
-      "[The Verge] WiiM expands its whole-home ecosystem with a new soundbar",
-      "[Wired] Nomad Goods Promo Codes: Get 25% Off in June 2026",
-      "[Wired] TurboTax Full Service Coupons This June",
-      "[Wired] 50% Off DoorDash Promo Code | June 2026",
-      "[Wired] NordVPN Coupons and Deals: 77% Off in June 2026"
-    ]
-  },
-  {
     "date": "2026-06-05T06:57:47.188555",
     "episode": 1,
     "headlines": [
@@ -165,6 +137,34 @@
       "[Världsnyheter] Iran war updates: US launches new attacks on ‘multiple targets in Iran’ - Al Jaz",
       "[SR Ekot] Attackerna fortsätter mellan USA och Iran",
       "[Världsnyheter] Live updates: U.S. has finished attacking targets in Iran, CENTCOM says - NBC Ne"
+    ]
+  },
+  {
+    "date": "2026-06-12T04:31:45.461963",
+    "episode": 1,
+    "headlines": [
+      "[DN] Alla broar till Krim attackerade – slår mot rysk logistik",
+      "[Sverige] Svantesson: Trump har kostat Sverige 160 miljarder - Dagens Nyheter",
+      "[Världsnyheter] Live updates: Trump says US ‘ended the war with Iran,’ though Tehran has yet to ",
+      "[Världsnyheter] Trump says he has canceled strikes on Iran, signals move toward deal - NBC News",
+      "[Världsnyheter] Live Updates: Trump says \"settlement\" reached on Iran, signing could be as soon ",
+      "[Världsnyheter] Trump says he has canceled plans to strike Iran, claiming deal is near - The Was",
+      "[SVT] Yngre barn i fängelse – minskar det brottsligheten?",
+      "[Aftonbladet] Sydkoreas expresident döms till 30 års fängelse"
+    ]
+  },
+  {
+    "date": "2026-06-12T04:35:48.282717",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Amazon&#8217;s Echo Hub gets a customizable new look and Ring&#8217;s AI feature",
+      "[The Verge] Logitech’s awesome MX Master 3S mouse drops to under $100",
+      "[The Verge] Blink’s six-piece outdoor camera kit is a great deal under $200",
+      "[The Verge] Roborock&#8217;s Q10 S5 Plus robovac is over half off, matching its best price t",
+      "[Wired] Apple’s Camera Chief Thinks AI Can Give You Superpowers",
+      "[Wired] Why You Might Already Own SpaceX Shares, Siri’s AI Makeover, and Knicks Owner’s ",
+      "[Wired] ‘Hands Off Our NHS’: Anti-Palantir Protests Break Out in UK Over Deal With Natio",
+      "[Wired] Meet the OpenAI Engineer Leading ChatGPT’s Biggest Transformation Yet"
     ]
   }
 ]
