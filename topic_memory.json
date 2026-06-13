@@ -1,47 +1,5 @@
 [
   {
-    "date": "2026-06-05T06:57:47.188555",
-    "episode": 1,
-    "headlines": [
-      "[SVT] AI-jätten varnar för AI utom kontroll: ”Människans roll minskar”",
-      "[SR Ekot] Svensk Natostyrka i Finland ska avskräcka Ryssland",
-      "[SR Ekot] Utpekad torterare vill få uppehållstillstånd i Sverige – efterlyst i Syrien",
-      "[Sverige] Svensk Natostyrka i Boden ska avskräcka Ryssland - Sveriges Radio",
-      "[Sverige] »Utan tvekan ser vi redan att läkare väljer bort Sverige« - Läkartidningen",
-      "[DN] Statens kontroll av kemikalier i frukt och grönt rasar – förlitar sig på bransch",
-      "[DN] Michael Winiarski: Oenighet mellan Ukraina och Polen kan bara glädja Putin",
-      "[Aftonbladet] Dödslangaren sålde tusentals självmordskit – världen över"
-    ]
-  },
-  {
-    "date": "2026-06-05T07:02:26.868555",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Valve says it&#8217;s ready to launch the Steam Machine this summer",
-      "[The Verge] Cyberdecks used to look like little laptops, but now they&#8217;re getting more ",
-      "[The Verge] Kevin O’Leary agrees to downsize massive Utah data center",
-      "[The Verge] Google is letting social media stars customize their search result page",
-      "[Wired] 30% Off Canon Promo Codes | June 2026",
-      "[Wired] LG Promo Codes and Coupons for June 2026",
-      "[Wired] The Motley Fool Promo Code: $200 Off on Stock Advisor June 2026",
-      "[Wired] Dell Coupon Codes: 20% Off for June 2026"
-    ]
-  },
-  {
-    "date": "2026-06-06T04:24:32.522094",
-    "episode": 1,
-    "headlines": [
-      "[Aftonbladet] USA och Iran i nattliga attacker",
-      "[SR Ekot] USA anföll radaranläggningar – Iran svarade med robotar",
-      "[DN] Dödsstraff för mordet på FN-svensken Zaida Catalán",
-      "[SR Ekot] Arméöverste döms till döden efter mordet på Zaida Catalán",
-      "[SR Ekot] Putin säger nej till Zelenskyjs inbjudan om möte",
-      "[Sverige] Gängledaren flögs hem av Sverige i privatplan – kan snart gå fri - SVT Nyheter",
-      "[Världsnyheter] CDC report: Ebola outbreak could rival the worst on record unless world acts - N",
-      "[SVT] Konsult bjöd på spahotell – 15 anställda åtalsanmäls för misstänkt mutbrott"
-    ]
-  },
-  {
     "date": "2026-06-07T04:31:59.464909",
     "episode": 1,
     "headlines": [
@@ -165,6 +123,20 @@
       "[Wired] Why You Might Already Own SpaceX Shares, Siri’s AI Makeover, and Knicks Owner’s ",
       "[Wired] ‘Hands Off Our NHS’: Anti-Palantir Protests Break Out in UK Over Deal With Natio",
       "[Wired] Meet the OpenAI Engineer Leading ChatGPT’s Biggest Transformation Yet"
+    ]
+  },
+  {
+    "date": "2026-06-13T04:30:54.036816",
+    "episode": 1,
+    "headlines": [
+      "[SR Ekot] USA och Iran uppges vara överens om utkast till fredsavtal",
+      "[Världsnyheter] Iran War Live Updates: Trump and Iranian Officials Say Peace Deal Appears Within",
+      "[Världsnyheter] Elon Musk becomes the world's first trillionaire with SpaceX's IPO - CBS News",
+      "[Världsnyheter] Iran war updates: Pakistan’s PM says ‘final text’ of US-Iran deal agreed | US-Is",
+      "[Aftonbladet] FN: Maj dödligaste månaden på flera år i Ukraina",
+      "[SR Ekot] Försvarsministern: Sverige måste rusta upp snabbare",
+      "[Sverige] Rapport: Angrepp mot Sverige kan inte uteslutas - Omni",
+      "[Världsnyheter] Exclusive: UAE to unlock billions of dollars for Iran, sources say - Reuters"
     ]
   }
 ]
