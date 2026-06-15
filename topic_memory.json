@@ -1,47 +1,5 @@
 [
   {
-    "date": "2026-06-07T04:31:59.464909",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] USA tror att Israel försöker spionera på samtal med Iran",
-      "[SR Ekot] Ukraina slår mot rysk flottbas i Sankt Petersburg",
-      "[Aftonbladet] ”Polariserande” EU-vän mot seger i Armenien",
-      "[Aftonbladet] Taiwan skickar fartyg som svar på kinesisk insats",
-      "[Aftonbladet] USA: Sköt ned iranska drönare",
-      "[SR Ekot] Ny medicin mot äggstockscancer säljs inte i Sverige – för dyr",
-      "[SR Ekot] Över 200 kommuner söker undersköterskor – brist inför sommaren",
-      "[Sverige] Ny medicin mot äggstockscancer kan inte användas i Sverige - Sveriges Radio"
-    ]
-  },
-  {
-    "date": "2026-06-08T04:32:02.779263",
-    "episode": 1,
-    "headlines": [
-      "[DN] Iran och Israel attackerar varandra – trots Trumps råd",
-      "[Aftonbladet] Israeliska luftattacker mot Iran",
-      "[SR Ekot] Israels svar – bombar Iran: ”Trump uppmanade att inte svara”",
-      "[DN] Tsunamivarningar efter skalv utanför Filippinerna",
-      "[SR Ekot] Jordbävning i Filipinerna – tsunamivarning utfärdad",
-      "[Världsnyheter] How have countries around the world responded to the US-Israel war on Iran? - Al",
-      "[SVT] TV4 pekar ut SD-trixande med fakturor – anordnade ”Jimmie-fester”",
-      "[Aftonbladet] Xi Jinping har anlänt i Nordkorea"
-    ]
-  },
-  {
-    "date": "2026-06-08T04:36:26.319138",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] NASA will wear high-tech Prada long johns to the Moon",
-      "[The Verge] The 7 biggest storylines from Summer Game Fest 2026",
-      "[The Verge] Persona 6 exists, and that’s all we know",
-      "[The Verge] Microsoft’s Xbox 25th anniversary console comes in translucent green",
-      "[Wired] Sigma BF Review (2026): Eccentric but Strangely Lovable",
-      "[Wired] You May Not Need a Giant Chef’s Knife When a Midsize Knife Does the Trick",
-      "[Wired] Lauf eElja Electric Mountain Bike Review: Power Trip",
-      "[Wired] Best Red-Light Therapy for Hair Restoration and Regrowth (2026)"
-    ]
-  },
-  {
     "date": "2026-06-09T04:26:49.663005",
     "episode": 1,
     "headlines": [
@@ -151,6 +109,34 @@
       "[SVT] Viktor Orbán återvald som partiledare för Fidesz",
       "[DN] Rekordvärme på Antarktiska halvön – forskare varnar för snabb issmältning",
       "[Aftonbladet] Ebolautbrottet fortsätter att växa"
+    ]
+  },
+  {
+    "date": "2026-06-15T04:32:31.818030",
+    "episode": 1,
+    "headlines": [
+      "[SVT] USA och Iran överens om avtal – Hormuzsundet öppnas",
+      "[Världsnyheter] Live updates: Trump and Iran reach agreement that includes opening Strait of Hor",
+      "[Världsnyheter] US-Iran peace deal could see strait of Hormuz open on Friday ‘under Iranian arra",
+      "[Aftonbladet] Flera döda i ryska robotattacker",
+      "[Världsnyheter] Iran War Live Updates: Trump Calls for Restraint After Israel Strikes Beirut Sub",
+      "[Aftonbladet] Känt kloster i lågor efter attacker mot Kiev",
+      "[Aftonbladet] Statsvetare: Flera fallgropar trots Iran-avtal",
+      "[SR Ekot] Sveriges utrikesminister om vapenvilan: ”Oerhört skört”"
+    ]
+  },
+  {
+    "date": "2026-06-15T04:37:07.223278",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] The FBI built a small town to simulate cyberattacks",
+      "[The Verge] China may have accessed Mythos",
+      "[The Verge] Conclave is the sound of a NYC summer block party",
+      "[The Verge] How to watch most of the World Cup matches with free trials",
+      "[Wired] 20 Best Gifts for Men, Manly Men, and Menly Man Men (2026)",
+      "[Wired] 19 Best Gifts for Plant Lovers and Gardeners (2026)",
+      "[Wired] Suunto Spark Review: The Perfect Pair for Runs and Rides",
+      "[Wired] The Strait of Hormuz Has Been Closed for 100 Days. Why Aren’t Oil Prices Higher?"
     ]
   }
 ]
