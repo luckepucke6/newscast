@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-06-09T04:26:49.663005",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] Israeli military launches strikes on Iran after Tehran fired missiles - USA Toda",
-      "[Världsnyheter] Iran-U.S. negotiators have agreed to broad principles of agreement, official say",
-      "[SVT] Open AI ansöker om börsnotering",
-      "[Aftonbladet] Fler unga varken jobbar eller pluggar",
-      "[Aftonbladet] Trump nominerar Blanche till justitieminister",
-      "[Aftonbladet] ICC:s chefsåklagare stängs av efter anklagelser",
-      "[SR Ekot] Barn kan vara omhändertagna i flera år utan bevis",
-      "[SR Ekot] EU utökar åtgärder mot ryska skuggflottan"
-    ]
-  },
-  {
     "date": "2026-06-10T04:30:41.740392",
     "episode": 1,
     "headlines": [
@@ -137,6 +123,20 @@
       "[Wired] 19 Best Gifts for Plant Lovers and Gardeners (2026)",
       "[Wired] Suunto Spark Review: The Perfect Pair for Runs and Rides",
       "[Wired] The Strait of Hormuz Has Been Closed for 100 Days. Why Aren’t Oil Prices Higher?"
+    ]
+  },
+  {
+    "date": "2026-06-16T04:32:57.211561",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] Trump and Iran reach tentative deal to end war, reopen Hormuz - NBC News",
+      "[DN] Militärexpert: Putin kan tvingas till mobilisering i höst",
+      "[SR Ekot] Trump: USA och Iran har skrivit under avsiktsförklaring",
+      "[Världsnyheter] Live updates: US and Iran reach agreement but key questions remain - CNN",
+      "[Världsnyheter] Bowen: Iran deal ends Trump's war that revealed limit of US dominance - BBC",
+      "[Världsnyheter] Netanyahu and Trump on collision course as US, Iran agree to halt war - Reuters",
+      "[SVT] ”SD-ministrar kan kosta Svantesson finansministerposten”",
+      "[Aftonbladet] Storbritannien: Ska förse Ukraina med uran"
     ]
   }
 ]
