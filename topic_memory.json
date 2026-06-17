@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-06-10T04:30:41.740392",
-    "episode": 1,
-    "headlines": [
-      "[SVT] USA: Attackerat Iran i självförsvar",
-      "[SVT] Avslöjar: Här upprustar Ryssland – bara kilometer från Natos gräns",
-      "[DN] Åkessons bokaffär ifrågasätts av korruptionsexpert",
-      "[Aftonbladet] TV4: Åkesson sålde böcker till SD:s dotterbolag",
-      "[Aftonbladet] Åkessons \"boksuccé\" – köptes av SD:s eget bolag",
-      "[Världsnyheter] Iran War Updates: Trump Puts Off ‘Final Determination’ on Iran Proposal - The Ne",
-      "[Världsnyheter] Trump says deal with Iran, including opening Strait of Hormuz, is 'largely negot",
-      "[DN] Ledare: Trump sitter fast i Hormuzsundet – och vi med honom"
-    ]
-  },
-  {
-    "date": "2026-06-10T04:35:17.770266",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] I tried Siri AI, and so far it actually works",
-      "[The Verge] Congress just gave DHS another $70 billion",
-      "[The Verge] The App Store is going to add subscription bundles soon",
-      "[The Verge] GM thinks EVs can help offset AI’s energy suck with vehicle-to-grid tech",
-      "[Wired] Great White Sharks Have Been in the Mediterranean Sea for Millions of Years—but ",
-      "[Wired] GM Wants Your Electric Car to Power Your House—and Your Neighborhood",
-      "[Wired] MacOS 27 Golden Gate: Top New Features",
-      "[Wired] The Top New Features in Apple’s iOS 27 and iPadOS 27"
-    ]
-  },
-  {
     "date": "2026-06-11T04:31:47.258863",
     "episode": 1,
     "headlines": [
@@ -137,6 +109,34 @@
       "[Världsnyheter] Netanyahu and Trump on collision course as US, Iran agree to halt war - Reuters",
       "[SVT] ”SD-ministrar kan kosta Svantesson finansministerposten”",
       "[Aftonbladet] Storbritannien: Ska förse Ukraina med uran"
+    ]
+  },
+  {
+    "date": "2026-06-17T04:31:44.133565",
+    "episode": 1,
+    "headlines": [
+      "[Aftonbladet] Dödlig attack mot Zaporizjzja",
+      "[DN] Tusentals svenska hus hotas av havet",
+      "[Aftonbladet] Iranska oljetankrar passerade USA:s blockad",
+      "[Aftonbladet] G7-länderna lovar förnyat stöd till Ukraina",
+      "[Aftonbladet] Majoritet tror på ny regering efter valet",
+      "[Aftonbladet] Anthropic-stopp ett ”akut problem” för EU",
+      "[SR Ekot] Majoritet tror att oppositionen vinner valet",
+      "[SR Ekot] Dödliga ryska attacker – ukrainare dödades i sin bil"
+    ]
+  },
+  {
+    "date": "2026-06-17T04:35:57.215501",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] The Complete Calvin and Hobbes is a great last-minute Father’s Day gift",
+      "[The Verge] All the latest news on Android 17, Wear OS 7, and Android XR",
+      "[The Verge] Android 17 arrives on Pixel phones today",
+      "[The Verge] Google launches Wear OS 7 with Live Updates and a battery life boost",
+      "[Wired] Best Handheld Fans and Wearable Fans (2026)",
+      "[Wired] Leak Exposes Members of Peter Thiel’s Secretive ‘Dialog’ Society",
+      "[Wired] Why the Reflecting Pool Is Full of Algae After Trump's Renovation",
+      "[Wired] ‘Dangerous’ AI Models Are Coming No Matter What"
     ]
   }
 ]
