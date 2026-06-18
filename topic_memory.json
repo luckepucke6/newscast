@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-06-11T04:31:47.258863",
-    "episode": 1,
-    "headlines": [
-      "[Aftonbladet] USA riktar anfall mot Iran – möts av motattacker",
-      "[Världsnyheter] Middle East crisis live: US says second day of Iran strikes ‘completed’; Tehran ",
-      "[Världsnyheter] Live updates: US military launches strikes ‘against multiple targets in Iran’ - ",
-      "[Världsnyheter] Live Updates: U.S. Strikes Iran Again After Trump Says Talks Are Taking Too Long",
-      "[Världsnyheter] Iran war live: US launches new strikes on Iran after Trump vows to attack 'very ",
-      "[Världsnyheter] Iran war updates: US launches new attacks on ‘multiple targets in Iran’ - Al Jaz",
-      "[SR Ekot] Attackerna fortsätter mellan USA och Iran",
-      "[Världsnyheter] Live updates: U.S. has finished attacking targets in Iran, CENTCOM says - NBC Ne"
-    ]
-  },
-  {
     "date": "2026-06-12T04:31:45.461963",
     "episode": 1,
     "headlines": [
@@ -137,6 +123,20 @@
       "[Wired] Leak Exposes Members of Peter Thiel’s Secretive ‘Dialog’ Society",
       "[Wired] Why the Reflecting Pool Is Full of Algae After Trump's Renovation",
       "[Wired] ‘Dangerous’ AI Models Are Coming No Matter What"
+    ]
+  },
+  {
+    "date": "2026-06-18T04:31:52.377324",
+    "episode": 1,
+    "headlines": [
+      "[Aftonbladet] Iranavtal signerat – Hormuz ska öppnas",
+      "[Världsnyheter] Analysis: US-Iran agreement appears to leave Iran with the upper hand - CNN",
+      "[SVT] Hemlig polisövervakning avslöjade restauranger i Danderyd och Täby: ”Modernt sla",
+      "[DN] Ingmar Nevéus: Trumps avtal är en seger för regimen i Iran",
+      "[DN] Rysk konstnär ihjälskjuten i Polen: ”Sannolikt politiskt”",
+      "[Aftonbladet] Efter Orbán: Här är de nya ”bråkmakarna” i Bryssel",
+      "[Aftonbladet] Nattliga attacker i Ukraina och Ryssland",
+      "[Sverige] Sverige riskerar miljonböter varje dag som vi missar EUs klimatmål - Via TT"
     ]
   }
 ]
