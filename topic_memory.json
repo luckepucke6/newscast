@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-06-12T04:31:45.461963",
-    "episode": 1,
-    "headlines": [
-      "[DN] Alla broar till Krim attackerade – slår mot rysk logistik",
-      "[Sverige] Svantesson: Trump har kostat Sverige 160 miljarder - Dagens Nyheter",
-      "[Världsnyheter] Live updates: Trump says US ‘ended the war with Iran,’ though Tehran has yet to ",
-      "[Världsnyheter] Trump says he has canceled strikes on Iran, signals move toward deal - NBC News",
-      "[Världsnyheter] Live Updates: Trump says \"settlement\" reached on Iran, signing could be as soon ",
-      "[Världsnyheter] Trump says he has canceled plans to strike Iran, claiming deal is near - The Was",
-      "[SVT] Yngre barn i fängelse – minskar det brottsligheten?",
-      "[Aftonbladet] Sydkoreas expresident döms till 30 års fängelse"
-    ]
-  },
-  {
-    "date": "2026-06-12T04:35:48.282717",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Amazon&#8217;s Echo Hub gets a customizable new look and Ring&#8217;s AI feature",
-      "[The Verge] Logitech’s awesome MX Master 3S mouse drops to under $100",
-      "[The Verge] Blink’s six-piece outdoor camera kit is a great deal under $200",
-      "[The Verge] Roborock&#8217;s Q10 S5 Plus robovac is over half off, matching its best price t",
-      "[Wired] Apple’s Camera Chief Thinks AI Can Give You Superpowers",
-      "[Wired] Why You Might Already Own SpaceX Shares, Siri’s AI Makeover, and Knicks Owner’s ",
-      "[Wired] ‘Hands Off Our NHS’: Anti-Palantir Protests Break Out in UK Over Deal With Natio",
-      "[Wired] Meet the OpenAI Engineer Leading ChatGPT’s Biggest Transformation Yet"
-    ]
-  },
-  {
     "date": "2026-06-13T04:30:54.036816",
     "episode": 1,
     "headlines": [
@@ -137,6 +109,34 @@
       "[Aftonbladet] Efter Orbán: Här är de nya ”bråkmakarna” i Bryssel",
       "[Aftonbladet] Nattliga attacker i Ukraina och Ryssland",
       "[Sverige] Sverige riskerar miljonböter varje dag som vi missar EUs klimatmål - Via TT"
+    ]
+  },
+  {
+    "date": "2026-06-19T04:32:21.665642",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] Live updates: US and Iran sign initial agreement to end war but tougher talks li",
+      "[Världsnyheter] Trump finally sealed his Iran deal. Now talks on the ‘final’ deal begin. - NBC N",
+      "[DN] Rysk lag gör fastigheter till militärt hot mot Europa",
+      "[DN] 76 000 britter kan avgöra hela landets framtid",
+      "[SR Ekot] EU-toppen har öppnat ”diplomatisk kanal” till Kreml",
+      "[SR Ekot] Nato ska modernisera sina kärnvapen: ”Nödvändigt för att säkra fred”",
+      "[Världsnyheter] Vance Issues Blunt Warning to Israel as He Defends Trump’s Deal - The New York T",
+      "[Världsnyheter] Ukraine Strikes Moscow Refinery in Large-Scale Drone Attack - The New York Times"
+    ]
+  },
+  {
+    "date": "2026-06-19T04:37:08.846603",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Valve is so behind on Steam Controller orders that some won&#8217;t ship until 2",
+      "[The Verge] You can now use the Game Boy Camera with your phone",
+      "[The Verge] HBO Max&#8217;s annual plans are 28 percent off right now",
+      "[The Verge] Snap’s Specs look good on nobody",
+      "[Wired] Prime Day Early Deals 2026: Breville and Ninja Espresso Maker Deals",
+      "[Wired] How the Peter Thiel-Linked Dialog Club Secretly Ranks Its Members",
+      "[Wired] The White House Is Making Up Its Rules for AI in Real Time",
+      "[Wired] 44 Best Father’s Day Gifts for Dads (2026)"
     ]
   }
 ]
