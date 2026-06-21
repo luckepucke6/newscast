@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-06-13T04:30:54.036816",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] USA och Iran uppges vara överens om utkast till fredsavtal",
-      "[Världsnyheter] Iran War Live Updates: Trump and Iranian Officials Say Peace Deal Appears Within",
-      "[Världsnyheter] Elon Musk becomes the world's first trillionaire with SpaceX's IPO - CBS News",
-      "[Världsnyheter] Iran war updates: Pakistan’s PM says ‘final text’ of US-Iran deal agreed | US-Is",
-      "[Aftonbladet] FN: Maj dödligaste månaden på flera år i Ukraina",
-      "[SR Ekot] Försvarsministern: Sverige måste rusta upp snabbare",
-      "[Sverige] Rapport: Angrepp mot Sverige kan inte uteslutas - Omni",
-      "[Världsnyheter] Exclusive: UAE to unlock billions of dollars for Iran, sources say - Reuters"
-    ]
-  },
-  {
-    "date": "2026-06-14T04:31:12.526786",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] Donald Trump: Ett avtal med Iran ska skrivas under på söndag",
-      "[SR Ekot] Det är frågorna som kan avgöra kampen om statsministerposten",
-      "[SR Ekot] Trump: Hormuzsundet öppnar i morgon",
-      "[Världsnyheter] Live updates: Iran war news; Trump says agreement to be signed Sunday, Tehran pu",
-      "[Världsnyheter] U.S.-Iran deal to reopen Strait of Hormuz could be signed within days, both side",
-      "[SVT] Viktor Orbán återvald som partiledare för Fidesz",
-      "[DN] Rekordvärme på Antarktiska halvön – forskare varnar för snabb issmältning",
-      "[Aftonbladet] Ebolautbrottet fortsätter att växa"
-    ]
-  },
-  {
     "date": "2026-06-15T04:32:31.818030",
     "episode": 1,
     "headlines": [
@@ -151,6 +123,20 @@
       "[Världsnyheter] With Lebanon ceasefire set, Trump envoy heads to Switzerland for U.S.-Iran talks",
       "[DN] Tåg kolliderade i England – en död och 89 skadade",
       "[Aftonbladet] Uppgörelse i Bolivia efter veckor av protester"
+    ]
+  },
+  {
+    "date": "2026-06-21T04:31:52.555226",
+    "episode": 1,
+    "headlines": [
+      "[SR Ekot] Efter Israels attacker: ”Många kroppar i rasmassorna”",
+      "[Världsnyheter] Iran says Strait of Hormuz is closed over ceasefire violations after continued I",
+      "[SVT] Uppgifter: Starmer väntas avgå på måndag",
+      "[Aftonbladet] Värmekupolen ligger som ett lock över Europa –  varnar för extrem hetta",
+      "[Aftonbladet] Källor: Extrainsatt möte om Hizbollah",
+      "[Aftonbladet] Källor: Besked om Starmers framtid till veckan",
+      "[SR Ekot] Rapport: Mer än en miljard barn utsatta för klimathot",
+      "[SVT] Storsatsning för att förhindra gängrekrytering – ny polisoperation i Värmland"
     ]
   }
 ]
