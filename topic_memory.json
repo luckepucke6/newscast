@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-06-15T04:32:31.818030",
-    "episode": 1,
-    "headlines": [
-      "[SVT] USA och Iran överens om avtal – Hormuzsundet öppnas",
-      "[Världsnyheter] Live updates: Trump and Iran reach agreement that includes opening Strait of Hor",
-      "[Världsnyheter] US-Iran peace deal could see strait of Hormuz open on Friday ‘under Iranian arra",
-      "[Aftonbladet] Flera döda i ryska robotattacker",
-      "[Världsnyheter] Iran War Live Updates: Trump Calls for Restraint After Israel Strikes Beirut Sub",
-      "[Aftonbladet] Känt kloster i lågor efter attacker mot Kiev",
-      "[Aftonbladet] Statsvetare: Flera fallgropar trots Iran-avtal",
-      "[SR Ekot] Sveriges utrikesminister om vapenvilan: ”Oerhört skört”"
-    ]
-  },
-  {
-    "date": "2026-06-15T04:37:07.223278",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] The FBI built a small town to simulate cyberattacks",
-      "[The Verge] China may have accessed Mythos",
-      "[The Verge] Conclave is the sound of a NYC summer block party",
-      "[The Verge] How to watch most of the World Cup matches with free trials",
-      "[Wired] 20 Best Gifts for Men, Manly Men, and Menly Man Men (2026)",
-      "[Wired] 19 Best Gifts for Plant Lovers and Gardeners (2026)",
-      "[Wired] Suunto Spark Review: The Perfect Pair for Runs and Rides",
-      "[Wired] The Strait of Hormuz Has Been Closed for 100 Days. Why Aren’t Oil Prices Higher?"
-    ]
-  },
-  {
     "date": "2026-06-16T04:32:57.211561",
     "episode": 1,
     "headlines": [
@@ -137,6 +109,34 @@
       "[Aftonbladet] Källor: Besked om Starmers framtid till veckan",
       "[SR Ekot] Rapport: Mer än en miljard barn utsatta för klimathot",
       "[SVT] Storsatsning för att förhindra gängrekrytering – ny polisoperation i Värmland"
+    ]
+  },
+  {
+    "date": "2026-06-22T04:32:56.487102",
+    "episode": 1,
+    "headlines": [
+      "[SVT] Fredsförhandlingarna i Schweiz – detta vet vi",
+      "[DN] Efter fyra år med Tidöregeringen – så går det för Sverige",
+      "[Världsnyheter] Live updates: Iran and US make ‘encouraging progress’ in crucial talks, mediator",
+      "[SVT] Åratal av larm – ändå skrev Region Skåne fem nya miljonavtal med Avarn",
+      "[SVT] Ansågs jävig – chef på Region Skåne fick ändå förhandla miljonavtal med Avarn",
+      "[Aftonbladet] Ryssland: Flygplatser stängdes efter drönarlarm",
+      "[Aftonbladet] Trumpfavorit går mot valseger i Colombia",
+      "[Aftonbladet] Iran efter avslutade förhandlingar: ”Framsteg”"
+    ]
+  },
+  {
+    "date": "2026-06-22T04:37:33.272515",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Bose thinks it can be a media company for some reason",
+      "[The Verge] Cold Court’s debut EP is an infectious, glitchy genre mashup",
+      "[The Verge] Polymarket reportedly paid people to post fake videos of themselves placing bets",
+      "[The Verge] How Roomba started a robot revolution",
+      "[Wired] Wooting 60HE v2: Peak Keyboard Perfection",
+      "[Wired] The Best NAS Devices for Your Home After Months of Testing",
+      "[Wired] 28 Tips to Take Your ChatGPT Prompts to the Next Level",
+      "[Wired] If You’re Searching for a New Skillet, Consider Stainless Steel"
     ]
   }
 ]
