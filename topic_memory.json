@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-06-16T04:32:57.211561",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] Trump and Iran reach tentative deal to end war, reopen Hormuz - NBC News",
-      "[DN] Militärexpert: Putin kan tvingas till mobilisering i höst",
-      "[SR Ekot] Trump: USA och Iran har skrivit under avsiktsförklaring",
-      "[Världsnyheter] Live updates: US and Iran reach agreement but key questions remain - CNN",
-      "[Världsnyheter] Bowen: Iran deal ends Trump's war that revealed limit of US dominance - BBC",
-      "[Världsnyheter] Netanyahu and Trump on collision course as US, Iran agree to halt war - Reuters",
-      "[SVT] ”SD-ministrar kan kosta Svantesson finansministerposten”",
-      "[Aftonbladet] Storbritannien: Ska förse Ukraina med uran"
-    ]
-  },
-  {
     "date": "2026-06-17T04:31:44.133565",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,34 @@
       "[Världsnyheter] US waives Iran sanctions after talks; Lebanon fighting abates - Reuters",
       "[SVT] Ulf Kristersson tappar i förtroende – Andersson drar ifrån",
       "[DN] Isobel Hadley-Kamptz: Kriget har kommit hem till Moskva"
+    ]
+  },
+  {
+    "date": "2026-06-24T04:26:26.663238",
+    "episode": 1,
+    "headlines": [
+      "[SVT] Nordkorea: Marinen får kärnvapen",
+      "[SVT] Ryska skuggflottan passerar nära Sverige – varje dag",
+      "[SVT] Efter hotet – kan Ukraina och Belarus hamna i krig?",
+      "[SR Ekot] Ryssland lurar studenter till fronten: ”Bryr sig inte om vem som dör”",
+      "[Sverige] Hemliga chattar: Sverige har köpt in Palantirs kritiserade AI-krigssystem - ETC.",
+      "[SVT] Så rekryteras unga till grova brott",
+      "[DN] Okända maktstriden inom SD – larmet gick till Åkesson i Thailand",
+      "[SR Ekot] ”Doktor lagom” granskas internt – betalades av tobaksbranschen"
+    ]
+  },
+  {
+    "date": "2026-06-24T04:30:49.253806",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] The best robot vacuum deals available during Prime Day",
+      "[The Verge] This year’s Prime Day deals on Apple products are the best I’ve seen",
+      "[The Verge] The Nex Playground is down to its pre-RAMageddon price during Prime Day",
+      "[The Verge] Google Home will soon get better at recognizing you",
+      "[Wired] Best Dyson Deals for Prime Day: Vacuums, Hair Tools, and More",
+      "[Wired] Microsoft Comes Through With the Best Laptop Deal of Prime Day So Far",
+      "[Wired] Amazon Prime Day Deal 2026: A Tushy Bidet for Under $100",
+      "[Wired] 117 Prime Day Deals on Gear We’ve Tested and Would Spend Our Own Money On"
     ]
   }
 ]
