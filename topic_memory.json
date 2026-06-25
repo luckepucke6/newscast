@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-06-17T04:31:44.133565",
-    "episode": 1,
-    "headlines": [
-      "[Aftonbladet] Dödlig attack mot Zaporizjzja",
-      "[DN] Tusentals svenska hus hotas av havet",
-      "[Aftonbladet] Iranska oljetankrar passerade USA:s blockad",
-      "[Aftonbladet] G7-länderna lovar förnyat stöd till Ukraina",
-      "[Aftonbladet] Majoritet tror på ny regering efter valet",
-      "[Aftonbladet] Anthropic-stopp ett ”akut problem” för EU",
-      "[SR Ekot] Majoritet tror att oppositionen vinner valet",
-      "[SR Ekot] Dödliga ryska attacker – ukrainare dödades i sin bil"
-    ]
-  },
-  {
-    "date": "2026-06-17T04:35:57.215501",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] The Complete Calvin and Hobbes is a great last-minute Father’s Day gift",
-      "[The Verge] All the latest news on Android 17, Wear OS 7, and Android XR",
-      "[The Verge] Android 17 arrives on Pixel phones today",
-      "[The Verge] Google launches Wear OS 7 with Live Updates and a battery life boost",
-      "[Wired] Best Handheld Fans and Wearable Fans (2026)",
-      "[Wired] Leak Exposes Members of Peter Thiel’s Secretive ‘Dialog’ Society",
-      "[Wired] Why the Reflecting Pool Is Full of Algae After Trump's Renovation",
-      "[Wired] ‘Dangerous’ AI Models Are Coming No Matter What"
-    ]
-  },
-  {
     "date": "2026-06-18T04:31:52.377324",
     "episode": 1,
     "headlines": [
@@ -165,6 +137,20 @@
       "[Wired] Microsoft Comes Through With the Best Laptop Deal of Prime Day So Far",
       "[Wired] Amazon Prime Day Deal 2026: A Tushy Bidet for Under $100",
       "[Wired] 117 Prime Day Deals on Gear We’ve Tested and Would Spend Our Own Money On"
+    ]
+  },
+  {
+    "date": "2026-06-25T04:25:55.739307",
+    "episode": 1,
+    "headlines": [
+      "[DN] Kraftiga jordbävningar i Venezuela – tiotusentals befaras döda",
+      "[DN] Jordskalv i Venezuela – risk för tiotusentals döda",
+      "[Världsnyheter] Live updates: Powerful 7.5 magnitude earthquake hits Venezuela - CNN",
+      "[Världsnyheter] France confirms first Ebola case - BBC",
+      "[SVT] Dubbel inkomst för Jansson – bidrag från kommunen och konsultpengar",
+      "[SVT] Polen och Sverige skriver avtal om tre A26-ubåtar den 29 juni",
+      "[Aftonbladet] Larm om höga halter av PFAS i kött vid Landvetter",
+      "[Aftonbladet] Dubbla skalv i Venezuela – tusentals befaras döda"
     ]
   }
 ]
