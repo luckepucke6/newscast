@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-06-18T04:31:52.377324",
-    "episode": 1,
-    "headlines": [
-      "[Aftonbladet] Iranavtal signerat – Hormuz ska öppnas",
-      "[Världsnyheter] Analysis: US-Iran agreement appears to leave Iran with the upper hand - CNN",
-      "[SVT] Hemlig polisövervakning avslöjade restauranger i Danderyd och Täby: ”Modernt sla",
-      "[DN] Ingmar Nevéus: Trumps avtal är en seger för regimen i Iran",
-      "[DN] Rysk konstnär ihjälskjuten i Polen: ”Sannolikt politiskt”",
-      "[Aftonbladet] Efter Orbán: Här är de nya ”bråkmakarna” i Bryssel",
-      "[Aftonbladet] Nattliga attacker i Ukraina och Ryssland",
-      "[Sverige] Sverige riskerar miljonböter varje dag som vi missar EUs klimatmål - Via TT"
-    ]
-  },
-  {
-    "date": "2026-06-19T04:32:21.665642",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] Live updates: US and Iran sign initial agreement to end war but tougher talks li",
-      "[Världsnyheter] Trump finally sealed his Iran deal. Now talks on the ‘final’ deal begin. - NBC N",
-      "[DN] Rysk lag gör fastigheter till militärt hot mot Europa",
-      "[DN] 76 000 britter kan avgöra hela landets framtid",
-      "[SR Ekot] EU-toppen har öppnat ”diplomatisk kanal” till Kreml",
-      "[SR Ekot] Nato ska modernisera sina kärnvapen: ”Nödvändigt för att säkra fred”",
-      "[Världsnyheter] Vance Issues Blunt Warning to Israel as He Defends Trump’s Deal - The New York T",
-      "[Världsnyheter] Ukraine Strikes Moscow Refinery in Large-Scale Drone Attack - The New York Times"
-    ]
-  },
-  {
     "date": "2026-06-19T04:37:08.846603",
     "episode": 2,
     "headlines": [
@@ -151,6 +123,34 @@
       "[SVT] Polen och Sverige skriver avtal om tre A26-ubåtar den 29 juni",
       "[Aftonbladet] Larm om höga halter av PFAS i kött vid Landvetter",
       "[Aftonbladet] Dubbla skalv i Venezuela – tusentals befaras döda"
+    ]
+  },
+  {
+    "date": "2026-06-26T04:29:47.983398",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] Live updates: Venezuela earthquakes kill at least 235; death toll could exceed t",
+      "[DN] USA skickar militära styrkor till Venezuela efter skalven",
+      "[Aftonbladet] Venezuela: Över 200 döda i skalven",
+      "[Aftonbladet] USA skickar militär nödhjälp till Venezuela",
+      "[SR Ekot] Över 200 döda efter jordbävningarna i Venezuela",
+      "[Världsnyheter] Powerful twin earthquakes hammer Venezuela, killing at least 188 - NBC News",
+      "[Aftonbladet] Dödstal i ebola stiger över 300",
+      "[SR Ekot] Dödstalet fortsätter stiga – anhöriga väntar vid rasmassorna"
+    ]
+  },
+  {
+    "date": "2026-06-26T04:33:55.982542",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Android 17&#8217;s new foldable gaming mode could make flippy phones more fun",
+      "[The Verge] YouTube updates Shorts to make it even more like TikTok",
+      "[The Verge] OpenAI will delay GPT-5.6 after Trump administration request",
+      "[The Verge] Framework has good news and bad news",
+      "[Wired] Anthropic Thinks Its Own Success Is Key to Making AI Safe",
+      "[Wired] This Is Probably Your Last Chance to Buy a Cheap MacBook for a While",
+      "[Wired] Why Amazon Dropped Its OpenAI Movie, Data Center Workers Fight Back, and Meta Le",
+      "[Wired] 99 Prime Day Deals That Aren’t For Suckers, Up to 50% Off (2026)"
     ]
   }
 ]
