@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-06-19T04:37:08.846603",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Valve is so behind on Steam Controller orders that some won&#8217;t ship until 2",
-      "[The Verge] You can now use the Game Boy Camera with your phone",
-      "[The Verge] HBO Max&#8217;s annual plans are 28 percent off right now",
-      "[The Verge] Snap’s Specs look good on nobody",
-      "[Wired] Prime Day Early Deals 2026: Breville and Ninja Espresso Maker Deals",
-      "[Wired] How the Peter Thiel-Linked Dialog Club Secretly Ranks Its Members",
-      "[Wired] The White House Is Making Up Its Rules for AI in Real Time",
-      "[Wired] 44 Best Father’s Day Gifts for Dads (2026)"
-    ]
-  },
-  {
     "date": "2026-06-20T04:30:38.092023",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,20 @@
       "[Wired] This Is Probably Your Last Chance to Buy a Cheap MacBook for a While",
       "[Wired] Why Amazon Dropped Its OpenAI Movie, Data Center Workers Fight Back, and Meta Le",
       "[Wired] 99 Prime Day Deals That Aren’t For Suckers, Up to 50% Off (2026)"
+    ]
+  },
+  {
+    "date": "2026-06-27T04:22:45.049361",
+    "episode": 1,
+    "headlines": [
+      "[SR Ekot] USA attackerar Iran – svar på anfall mot kommersiellt fartyg",
+      "[Världsnyheter] US strikes Iran in response to attack on cargo ship in Strait of Hormuz - Reuter",
+      "[DN] USA anföll mål i Iran – svar på attack mot fartyg",
+      "[Aftonbladet] Iran: Motattacker mot amerikanska mål",
+      "[Aftonbladet] Natoländerna väntar på rysk attack: ”Snart”",
+      "[SR Ekot] Över 920 döda: ”Människor hörs under rasmassorna”",
+      "[Världsnyheter] Venezuela quake toll tops 900, search intensifies for hundreds trapped - Reuters",
+      "[SR Ekot] Europol: Över 500 nya kriminella nätverk på två år"
     ]
   }
 ]
