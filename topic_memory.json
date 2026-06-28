@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-06-20T04:30:38.092023",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] Efter Ukrainas attacker: Ryssland kan tvingas importera bensin",
-      "[SR Ekot] Uppgifter: Witkoff på väg till Schweiz för Iransamtal",
-      "[Världsnyheter] Live updates: Witkoff heading to Switzerland for Iran talks, US official says - ",
-      "[DN] 400 danska ”spöksoldater” på väg till Ukraina",
-      "[Aftonbladet] Källor: USA skickar sändebud för Iransamtal",
-      "[Världsnyheter] With Lebanon ceasefire set, Trump envoy heads to Switzerland for U.S.-Iran talks",
-      "[DN] Tåg kolliderade i England – en död och 89 skadade",
-      "[Aftonbladet] Uppgörelse i Bolivia efter veckor av protester"
-    ]
-  },
-  {
     "date": "2026-06-21T04:31:52.555226",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,20 @@
       "[SR Ekot] Över 920 döda: ”Människor hörs under rasmassorna”",
       "[Världsnyheter] Venezuela quake toll tops 900, search intensifies for hundreds trapped - Reuters",
       "[SR Ekot] Europol: Över 500 nya kriminella nätverk på två år"
+    ]
+  },
+  {
+    "date": "2026-06-28T04:30:57.538890",
+    "episode": 1,
+    "headlines": [
+      "[DN] USA attackerar mål i Iran för andra kvällen i rad",
+      "[Aftonbladet] USA och Iran utväxlar attacker och hot",
+      "[Världsnyheter] Live updates: Death toll climbs to over 1,400 in Venezuela quakes as aftershocks",
+      "[Världsnyheter] Venezuela earthquakes: death toll rises again to more than 1,400 - The Guardian",
+      "[Aftonbladet] Attackvågor mot flera delar av Ukraina",
+      "[SR Ekot] Ryska drönarattacker mot flera ukrainska städer",
+      "[Aftonbladet] Trumps hot för att rädda seger: De är som djur",
+      "[Aftonbladet] Netanyahu ändrar kurs – vill ha ”bred koalition”"
     ]
   }
 ]
