@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-06-21T04:31:52.555226",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] Efter Israels attacker: ”Många kroppar i rasmassorna”",
-      "[Världsnyheter] Iran says Strait of Hormuz is closed over ceasefire violations after continued I",
-      "[SVT] Uppgifter: Starmer väntas avgå på måndag",
-      "[Aftonbladet] Värmekupolen ligger som ett lock över Europa –  varnar för extrem hetta",
-      "[Aftonbladet] Källor: Extrainsatt möte om Hizbollah",
-      "[Aftonbladet] Källor: Besked om Starmers framtid till veckan",
-      "[SR Ekot] Rapport: Mer än en miljard barn utsatta för klimathot",
-      "[SVT] Storsatsning för att förhindra gängrekrytering – ny polisoperation i Värmland"
-    ]
-  },
-  {
-    "date": "2026-06-22T04:32:56.487102",
-    "episode": 1,
-    "headlines": [
-      "[SVT] Fredsförhandlingarna i Schweiz – detta vet vi",
-      "[DN] Efter fyra år med Tidöregeringen – så går det för Sverige",
-      "[Världsnyheter] Live updates: Iran and US make ‘encouraging progress’ in crucial talks, mediator",
-      "[SVT] Åratal av larm – ändå skrev Region Skåne fem nya miljonavtal med Avarn",
-      "[SVT] Ansågs jävig – chef på Region Skåne fick ändå förhandla miljonavtal med Avarn",
-      "[Aftonbladet] Ryssland: Flygplatser stängdes efter drönarlarm",
-      "[Aftonbladet] Trumpfavorit går mot valseger i Colombia",
-      "[Aftonbladet] Iran efter avslutade förhandlingar: ”Framsteg”"
-    ]
-  },
-  {
     "date": "2026-06-22T04:37:33.272515",
     "episode": 2,
     "headlines": [
@@ -151,6 +123,34 @@
       "[SR Ekot] Ryska drönarattacker mot flera ukrainska städer",
       "[Aftonbladet] Trumps hot för att rädda seger: De är som djur",
       "[Aftonbladet] Netanyahu ändrar kurs – vill ha ”bred koalition”"
+    ]
+  },
+  {
+    "date": "2026-06-29T04:32:11.361688",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] Iran and US agree to halt attacks and renew talks, U.S. official says - Reuters",
+      "[DN] Källor: Iran och USA pausar attacker – samtal i Doha",
+      "[Aftonbladet] Vapenvilan mellan USA och Iran i fara",
+      "[Aftonbladet] Uppgifter: USA och Iran avbryter attacker",
+      "[SR Ekot] Tusentals utan hem efter skalven – över 1400 döda",
+      "[Världsnyheter] Live updates: US and Iran to ‘stand down for now,’ US official says after exchan",
+      "[Världsnyheter] Live Updates: Iran Strikes U.S. Sites in Bahrain and Kuwait as Attacks Show Few ",
+      "[Aftonbladet] Svänger om migrationen – ska ”lösas” utanför Europa"
+    ]
+  },
+  {
+    "date": "2026-06-29T04:36:36.298303",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] China’s Z.ai claims it can match Mythos on cybersecurity",
+      "[The Verge] Suno launches Spark incubator program to feed independent artists to its AI mach",
+      "[The Verge] China claims the world&#8217;s fastest supercomputer",
+      "[The Verge] The Cube is Jim Henson’s little-known proto-Black Mirror masterpiece",
+      "[Wired] What to Do in Houston If You're Here for Business (2026)",
+      "[Wired] The ‘Almost Homeless’ Subreddit Is a Stark Glimpse at Soaring Wealth Inequality",
+      "[Wired] Why Wear Anything Other Than a Sun Hoodie This Summer? Our Picks for the Best",
+      "[Wired] This Is the Most Detailed Image Yet of the Milky Way's Center"
     ]
   }
 ]
