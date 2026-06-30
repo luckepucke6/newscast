@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-06-22T04:37:33.272515",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Bose thinks it can be a media company for some reason",
-      "[The Verge] Cold Court’s debut EP is an infectious, glitchy genre mashup",
-      "[The Verge] Polymarket reportedly paid people to post fake videos of themselves placing bets",
-      "[The Verge] How Roomba started a robot revolution",
-      "[Wired] Wooting 60HE v2: Peak Keyboard Perfection",
-      "[Wired] The Best NAS Devices for Your Home After Months of Testing",
-      "[Wired] 28 Tips to Take Your ChatGPT Prompts to the Next Level",
-      "[Wired] If You’re Searching for a New Skillet, Consider Stainless Steel"
-    ]
-  },
-  {
-    "date": "2026-06-23T04:25:22.943053",
-    "episode": 1,
-    "headlines": [
-      "[Aftonbladet] Säpo: Iran fortsätter värva unga för attentat",
-      "[SR Ekot] Säpo: Iran fortsätter använda svenska gäng för våldsuppdrag",
-      "[Sverige] Säpo: Iran använder svenska kriminella nätverk - Sveriges Radio",
-      "[Världsnyheter] Iran war updates: Trump says Iran ‘will agree’ to allow weapons inspections - Al",
-      "[Världsnyheter] US-Iran talks laid ‘very good foundation for a successful final deal’, says Vanc",
-      "[Världsnyheter] US waives Iran sanctions after talks; Lebanon fighting abates - Reuters",
-      "[SVT] Ulf Kristersson tappar i förtroende – Andersson drar ifrån",
-      "[DN] Isobel Hadley-Kamptz: Kriget har kommit hem till Moskva"
-    ]
-  },
-  {
     "date": "2026-06-24T04:26:26.663238",
     "episode": 1,
     "headlines": [
@@ -151,6 +123,20 @@
       "[Wired] The ‘Almost Homeless’ Subreddit Is a Stark Glimpse at Soaring Wealth Inequality",
       "[Wired] Why Wear Anything Other Than a Sun Hoodie This Summer? Our Picks for the Best",
       "[Wired] This Is the Most Detailed Image Yet of the Milky Way's Center"
+    ]
+  },
+  {
+    "date": "2026-06-30T04:26:22.612020",
+    "episode": 1,
+    "headlines": [
+      "[Aftonbladet] Ryssland: Ukrainska attackvågor mot Moskva",
+      "[SR Ekot] EU och Kina i möten – vill undvika handelskrig",
+      "[DN] Max Hjelm: Från V till M är de överens – vem som än vinner valet får den här gru",
+      "[Aftonbladet] Mustchefen: Rysslands förluster är ofattbara",
+      "[Aftonbladet] Dödstalet stiger i Kongo-Kinshasa",
+      "[Sverige] Ubåtsaffären med Polen klar – värd nästan 50 miljarder - SVT Nyheter",
+      "[Världsnyheter] Live updates: Trump and Iran issue conflicting statements about new talks - CNN",
+      "[Politik] How civilisational politics fuels today’s wars - ThinkChina"
     ]
   }
 ]
