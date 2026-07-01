@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-06-24T04:26:26.663238",
-    "episode": 1,
-    "headlines": [
-      "[SVT] Nordkorea: Marinen får kärnvapen",
-      "[SVT] Ryska skuggflottan passerar nära Sverige – varje dag",
-      "[SVT] Efter hotet – kan Ukraina och Belarus hamna i krig?",
-      "[SR Ekot] Ryssland lurar studenter till fronten: ”Bryr sig inte om vem som dör”",
-      "[Sverige] Hemliga chattar: Sverige har köpt in Palantirs kritiserade AI-krigssystem - ETC.",
-      "[SVT] Så rekryteras unga till grova brott",
-      "[DN] Okända maktstriden inom SD – larmet gick till Åkesson i Thailand",
-      "[SR Ekot] ”Doktor lagom” granskas internt – betalades av tobaksbranschen"
-    ]
-  },
-  {
-    "date": "2026-06-24T04:30:49.253806",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] The best robot vacuum deals available during Prime Day",
-      "[The Verge] This year’s Prime Day deals on Apple products are the best I’ve seen",
-      "[The Verge] The Nex Playground is down to its pre-RAMageddon price during Prime Day",
-      "[The Verge] Google Home will soon get better at recognizing you",
-      "[Wired] Best Dyson Deals for Prime Day: Vacuums, Hair Tools, and More",
-      "[Wired] Microsoft Comes Through With the Best Laptop Deal of Prime Day So Far",
-      "[Wired] Amazon Prime Day Deal 2026: A Tushy Bidet for Under $100",
-      "[Wired] 117 Prime Day Deals on Gear We’ve Tested and Would Spend Our Own Money On"
-    ]
-  },
-  {
     "date": "2026-06-25T04:25:55.739307",
     "episode": 1,
     "headlines": [
@@ -137,6 +109,34 @@
       "[Sverige] Ubåtsaffären med Polen klar – värd nästan 50 miljarder - SVT Nyheter",
       "[Världsnyheter] Live updates: Trump and Iran issue conflicting statements about new talks - CNN",
       "[Politik] How civilisational politics fuels today’s wars - ThinkChina"
+    ]
+  },
+  {
+    "date": "2026-07-01T04:31:38.244532",
+    "episode": 1,
+    "headlines": [
+      "[DN] Nu sänks priset för alla som åker kollektivt",
+      "[DN] Har Moderaterna någon chans kvar att vinna valet?",
+      "[SR Ekot] Nu öppnar ungdomsfängelserna",
+      "[Världsnyheter] Live updates: US envoys in Qatar for talks with mediators about Iran - CNN",
+      "[DN] Ledare: Gängsoppan i Botkyrka hänger med in i valrörelsen – och det är S eget fe",
+      "[Aftonbladet] USA har påbörjat deportationer till pyttestat",
+      "[SR Ekot] Yrkesprogrammen ökar – högsta söktrycket på länge",
+      "[Sverige] Språkkrav och enklare uthyrning – detta börjar gälla i dag - NSD"
+    ]
+  },
+  {
+    "date": "2026-07-01T04:36:05.470976",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Meta is adding ridiculous &#8216;rate limits&#8217; and a soft paywall to its sm",
+      "[The Verge] Anthropic&#8217;s long-sidelined Fable 5 is greenlit to return",
+      "[The Verge] Dish files for bankruptcy, but not shutting down",
+      "[The Verge] Amazon fined $2.25 million for failing to help identity theft victims",
+      "[Wired] The Trump Administration Is Lifting Its Export Controls on Anthropic’s Mythos an",
+      "[Wired] Daisy’s First Headphones Are Premium, High-Quality—and Just a Little Bit Cheaper",
+      "[Wired] New York Is About to Feel Hotter Than Phoenix",
+      "[Wired] The 2 Best Slushie Machines of 2026: Now With Soft Serve"
     ]
   }
 ]
