@@ -1,47 +1,5 @@
 [
   {
-    "date": "2026-06-25T04:25:55.739307",
-    "episode": 1,
-    "headlines": [
-      "[DN] Kraftiga jordbävningar i Venezuela – tiotusentals befaras döda",
-      "[DN] Jordskalv i Venezuela – risk för tiotusentals döda",
-      "[Världsnyheter] Live updates: Powerful 7.5 magnitude earthquake hits Venezuela - CNN",
-      "[Världsnyheter] France confirms first Ebola case - BBC",
-      "[SVT] Dubbel inkomst för Jansson – bidrag från kommunen och konsultpengar",
-      "[SVT] Polen och Sverige skriver avtal om tre A26-ubåtar den 29 juni",
-      "[Aftonbladet] Larm om höga halter av PFAS i kött vid Landvetter",
-      "[Aftonbladet] Dubbla skalv i Venezuela – tusentals befaras döda"
-    ]
-  },
-  {
-    "date": "2026-06-26T04:29:47.983398",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] Live updates: Venezuela earthquakes kill at least 235; death toll could exceed t",
-      "[DN] USA skickar militära styrkor till Venezuela efter skalven",
-      "[Aftonbladet] Venezuela: Över 200 döda i skalven",
-      "[Aftonbladet] USA skickar militär nödhjälp till Venezuela",
-      "[SR Ekot] Över 200 döda efter jordbävningarna i Venezuela",
-      "[Världsnyheter] Powerful twin earthquakes hammer Venezuela, killing at least 188 - NBC News",
-      "[Aftonbladet] Dödstal i ebola stiger över 300",
-      "[SR Ekot] Dödstalet fortsätter stiga – anhöriga väntar vid rasmassorna"
-    ]
-  },
-  {
-    "date": "2026-06-26T04:33:55.982542",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Android 17&#8217;s new foldable gaming mode could make flippy phones more fun",
-      "[The Verge] YouTube updates Shorts to make it even more like TikTok",
-      "[The Verge] OpenAI will delay GPT-5.6 after Trump administration request",
-      "[The Verge] Framework has good news and bad news",
-      "[Wired] Anthropic Thinks Its Own Success Is Key to Making AI Safe",
-      "[Wired] This Is Probably Your Last Chance to Buy a Cheap MacBook for a While",
-      "[Wired] Why Amazon Dropped Its OpenAI Movie, Data Center Workers Fight Back, and Meta Le",
-      "[Wired] 99 Prime Day Deals That Aren’t For Suckers, Up to 50% Off (2026)"
-    ]
-  },
-  {
     "date": "2026-06-27T04:22:45.049361",
     "episode": 1,
     "headlines": [
@@ -151,6 +109,34 @@
       "[SR Ekot] Första åtalet mot barnäktenskap: ”Historiskt rättsfall”",
       "[SR Ekot] Ökat ukrainskt stöd när Europas arméer ska växa",
       "[SR Ekot] Högsta elpriset i södra Sverige på flera år – värmeböljan påverkar"
+    ]
+  },
+  {
+    "date": "2026-07-03T06:23:00.395734",
+    "episode": 1,
+    "headlines": [
+      "[SR Ekot] Över 2 500 döda efter jordbävning: ”Vi agerade omedelbart”",
+      "[SR Ekot] Efter Kiev-attackerna: Zelenskyj vädjar om mer hjälp",
+      "[SVT] Idag får PFAS-drabbade i Kallinge besked om ersättning från staten",
+      "[Aftonbladet] Frankrike: Fler döda efter värmebölja",
+      "[Aftonbladet] Klart: Nytt klimatmål ska prövas i domstol",
+      "[SR Ekot] Irland ska lösa EU-tvist om tusentals miljarder",
+      "[Sverige] Ryska ambassaden: Attack i Stockholm i natt - Expressen",
+      "[SVT] Sverige avbryter klimatprojekt i Ghana – gav inte minskade utsläpp"
+    ]
+  },
+  {
+    "date": "2026-07-03T06:26:44.319901",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Sony’s PlayStation disc factory is already being repurposed",
+      "[The Verge] Tesla driver faces manslaughter charges over Texas crash that killed a woman ins",
+      "[The Verge] Meta has a new app called Pocket that is absolutely nothing like the old Pocket",
+      "[The Verge] The best July 4th sales we found so far",
+      "[Wired] EU Politicians Investigated Pegasus Spyware. Then It Ended Up on One of Their Ph",
+      "[Wired] The Onion’s ‘Infowars’ Parody Is Here. Alex Jones Is Going to Hate It",
+      "[Wired] How Big Is ‘Love Island USA’? More Than 10 Million People Are Already on Its App",
+      "[Wired] Spotify Confirms Streaming Fraud After Kalshi Trader Cries Foul"
     ]
   }
 ]
