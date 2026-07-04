@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-06-27T04:22:45.049361",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] USA attackerar Iran – svar på anfall mot kommersiellt fartyg",
-      "[Världsnyheter] US strikes Iran in response to attack on cargo ship in Strait of Hormuz - Reuter",
-      "[DN] USA anföll mål i Iran – svar på attack mot fartyg",
-      "[Aftonbladet] Iran: Motattacker mot amerikanska mål",
-      "[Aftonbladet] Natoländerna väntar på rysk attack: ”Snart”",
-      "[SR Ekot] Över 920 döda: ”Människor hörs under rasmassorna”",
-      "[Världsnyheter] Venezuela quake toll tops 900, search intensifies for hundreds trapped - Reuters",
-      "[SR Ekot] Europol: Över 500 nya kriminella nätverk på två år"
-    ]
-  },
-  {
     "date": "2026-06-28T04:30:57.538890",
     "episode": 1,
     "headlines": [
@@ -137,6 +123,20 @@
       "[Wired] The Onion’s ‘Infowars’ Parody Is Here. Alex Jones Is Going to Hate It",
       "[Wired] How Big Is ‘Love Island USA’? More Than 10 Million People Are Already on Its App",
       "[Wired] Spotify Confirms Streaming Fraud After Kalshi Trader Cries Foul"
+    ]
+  },
+  {
+    "date": "2026-07-04T06:10:54.115755",
+    "episode": 1,
+    "headlines": [
+      "[DN] Uppgifter: Ryssland kan planera ”provokation” mot Polen",
+      "[SR Ekot] Khameneis statsbegravning har inletts",
+      "[SR Ekot] Kinesisk utrikesminister i Sverige efter 22 år",
+      "[Världsnyheter] July 3, 2026 — Iran prepares for late supreme leader’s funeral - CNN",
+      "[Världsnyheter] ‘Ridiculous’ for US to maintain current Nato support, Trump warns ahead of allia",
+      "[Aftonbladet] 14-åriga ”Amani” i Gaza: ”Kan dödas när som helst”",
+      "[Aftonbladet] Trump: Amerikansk identitet utsatt för ny attack",
+      "[Aftonbladet] Spelet bakom attacken – så dödades ayatollan"
     ]
   }
 ]
