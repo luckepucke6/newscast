@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-06-28T04:30:57.538890",
-    "episode": 1,
-    "headlines": [
-      "[DN] USA attackerar mål i Iran för andra kvällen i rad",
-      "[Aftonbladet] USA och Iran utväxlar attacker och hot",
-      "[Världsnyheter] Live updates: Death toll climbs to over 1,400 in Venezuela quakes as aftershocks",
-      "[Världsnyheter] Venezuela earthquakes: death toll rises again to more than 1,400 - The Guardian",
-      "[Aftonbladet] Attackvågor mot flera delar av Ukraina",
-      "[SR Ekot] Ryska drönarattacker mot flera ukrainska städer",
-      "[Aftonbladet] Trumps hot för att rädda seger: De är som djur",
-      "[Aftonbladet] Netanyahu ändrar kurs – vill ha ”bred koalition”"
-    ]
-  },
-  {
     "date": "2026-06-29T04:32:11.361688",
     "episode": 1,
     "headlines": [
@@ -137,6 +123,20 @@
       "[Aftonbladet] 14-åriga ”Amani” i Gaza: ”Kan dödas när som helst”",
       "[Aftonbladet] Trump: Amerikansk identitet utsatt för ny attack",
       "[Aftonbladet] Spelet bakom attacken – så dödades ayatollan"
+    ]
+  },
+  {
+    "date": "2026-07-05T06:30:36.830215",
+    "episode": 1,
+    "headlines": [
+      "[Aftonbladet] Militärexpert: Ryssland kan mobilisera i höst",
+      "[SR Ekot] Dödssiffran stiger i Venezuela – närmar sig 3000",
+      "[Sverige] Avslöjar: Regeringen bakom kampanj om ”nystart” i Afghanistan - Aftonbladet",
+      "[Sverige] Sveriges fregattköp sågas: ”Har ni alls följt vårt krig?” - Omni – Alla nyheter.",
+      "[SVT] Regeringen vill stärka beredskap i kommunerna",
+      "[Aftonbladet] Efterträdaren saknas vid Khameneis begravning",
+      "[Aftonbladet] Målet få 200 att återvända till Afghanistan – noll har nappat",
+      "[SR Ekot] EU varnar Albanien – Trumpbygget hotar medlemskap"
     ]
   }
 ]
