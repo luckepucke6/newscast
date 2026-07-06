@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-06-29T04:32:11.361688",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] Iran and US agree to halt attacks and renew talks, U.S. official says - Reuters",
-      "[DN] Källor: Iran och USA pausar attacker – samtal i Doha",
-      "[Aftonbladet] Vapenvilan mellan USA och Iran i fara",
-      "[Aftonbladet] Uppgifter: USA och Iran avbryter attacker",
-      "[SR Ekot] Tusentals utan hem efter skalven – över 1400 döda",
-      "[Världsnyheter] Live updates: US and Iran to ‘stand down for now,’ US official says after exchan",
-      "[Världsnyheter] Live Updates: Iran Strikes U.S. Sites in Bahrain and Kuwait as Attacks Show Few ",
-      "[Aftonbladet] Svänger om migrationen – ska ”lösas” utanför Europa"
-    ]
-  },
-  {
-    "date": "2026-06-29T04:36:36.298303",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] China’s Z.ai claims it can match Mythos on cybersecurity",
-      "[The Verge] Suno launches Spark incubator program to feed independent artists to its AI mach",
-      "[The Verge] China claims the world&#8217;s fastest supercomputer",
-      "[The Verge] The Cube is Jim Henson’s little-known proto-Black Mirror masterpiece",
-      "[Wired] What to Do in Houston If You're Here for Business (2026)",
-      "[Wired] The ‘Almost Homeless’ Subreddit Is a Stark Glimpse at Soaring Wealth Inequality",
-      "[Wired] Why Wear Anything Other Than a Sun Hoodie This Summer? Our Picks for the Best",
-      "[Wired] This Is the Most Detailed Image Yet of the Milky Way's Center"
-    ]
-  },
-  {
     "date": "2026-06-30T04:26:22.612020",
     "episode": 1,
     "headlines": [
@@ -137,6 +109,34 @@
       "[Aftonbladet] Efterträdaren saknas vid Khameneis begravning",
       "[Aftonbladet] Målet få 200 att återvända till Afghanistan – noll har nappat",
       "[SR Ekot] EU varnar Albanien – Trumpbygget hotar medlemskap"
+    ]
+  },
+  {
+    "date": "2026-07-06T07:00:19.774742",
+    "episode": 1,
+    "headlines": [
+      "[Aftonbladet] Ukrainas attacker fördubblade – Trump och Putin i samtal",
+      "[Aftonbladet] Kina testade kärnvapenrobot",
+      "[Aftonbladet] Vårdcentraler stängda efter misstankar om fusk, slarv och brottslighet",
+      "[SR Ekot] Fördubbling av PFAS-kemikalier i jordbruket – på åtta år",
+      "[Världsnyheter] China tests long-range missile in Pacific in move Australia condemns as ‘destabi",
+      "[DN] Nu avgörs framtiden för de franska högernationalisterna",
+      "[Aftonbladet] Allvarligt läge för blodlagren – påfyllning behövs",
+      "[Aftonbladet] Irland trycker på för hårdare tag mot Israel"
+    ]
+  },
+  {
+    "date": "2026-07-06T07:03:21.104587",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Some of the nation’s rich are letting AI teach their kids",
+      "[The Verge] Mr. Lif’s Emergency Rations EP is post-9/11 hip hop at its most daring",
+      "[The Verge] Where to preorder Grand Theft Auto VI",
+      "[The Verge] Infuriating Google commercial imagines the founding fathers embracing AI",
+      "[Wired] Prediction Markets Let You Bet on Whether a Wildfire Will Burn Down Your Town",
+      "[Wired] Best Wi-Fi Routers (2026): My Honest Picks After Testing 40+",
+      "[Wired] Review: TCL RM9L RGB-Mini LED (2026)",
+      "[Wired] Eight Sleep Pod 5 Review: The Smartest, Nosiest Bed You Can Buy"
     ]
   }
 ]
