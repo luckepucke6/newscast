@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-06-30T04:26:22.612020",
-    "episode": 1,
-    "headlines": [
-      "[Aftonbladet] Ryssland: Ukrainska attackvågor mot Moskva",
-      "[SR Ekot] EU och Kina i möten – vill undvika handelskrig",
-      "[DN] Max Hjelm: Från V till M är de överens – vem som än vinner valet får den här gru",
-      "[Aftonbladet] Mustchefen: Rysslands förluster är ofattbara",
-      "[Aftonbladet] Dödstalet stiger i Kongo-Kinshasa",
-      "[Sverige] Ubåtsaffären med Polen klar – värd nästan 50 miljarder - SVT Nyheter",
-      "[Världsnyheter] Live updates: Trump and Iran issue conflicting statements about new talks - CNN",
-      "[Politik] How civilisational politics fuels today’s wars - ThinkChina"
-    ]
-  },
-  {
     "date": "2026-07-01T04:31:38.244532",
     "episode": 1,
     "headlines": [
@@ -137,6 +123,20 @@
       "[Wired] Best Wi-Fi Routers (2026): My Honest Picks After Testing 40+",
       "[Wired] Review: TCL RM9L RGB-Mini LED (2026)",
       "[Wired] Eight Sleep Pod 5 Review: The Smartest, Nosiest Bed You Can Buy"
+    ]
+  },
+  {
+    "date": "2026-07-07T06:36:18.220940",
+    "episode": 1,
+    "headlines": [
+      "[Aftonbladet] Källor: Trump kan bevilja Ukraina Patriotlicens",
+      "[SR Ekot] Osäkerhet kring Natos framtid inför toppmötet",
+      "[SVT] Regeringen vill utreda olika momssatser på mat",
+      "[SR Ekot] Sveriges största utsläppare stoppar klimatplaner",
+      "[SR Ekot] ”Svårare för Natoledarna att blidka Trump”",
+      "[SR Ekot] Nationell samling mobiliserar inför domen mot Marine Le Pen",
+      "[Sverige] Ryska ubåtarna oroar – Sverige får nyckelroll - Dagens Nyheter",
+      "[SVT] Nu är Stockholm (äntligen) en miljonstad"
     ]
   }
 ]
