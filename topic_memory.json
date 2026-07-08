@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-07-01T04:31:38.244532",
-    "episode": 1,
-    "headlines": [
-      "[DN] Nu sänks priset för alla som åker kollektivt",
-      "[DN] Har Moderaterna någon chans kvar att vinna valet?",
-      "[SR Ekot] Nu öppnar ungdomsfängelserna",
-      "[Världsnyheter] Live updates: US envoys in Qatar for talks with mediators about Iran - CNN",
-      "[DN] Ledare: Gängsoppan i Botkyrka hänger med in i valrörelsen – och det är S eget fe",
-      "[Aftonbladet] USA har påbörjat deportationer till pyttestat",
-      "[SR Ekot] Yrkesprogrammen ökar – högsta söktrycket på länge",
-      "[Sverige] Språkkrav och enklare uthyrning – detta börjar gälla i dag - NSD"
-    ]
-  },
-  {
-    "date": "2026-07-01T04:36:05.470976",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Meta is adding ridiculous &#8216;rate limits&#8217; and a soft paywall to its sm",
-      "[The Verge] Anthropic&#8217;s long-sidelined Fable 5 is greenlit to return",
-      "[The Verge] Dish files for bankruptcy, but not shutting down",
-      "[The Verge] Amazon fined $2.25 million for failing to help identity theft victims",
-      "[Wired] The Trump Administration Is Lifting Its Export Controls on Anthropic’s Mythos an",
-      "[Wired] Daisy’s First Headphones Are Premium, High-Quality—and Just a Little Bit Cheaper",
-      "[Wired] New York Is About to Feel Hotter Than Phoenix",
-      "[Wired] The 2 Best Slushie Machines of 2026: Now With Soft Serve"
-    ]
-  },
-  {
     "date": "2026-07-02T04:24:38.307027",
     "episode": 1,
     "headlines": [
@@ -137,6 +109,34 @@
       "[SR Ekot] Nationell samling mobiliserar inför domen mot Marine Le Pen",
       "[Sverige] Ryska ubåtarna oroar – Sverige får nyckelroll - Dagens Nyheter",
       "[SVT] Nu är Stockholm (äntligen) en miljonstad"
+    ]
+  },
+  {
+    "date": "2026-07-08T05:42:38.802480",
+    "episode": 1,
+    "headlines": [
+      "[Aftonbladet] Iran efter USA:s attacker: 85 amerikanska mål attackerade",
+      "[SR Ekot] Irans svar efter massiva attackerna – anfaller Kuwait och Barain",
+      "[Världsnyheter] Live updates: US hits more than 80 Iran targets and reimposes sanctions - CNN",
+      "[Världsnyheter] US military launches strikes against Iran, Central Command says - Reuters",
+      "[SVT] Marine Le Pen om domen: Jag kommer överklaga",
+      "[Aftonbladet] Rutte: Attacken var nödvändig",
+      "[Aftonbladet] Uppgift: Lät bli varning – då dog 168 barn",
+      "[SR Ekot] EU pressat av Trump under toppmötet: ”Finns en nervositet”"
+    ]
+  },
+  {
+    "date": "2026-07-08T05:45:49.116302",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Meta’s glasses will turn off the camera if you tamper with the privacy light",
+      "[The Verge] Of course viewers are giving up on Netflix shows",
+      "[The Verge] Netflix is about to host videos from BuzzFeed, Condé Nast, and other publishers",
+      "[The Verge] Meta’s new Muse Image model can pull other Instagram users into AI photos",
+      "[Wired] We-Vibe Discount Codes and Deals: Up to 60% Off",
+      "[Wired] Vimeo Promo Codes and Discounts: Up to 40% Off This July 2026",
+      "[Wired] TurboTax Full Service Coupons This July",
+      "[Wired] Lowe’s Promo Codes and Deals: Up to $300 Off Appliances"
     ]
   }
 ]
