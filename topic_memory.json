@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-07-02T04:24:38.307027",
-    "episode": 1,
-    "headlines": [
-      "[DN] Omfattande angrepp mot Kiev: ”Under rasande attack”",
-      "[SR Ekot] Omfattande ryska attacker – minst åtta döda",
-      "[DN] Ukrainas militärchef: Ryssarna planerar nya sätt att erövra Kiev",
-      "[Aftonbladet] Iran avfärdar Hormuzmöte: Under vårt befäl",
-      "[Aftonbladet] Ukraina kopplar strypgrepp på Krim",
-      "[SR Ekot] Första åtalet mot barnäktenskap: ”Historiskt rättsfall”",
-      "[SR Ekot] Ökat ukrainskt stöd när Europas arméer ska växa",
-      "[SR Ekot] Högsta elpriset i södra Sverige på flera år – värmeböljan påverkar"
-    ]
-  },
-  {
     "date": "2026-07-03T06:23:00.395734",
     "episode": 1,
     "headlines": [
@@ -137,6 +123,20 @@
       "[Wired] Vimeo Promo Codes and Discounts: Up to 40% Off This July 2026",
       "[Wired] TurboTax Full Service Coupons This July",
       "[Wired] Lowe’s Promo Codes and Deals: Up to $300 Off Appliances"
+    ]
+  },
+  {
+    "date": "2026-07-09T06:34:32.441227",
+    "episode": 1,
+    "headlines": [
+      "[DN] Attacker mellan USA och Iran – andra dagen i rad",
+      "[SR Ekot] Trump efter USA:s nya attacker: ”Vi slår tillbaka tjugo gånger hårdare”",
+      "[SR Ekot] Explosioner på flera håll i Iran: ”Risk att det trappas upp”",
+      "[Världsnyheter] Live updates: US and Iran trade strikes for second day after Trump said ceasefir",
+      "[Världsnyheter] US launches strikes on Iran for a second day after Trump says agreement to end t",
+      "[Världsnyheter] Live updates: U.S. military completes latest strikes on Iran after Trump says ce",
+      "[Världsnyheter] Iran war updates: Explosions as US forces carry out ‘additional strikes’ - Al Ja",
+      "[Världsnyheter] Live Updates: U.S., Iran trade more strikes after Trump says ceasefire is \"over\""
     ]
   }
 ]
