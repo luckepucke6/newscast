@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-07-03T06:23:00.395734",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] Över 2 500 döda efter jordbävning: ”Vi agerade omedelbart”",
-      "[SR Ekot] Efter Kiev-attackerna: Zelenskyj vädjar om mer hjälp",
-      "[SVT] Idag får PFAS-drabbade i Kallinge besked om ersättning från staten",
-      "[Aftonbladet] Frankrike: Fler döda efter värmebölja",
-      "[Aftonbladet] Klart: Nytt klimatmål ska prövas i domstol",
-      "[SR Ekot] Irland ska lösa EU-tvist om tusentals miljarder",
-      "[Sverige] Ryska ambassaden: Attack i Stockholm i natt - Expressen",
-      "[SVT] Sverige avbryter klimatprojekt i Ghana – gav inte minskade utsläpp"
-    ]
-  },
-  {
-    "date": "2026-07-03T06:26:44.319901",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Sony’s PlayStation disc factory is already being repurposed",
-      "[The Verge] Tesla driver faces manslaughter charges over Texas crash that killed a woman ins",
-      "[The Verge] Meta has a new app called Pocket that is absolutely nothing like the old Pocket",
-      "[The Verge] The best July 4th sales we found so far",
-      "[Wired] EU Politicians Investigated Pegasus Spyware. Then It Ended Up on One of Their Ph",
-      "[Wired] The Onion’s ‘Infowars’ Parody Is Here. Alex Jones Is Going to Hate It",
-      "[Wired] How Big Is ‘Love Island USA’? More Than 10 Million People Are Already on Its App",
-      "[Wired] Spotify Confirms Streaming Fraud After Kalshi Trader Cries Foul"
-    ]
-  },
-  {
     "date": "2026-07-04T06:10:54.115755",
     "episode": 1,
     "headlines": [
@@ -137,6 +109,34 @@
       "[Världsnyheter] Live updates: U.S. military completes latest strikes on Iran after Trump says ce",
       "[Världsnyheter] Iran war updates: Explosions as US forces carry out ‘additional strikes’ - Al Ja",
       "[Världsnyheter] Live Updates: U.S., Iran trade more strikes after Trump says ceasefire is \"over\""
+    ]
+  },
+  {
+    "date": "2026-07-10T06:33:34.453777",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] July 9, 2026 — US-Iran ceasefire crumbles as fresh strikes rock Middle East - CN",
+      "[Världsnyheter] Iran war live: Uneasy calm in the Middle East after deadly attacks - Al Jazeera",
+      "[Världsnyheter] Iran says it hits U.S. military targets in Gulf, buries slain leader Khamenei - ",
+      "[Världsnyheter] Iran updates: Blasts across southern Iran after Tehran attacks Gulf states - Al ",
+      "[DN] Källor: Irans plan att döda Trump avslöjad",
+      "[Aftonbladet] Uppgifter: Iransk mordplan mot Trump avslöjad",
+      "[SR Ekot] Källor: Funnits specifika mordplaner på Trump",
+      "[SVT] Uppgift: 120 000 jobb i fara hos Volkswagen"
+    ]
+  },
+  {
+    "date": "2026-07-10T06:36:37.437395",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Microsoft’s carbon emissions went up 25 percent last year",
+      "[The Verge] Fidji Simo steps down from leading OpenAI’s AGI work due to illness",
+      "[The Verge] Netflix reportedly considers adding always-on channels",
+      "[The Verge] The ChatGPT browser is already dead",
+      "[Wired] Robot Dogs, Teslas, and Rescue Helicopters: The UN AI Summit Was a Lot",
+      "[Wired] Ulta Promo Codes: Up to 50% Off in July 2026",
+      "[Wired] Chewy Promo Codes: $20 Off July 2026",
+      "[Wired] 50% Off DoorDash Promo Code | July 2026"
     ]
   }
 ]
