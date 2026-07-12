@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-07-04T06:10:54.115755",
-    "episode": 1,
-    "headlines": [
-      "[DN] Uppgifter: Ryssland kan planera ”provokation” mot Polen",
-      "[SR Ekot] Khameneis statsbegravning har inletts",
-      "[SR Ekot] Kinesisk utrikesminister i Sverige efter 22 år",
-      "[Världsnyheter] July 3, 2026 — Iran prepares for late supreme leader’s funeral - CNN",
-      "[Världsnyheter] ‘Ridiculous’ for US to maintain current Nato support, Trump warns ahead of allia",
-      "[Aftonbladet] 14-åriga ”Amani” i Gaza: ”Kan dödas när som helst”",
-      "[Aftonbladet] Trump: Amerikansk identitet utsatt för ny attack",
-      "[Aftonbladet] Spelet bakom attacken – så dödades ayatollan"
-    ]
-  },
-  {
     "date": "2026-07-05T06:30:36.830215",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,20 @@
       "[Aftonbladet] Trump: Redo för ett år av strid",
       "[SR Ekot] Nya ryska attacker i Kiev – minst sex skadade",
       "[Världsnyheter] July 10, 2026 — Mediators work to de-escalate US-Iran tensions and revive talks "
+    ]
+  },
+  {
+    "date": "2026-07-12T05:48:15.776414",
+    "episode": 1,
+    "headlines": [
+      "[SR Ekot] USA genomför attacker mot Iran",
+      "[Världsnyheter] Live updates: New US strikes on Iran and Gulf nations intercept attacks - CNN",
+      "[Världsnyheter] Iran indefinitely closes Strait of Hormuz and attacks ship, prompting more U.S. ",
+      "[Världsnyheter] US strikes Iran, Tehran says Strait of Hormuz closed, Gulf states hit - Reuters",
+      "[Aftonbladet] Gryningsattacker efter amerikanska bombningar",
+      "[DN] Första svenska fångarna till Estland i augusti",
+      "[SR Ekot] Inför valet: Så vill riksdagspartierna korta vårdköerna",
+      "[SR Ekot] Trumps regering kallar journalister till domstol"
     ]
   }
 ]
