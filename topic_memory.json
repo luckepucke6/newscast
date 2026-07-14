@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-07-06T07:00:19.774742",
-    "episode": 1,
-    "headlines": [
-      "[Aftonbladet] Ukrainas attacker fördubblade – Trump och Putin i samtal",
-      "[Aftonbladet] Kina testade kärnvapenrobot",
-      "[Aftonbladet] Vårdcentraler stängda efter misstankar om fusk, slarv och brottslighet",
-      "[SR Ekot] Fördubbling av PFAS-kemikalier i jordbruket – på åtta år",
-      "[Världsnyheter] China tests long-range missile in Pacific in move Australia condemns as ‘destabi",
-      "[DN] Nu avgörs framtiden för de franska högernationalisterna",
-      "[Aftonbladet] Allvarligt läge för blodlagren – påfyllning behövs",
-      "[Aftonbladet] Irland trycker på för hårdare tag mot Israel"
-    ]
-  },
-  {
-    "date": "2026-07-06T07:03:21.104587",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Some of the nation’s rich are letting AI teach their kids",
-      "[The Verge] Mr. Lif’s Emergency Rations EP is post-9/11 hip hop at its most daring",
-      "[The Verge] Where to preorder Grand Theft Auto VI",
-      "[The Verge] Infuriating Google commercial imagines the founding fathers embracing AI",
-      "[Wired] Prediction Markets Let You Bet on Whether a Wildfire Will Burn Down Your Town",
-      "[Wired] Best Wi-Fi Routers (2026): My Honest Picks After Testing 40+",
-      "[Wired] Review: TCL RM9L RGB-Mini LED (2026)",
-      "[Wired] Eight Sleep Pod 5 Review: The Smartest, Nosiest Bed You Can Buy"
-    ]
-  },
-  {
     "date": "2026-07-07T06:36:18.220940",
     "episode": 1,
     "headlines": [
@@ -165,6 +137,20 @@
       "[Wired] The Best Robotic Pool Cleaners of 2026: Beatbot, iGarden, Dreame",
       "[Wired] Here’s How Apple Is Updating Its Child Safety Features in iOS 27",
       "[Wired] 28 Best STEM Toys for Kids (2026): Learning Made Fun"
+    ]
+  },
+  {
+    "date": "2026-07-14T05:21:10.858304",
+    "episode": 1,
+    "headlines": [
+      "[Aftonbladet] Nya attacker mellan USA och Iran i natt",
+      "[Världsnyheter] July 13, 2026 -US resumes strikes while Iran says it struck two tankers in Strai",
+      "[Världsnyheter] Iran War Live Updates: U.S. Begins New Strikes on Iran as Trump Orders Resumptio",
+      "[Världsnyheter] US attacks Iran and Tehran retaliates across the Middle East as both vie for con",
+      "[Världsnyheter] U.S.-Iran Latest: U.S. wraps up 3rd straight night of Iran strikes as Trump vows",
+      "[Världsnyheter] Iran war updates: US launches new attacks after Trump’s threats - Al Jazeera",
+      "[DN] Trump: Kommer att slå till hårt i dag och i morgon",
+      "[Aftonbladet] Nytt hopp för Zelenskyj – efter överenskommelse med Trump"
     ]
   }
 ]
