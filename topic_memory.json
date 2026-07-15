@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-07-07T06:36:18.220940",
-    "episode": 1,
-    "headlines": [
-      "[Aftonbladet] Källor: Trump kan bevilja Ukraina Patriotlicens",
-      "[SR Ekot] Osäkerhet kring Natos framtid inför toppmötet",
-      "[SVT] Regeringen vill utreda olika momssatser på mat",
-      "[SR Ekot] Sveriges största utsläppare stoppar klimatplaner",
-      "[SR Ekot] ”Svårare för Natoledarna att blidka Trump”",
-      "[SR Ekot] Nationell samling mobiliserar inför domen mot Marine Le Pen",
-      "[Sverige] Ryska ubåtarna oroar – Sverige får nyckelroll - Dagens Nyheter",
-      "[SVT] Nu är Stockholm (äntligen) en miljonstad"
-    ]
-  },
-  {
     "date": "2026-07-08T05:42:38.802480",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,34 @@
       "[Världsnyheter] Iran war updates: US launches new attacks after Trump’s threats - Al Jazeera",
       "[DN] Trump: Kommer att slå till hårt i dag och i morgon",
       "[Aftonbladet] Nytt hopp för Zelenskyj – efter överenskommelse med Trump"
+    ]
+  },
+  {
+    "date": "2026-07-15T05:23:06.517402",
+    "episode": 1,
+    "headlines": [
+      "[Sverige] Risk för bränder i Sverige - 8 Sidor",
+      "[SR Ekot] Fjärde natten av attacker mellan Iran och USA: ”Kommer fortsätta”",
+      "[SVT] Ukraina slår mot ryska skuggflottan på Azovska sjön",
+      "[DN] Trump hotar slå till mot Irans infrastruktur",
+      "[Aftonbladet] Nya hotet från Trump: Attackera Irans infrastruktur",
+      "[Aftonbladet] USA:s nya vapen mot Iran – historiska kamikaze-attacker",
+      "[Aftonbladet] Trumps dilemma: Fler soldater krävs i Hormuz",
+      "[SR Ekot] Tusentals tros ha dött i värmeböljorna – nu kommer hettan tillbaka"
+    ]
+  },
+  {
+    "date": "2026-07-15T05:25:59.895350",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Google and Epic give up fighting — third-party Android app stores are coming nex",
+      "[The Verge] Nothing’s good-looking Watch 3 Pro smartwatch is just $69",
+      "[The Verge] Windows 11&#8217;s big patch Tuesday allows you to hold off on updates for longe",
+      "[The Verge] OpenAI may announce a ChatGPT smart speaker this year",
+      "[Wired] Noom Promo Codes: 50% Off Best Deals & Free Trials for July 2026",
+      "[Wired] Hydrow Discount Code: Save Up to $150 | July 2026",
+      "[Wired] Chegg Coupon Codes July 2026: Save on Study, Textbooks, & More",
+      "[Wired] Naturepedic Promo Codes: Get 20% Off Plus Free Pillows"
     ]
   }
 ]
