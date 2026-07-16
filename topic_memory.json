@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-07-08T05:42:38.802480",
-    "episode": 1,
-    "headlines": [
-      "[Aftonbladet] Iran efter USA:s attacker: 85 amerikanska mål attackerade",
-      "[SR Ekot] Irans svar efter massiva attackerna – anfaller Kuwait och Barain",
-      "[Världsnyheter] Live updates: US hits more than 80 Iran targets and reimposes sanctions - CNN",
-      "[Världsnyheter] US military launches strikes against Iran, Central Command says - Reuters",
-      "[SVT] Marine Le Pen om domen: Jag kommer överklaga",
-      "[Aftonbladet] Rutte: Attacken var nödvändig",
-      "[Aftonbladet] Uppgift: Lät bli varning – då dog 168 barn",
-      "[SR Ekot] EU pressat av Trump under toppmötet: ”Finns en nervositet”"
-    ]
-  },
-  {
-    "date": "2026-07-08T05:45:49.116302",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Meta’s glasses will turn off the camera if you tamper with the privacy light",
-      "[The Verge] Of course viewers are giving up on Netflix shows",
-      "[The Verge] Netflix is about to host videos from BuzzFeed, Condé Nast, and other publishers",
-      "[The Verge] Meta’s new Muse Image model can pull other Instagram users into AI photos",
-      "[Wired] We-Vibe Discount Codes and Deals: Up to 60% Off",
-      "[Wired] Vimeo Promo Codes and Discounts: Up to 40% Off This July 2026",
-      "[Wired] TurboTax Full Service Coupons This July",
-      "[Wired] Lowe’s Promo Codes and Deals: Up to $300 Off Appliances"
-    ]
-  },
-  {
     "date": "2026-07-09T06:34:32.441227",
     "episode": 1,
     "headlines": [
@@ -165,6 +137,20 @@
       "[Wired] Hydrow Discount Code: Save Up to $150 | July 2026",
       "[Wired] Chegg Coupon Codes July 2026: Save on Study, Textbooks, & More",
       "[Wired] Naturepedic Promo Codes: Get 20% Off Plus Free Pillows"
+    ]
+  },
+  {
+    "date": "2026-07-16T05:31:52.109671",
+    "episode": 1,
+    "headlines": [
+      "[DN] Fortsatta amerikanska attacker mot Iran under natten",
+      "[Världsnyheter] July 15, 2026 — US says new strikes on Iran aimed at protecting vessels in Strai",
+      "[Världsnyheter] Iran war updates: US military carries out another wave of strikes - Al Jazeera",
+      "[SVT] Franska parlamentet röstar ja till dödshjälp",
+      "[SR Ekot] Ukraina slår hårt mot Ryssland – riktar attacker mot skuggflottan",
+      "[SVT] Frida skadades i rysk drönarattack i Ukraina: ”Det var krigsbrott”",
+      "[SVT] Gängens ”mordannonser” ska tas bort – inom en timme",
+      "[DN] Bomberna slog ner – innan flyglarmet ljöd i Kiev"
     ]
   }
 ]
