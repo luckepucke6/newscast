@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-07-09T06:34:32.441227",
-    "episode": 1,
-    "headlines": [
-      "[DN] Attacker mellan USA och Iran – andra dagen i rad",
-      "[SR Ekot] Trump efter USA:s nya attacker: ”Vi slår tillbaka tjugo gånger hårdare”",
-      "[SR Ekot] Explosioner på flera håll i Iran: ”Risk att det trappas upp”",
-      "[Världsnyheter] Live updates: US and Iran trade strikes for second day after Trump said ceasefir",
-      "[Världsnyheter] US launches strikes on Iran for a second day after Trump says agreement to end t",
-      "[Världsnyheter] Live updates: U.S. military completes latest strikes on Iran after Trump says ce",
-      "[Världsnyheter] Iran war updates: Explosions as US forces carry out ‘additional strikes’ - Al Ja",
-      "[Världsnyheter] Live Updates: U.S., Iran trade more strikes after Trump says ceasefire is \"over\""
-    ]
-  },
-  {
     "date": "2026-07-10T06:33:34.453777",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,34 @@
       "[SVT] Frida skadades i rysk drönarattack i Ukraina: ”Det var krigsbrott”",
       "[SVT] Gängens ”mordannonser” ska tas bort – inom en timme",
       "[DN] Bomberna slog ner – innan flyglarmet ljöd i Kiev"
+    ]
+  },
+  {
+    "date": "2026-07-17T05:33:34.436857",
+    "episode": 1,
+    "headlines": [
+      "[DN] Förnyade amerikanska attacker mot Iran",
+      "[SR Ekot] Nya attacker mellan USA och Iran under natten",
+      "[DN] Karl Dalén: Trump pressar kongressen att ändra vallagarna",
+      "[Aftonbladet] Ukraina först i världen med amfibiskt robotanfall",
+      "[SR Ekot] Ebolautbrottet fortsätter skörda liv – 800 döda i Kongo-Kinshasa",
+      "[SVT] Trump anklagar Kina för att ha påverkat valet i USA",
+      "[DN] Oscar Jonsson: Europa har slutat hoppas på USA – men jobbet kvarstår",
+      "[DN] Stor kartläggning: Strypvåld i var tredje våldtäktsfall"
+    ]
+  },
+  {
+    "date": "2026-07-17T05:36:35.625886",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Fortnite is getting a bunch of AI-powered ‘personas’",
+      "[The Verge] Samsung’s 55-inch Frame art TV is $200 cheaper than usual",
+      "[The Verge] Netflix says around 300 titles used generative AI",
+      "[The Verge] Why are people buying so many CDs?",
+      "[Wired] Home Depot Promo Codes: 50% Off in July 2026",
+      "[Wired] Paramount+ Coupon Codes and Deals for July 2026",
+      "[Wired] LG Promo Codes and Coupons for July 2026",
+      "[Wired] Walmart Promo Codes: Up to 65% Off for July 2026"
     ]
   }
 ]
