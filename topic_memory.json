@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-07-10T06:33:34.453777",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] July 9, 2026 — US-Iran ceasefire crumbles as fresh strikes rock Middle East - CN",
-      "[Världsnyheter] Iran war live: Uneasy calm in the Middle East after deadly attacks - Al Jazeera",
-      "[Världsnyheter] Iran says it hits U.S. military targets in Gulf, buries slain leader Khamenei - ",
-      "[Världsnyheter] Iran updates: Blasts across southern Iran after Tehran attacks Gulf states - Al ",
-      "[DN] Källor: Irans plan att döda Trump avslöjad",
-      "[Aftonbladet] Uppgifter: Iransk mordplan mot Trump avslöjad",
-      "[SR Ekot] Källor: Funnits specifika mordplaner på Trump",
-      "[SVT] Uppgift: 120 000 jobb i fara hos Volkswagen"
-    ]
-  },
-  {
-    "date": "2026-07-10T06:36:37.437395",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Microsoft’s carbon emissions went up 25 percent last year",
-      "[The Verge] Fidji Simo steps down from leading OpenAI’s AGI work due to illness",
-      "[The Verge] Netflix reportedly considers adding always-on channels",
-      "[The Verge] The ChatGPT browser is already dead",
-      "[Wired] Robot Dogs, Teslas, and Rescue Helicopters: The UN AI Summit Was a Lot",
-      "[Wired] Ulta Promo Codes: Up to 50% Off in July 2026",
-      "[Wired] Chewy Promo Codes: $20 Off July 2026",
-      "[Wired] 50% Off DoorDash Promo Code | July 2026"
-    ]
-  },
-  {
     "date": "2026-07-11T05:32:48.854220",
     "episode": 1,
     "headlines": [
@@ -165,6 +137,20 @@
       "[Wired] Paramount+ Coupon Codes and Deals for July 2026",
       "[Wired] LG Promo Codes and Coupons for July 2026",
       "[Wired] Walmart Promo Codes: Up to 65% Off for July 2026"
+    ]
+  },
+  {
+    "date": "2026-07-18T05:16:40.854432",
+    "episode": 1,
+    "headlines": [
+      "[SR Ekot] Attacker mellan USA och Iran – för sjunde natten",
+      "[Världsnyheter] July 17, 2026 — Iran and US widen attacks as renewed conflict shows no sign of d",
+      "[Världsnyheter] Iran War Updates: Bridges and Water Plants Hit as Strikes Stretch to 7th Straigh",
+      "[Aftonbladet] Ryssland: 370 drönare mot Moskva i natt",
+      "[Aftonbladet] Dödstalet efter skalven i Venezuela passerar 5 000",
+      "[SR Ekot] Över 5 000 bekräftade döda efter jordskalven i Venezuela",
+      "[Världsnyheter] U.S. strikes bridges around key port in Iran, expanding campaign in battle over ",
+      "[SVT] Störningar av navigationssystem på Östersjön ökar"
     ]
   }
 ]
