@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-07-11T05:32:48.854220",
-    "episode": 1,
-    "headlines": [
-      "[DN] Så tog Ukraina tillbaka initiativet i kriget",
-      "[Aftonbladet] Trump: USA ödelägger Iran om jag mördas",
-      "[SR Ekot] Trump hotar att ”ödelägga” Iran om landet försöker döda honom",
-      "[Världsnyheter] US and Iran exchange intensifying fire across Mideast, threatening ceasefire dea",
-      "[SVT] Karolinska måste lämna ut uppgifter om papperslös",
-      "[Aftonbladet] Trump: Redo för ett år av strid",
-      "[SR Ekot] Nya ryska attacker i Kiev – minst sex skadade",
-      "[Världsnyheter] July 10, 2026 — Mediators work to de-escalate US-Iran tensions and revive talks "
-    ]
-  },
-  {
     "date": "2026-07-12T05:48:15.776414",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,20 @@
       "[SR Ekot] Över 5 000 bekräftade döda efter jordskalven i Venezuela",
       "[Världsnyheter] U.S. strikes bridges around key port in Iran, expanding campaign in battle over ",
       "[SVT] Störningar av navigationssystem på Östersjön ökar"
+    ]
+  },
+  {
+    "date": "2026-07-19T05:43:06.195651",
+    "episode": 1,
+    "headlines": [
+      "[SR Ekot] Nya anfall mellan USA och Iran",
+      "[Världsnyheter] July 18, 2026 – US-Iran war news - CNN",
+      "[Världsnyheter] U.S. strikes Iran after 2 service members killed, 1 missing in attack on Jordan ",
+      "[Världsnyheter] Two U.S. service members killed in Jordan and another is missing after Iranian s",
+      "[Världsnyheter] Iran war updates: US launches strikes after killing of soldiers in Jordan - Al J",
+      "[Världsnyheter] Iran War Live Updates: 2 U.S. Service Members Killed and 1 Missing in Iranian At",
+      "[Sverige] Skjutningar störtdyker: ”Vi är klara i Sverige” - Svenska Dagbladet",
+      "[SR Ekot] Ryska attacker mot Kiev – minst sju skadade"
     ]
   }
 ]
