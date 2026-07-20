@@ -1,47 +1,5 @@
 [
   {
-    "date": "2026-07-12T05:48:15.776414",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] USA genomför attacker mot Iran",
-      "[Världsnyheter] Live updates: New US strikes on Iran and Gulf nations intercept attacks - CNN",
-      "[Världsnyheter] Iran indefinitely closes Strait of Hormuz and attacks ship, prompting more U.S. ",
-      "[Världsnyheter] US strikes Iran, Tehran says Strait of Hormuz closed, Gulf states hit - Reuters",
-      "[Aftonbladet] Gryningsattacker efter amerikanska bombningar",
-      "[DN] Första svenska fångarna till Estland i augusti",
-      "[SR Ekot] Inför valet: Så vill riksdagspartierna korta vårdköerna",
-      "[SR Ekot] Trumps regering kallar journalister till domstol"
-    ]
-  },
-  {
-    "date": "2026-07-13T05:59:14.471756",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] Nya attacker mellan USA och Iran: ”Har trappats upp ytterligare”",
-      "[Världsnyheter] July 12, 2026 — US launches strikes on Iran for a second night - CNN",
-      "[Världsnyheter] Iran Live Updates: After Intense U.S. Strikes, Iran Targets Gulf States and Clai",
-      "[Världsnyheter] Iran expands attacks on Gulf states after US strikes, says Strait of Hormuz clos",
-      "[Världsnyheter] Trump claims strait of Hormuz open to commercial traffic despite Iran earlier an",
-      "[DN] Nu införs omstridda ”angiverilagen”",
-      "[Världsnyheter] Sen. Lindsey Graham dies at 71 after ‘brief and sudden illness’ - NBC News",
-      "[Världsnyheter] Republican Lindsey Graham dies at 71: World leaders, US politicians react - Al J"
-    ]
-  },
-  {
-    "date": "2026-07-13T06:02:04.429456",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Lorde says Ray-Ban Meta AI glasses are ‘not sexy’",
-      "[The Verge] Shall We Go On Sinning So That Grace May Increase? is hypnotic, healing, and hop",
-      "[The Verge] Apple’s failed self-driving car program left a legacy of powerful AI chips",
-      "[The Verge] One of SteelSeries&#8217; best gaming headsets is over $100 off",
-      "[Wired] Uber’s Autonomous Vehicle Strategy: Slow Their Adoption",
-      "[Wired] The Best Robotic Pool Cleaners of 2026: Beatbot, iGarden, Dreame",
-      "[Wired] Here’s How Apple Is Updating Its Child Safety Features in iOS 27",
-      "[Wired] 28 Best STEM Toys for Kids (2026): Learning Made Fun"
-    ]
-  },
-  {
     "date": "2026-07-14T05:21:10.858304",
     "episode": 1,
     "headlines": [
@@ -151,6 +109,34 @@
       "[Världsnyheter] Iran War Live Updates: 2 U.S. Service Members Killed and 1 Missing in Iranian At",
       "[Sverige] Skjutningar störtdyker: ”Vi är klara i Sverige” - Svenska Dagbladet",
       "[SR Ekot] Ryska attacker mot Kiev – minst sju skadade"
+    ]
+  },
+  {
+    "date": "2026-07-20T05:59:42.057600",
+    "episode": 1,
+    "headlines": [
+      "[Aftonbladet] Attacker mellan USA och Iran: ”Slog till hårt”",
+      "[Världsnyheter] Iran War Live Updates: Another U.S. Service Member Is Killed as War Expands - Th",
+      "[Världsnyheter] Live updates: US completes 9th night of strikes on Iran as troop deaths raise fe",
+      "[Aftonbladet] Hundratals förgiftade – epidemi utlyst",
+      "[SR Ekot] Trump: Attackerat med kraft för att hämnas stupade",
+      "[Aftonbladet] Minst två döda i ryska attacker",
+      "[SR Ekot] Kris i finska regeringen – anklagas för korruption",
+      "[Politik] Fears about the US are leading to a new world of balancing for the EU and middle"
+    ]
+  },
+  {
+    "date": "2026-07-20T06:02:44.045604",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] This unpronounceable series of glyphs is an incredible side project from Kieran ",
+      "[The Verge] Kodak EC35 is a dirt-cheap point-and-shoot film camera",
+      "[The Verge] I hate that I don’t hate this song made with Suno",
+      "[The Verge] The FBI reportedly won’t investigate ICE anymore",
+      "[Wired] How to Disable Music Videos in Spotify",
+      "[Wired] Best Power Banks (2026): My Picks After Testing Over 100",
+      "[Wired] The 10 Best Electrolyte Powders (We Tested Over 20)",
+      "[Wired] The Search for Another Earth-Like Planet Just Took a Big Step Forward"
     ]
   }
 ]
