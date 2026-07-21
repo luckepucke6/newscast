@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-07-14T05:21:10.858304",
-    "episode": 1,
-    "headlines": [
-      "[Aftonbladet] Nya attacker mellan USA och Iran i natt",
-      "[Världsnyheter] July 13, 2026 -US resumes strikes while Iran says it struck two tankers in Strai",
-      "[Världsnyheter] Iran War Live Updates: U.S. Begins New Strikes on Iran as Trump Orders Resumptio",
-      "[Världsnyheter] US attacks Iran and Tehran retaliates across the Middle East as both vie for con",
-      "[Världsnyheter] U.S.-Iran Latest: U.S. wraps up 3rd straight night of Iran strikes as Trump vows",
-      "[Världsnyheter] Iran war updates: US launches new attacks after Trump’s threats - Al Jazeera",
-      "[DN] Trump: Kommer att slå till hårt i dag och i morgon",
-      "[Aftonbladet] Nytt hopp för Zelenskyj – efter överenskommelse med Trump"
-    ]
-  },
-  {
     "date": "2026-07-15T05:23:06.517402",
     "episode": 1,
     "headlines": [
@@ -137,6 +123,20 @@
       "[Wired] Best Power Banks (2026): My Picks After Testing Over 100",
       "[Wired] The 10 Best Electrolyte Powders (We Tested Over 20)",
       "[Wired] The Search for Another Earth-Like Planet Just Took a Big Step Forward"
+    ]
+  },
+  {
+    "date": "2026-07-21T05:41:44.107259",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] July 20, 2026 — US completes more strikes against Iran after Trump warning to Te",
+      "[Världsnyheter] Houthis announce Saudi naval blockade, threatening new front in US-Iran war - Re",
+      "[Världsnyheter] Nearly 100 U.S. troops injured in last two weeks of Iran war, Pentagon says - Th",
+      "[Världsnyheter] Donald Trump to impose 50% tariff on most Canadian goods, White House says - The",
+      "[Världsnyheter] Another U.S. Service Member Is Killed as Iran War Expands - The New York Times",
+      "[SVT] USA inför strafftullar – Kanada har 30 dagar på sig",
+      "[DN] Statsministern i blåsväder – förnekar korruption",
+      "[DN] Trumps nya tullar mot Kanada – ändrar sig om skälen"
     ]
   }
 ]
