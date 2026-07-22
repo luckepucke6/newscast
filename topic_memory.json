@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-07-15T05:23:06.517402",
-    "episode": 1,
-    "headlines": [
-      "[Sverige] Risk för bränder i Sverige - 8 Sidor",
-      "[SR Ekot] Fjärde natten av attacker mellan Iran och USA: ”Kommer fortsätta”",
-      "[SVT] Ukraina slår mot ryska skuggflottan på Azovska sjön",
-      "[DN] Trump hotar slå till mot Irans infrastruktur",
-      "[Aftonbladet] Nya hotet från Trump: Attackera Irans infrastruktur",
-      "[Aftonbladet] USA:s nya vapen mot Iran – historiska kamikaze-attacker",
-      "[Aftonbladet] Trumps dilemma: Fler soldater krävs i Hormuz",
-      "[SR Ekot] Tusentals tros ha dött i värmeböljorna – nu kommer hettan tillbaka"
-    ]
-  },
-  {
-    "date": "2026-07-15T05:25:59.895350",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Google and Epic give up fighting — third-party Android app stores are coming nex",
-      "[The Verge] Nothing’s good-looking Watch 3 Pro smartwatch is just $69",
-      "[The Verge] Windows 11&#8217;s big patch Tuesday allows you to hold off on updates for longe",
-      "[The Verge] OpenAI may announce a ChatGPT smart speaker this year",
-      "[Wired] Noom Promo Codes: 50% Off Best Deals & Free Trials for July 2026",
-      "[Wired] Hydrow Discount Code: Save Up to $150 | July 2026",
-      "[Wired] Chegg Coupon Codes July 2026: Save on Study, Textbooks, & More",
-      "[Wired] Naturepedic Promo Codes: Get 20% Off Plus Free Pillows"
-    ]
-  },
-  {
     "date": "2026-07-16T05:31:52.109671",
     "episode": 1,
     "headlines": [
@@ -137,6 +109,34 @@
       "[SVT] USA inför strafftullar – Kanada har 30 dagar på sig",
       "[DN] Statsministern i blåsväder – förnekar korruption",
       "[DN] Trumps nya tullar mot Kanada – ändrar sig om skälen"
+    ]
+  },
+  {
+    "date": "2026-07-22T05:40:01.947650",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] US and Iran exchange intensifying fire across Mideast, threatening ceasefire dea",
+      "[DN] USA: Attacker mot hangarer i Iran",
+      "[SR Ekot] Frankrike stoppar sociala medier för alla under 15 år",
+      "[SR Ekot] Zelenskyj byter ut Ukrainas militärchef",
+      "[Aftonbladet] Massiva bränder i södra Ryssland efter attacker",
+      "[SR Ekot] Nato utvecklar kognitiv krigföring",
+      "[Sverige] Jättesatsningarna stöper om Sverige: ”Enorm magnitud” - Dagens industri",
+      "[SVT] 190 miljoner till vätgasmackar – men bara fyra lastbilar kör på vätgas"
+    ]
+  },
+  {
+    "date": "2026-07-22T05:42:52.818263",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Samsung Galaxy Unpacked July 2026: How to watch",
+      "[The Verge] Neill Blomkamp’s new zombie AI ‘film’ is just slop warmed over",
+      "[The Verge] OpenAI says it accidentally hacked Hugging Face with a new AI system",
+      "[The Verge] Substack adds an AI detector to help spot blogs written by no one",
+      "[Wired] Is the All-New Range Rover GT Stepping on Jaguar’s Tail?",
+      "[Wired] OpenAI Models Escaped Containment and Hacked Hugging Face",
+      "[Wired] Shop Best Buy’s Black Friday in July Sale 2026 Before Fall Chaos",
+      "[Wired] Taylor Farms Spent Big on MAGA and Anti-Regulatory Lobbying Before Diarrhea Outb"
     ]
   }
 ]
