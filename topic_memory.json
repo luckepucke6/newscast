@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-07-16T05:31:52.109671",
-    "episode": 1,
-    "headlines": [
-      "[DN] Fortsatta amerikanska attacker mot Iran under natten",
-      "[Världsnyheter] July 15, 2026 — US says new strikes on Iran aimed at protecting vessels in Strai",
-      "[Världsnyheter] Iran war updates: US military carries out another wave of strikes - Al Jazeera",
-      "[SVT] Franska parlamentet röstar ja till dödshjälp",
-      "[SR Ekot] Ukraina slår hårt mot Ryssland – riktar attacker mot skuggflottan",
-      "[SVT] Frida skadades i rysk drönarattack i Ukraina: ”Det var krigsbrott”",
-      "[SVT] Gängens ”mordannonser” ska tas bort – inom en timme",
-      "[DN] Bomberna slog ner – innan flyglarmet ljöd i Kiev"
-    ]
-  },
-  {
     "date": "2026-07-17T05:33:34.436857",
     "episode": 1,
     "headlines": [
@@ -137,6 +123,20 @@
       "[Wired] OpenAI Models Escaped Containment and Hacked Hugging Face",
       "[Wired] Shop Best Buy’s Black Friday in July Sale 2026 Before Fall Chaos",
       "[Wired] Taylor Farms Spent Big on MAGA and Anti-Regulatory Lobbying Before Diarrhea Outb"
+    ]
+  },
+  {
+    "date": "2026-07-23T05:44:44.154032",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] U.S. and Iran exchange intense new attacks after Trump says ceasefire is ‘over’ ",
+      "[SVT] Över 1000 döda i ebola i Kongo-Kinshasa",
+      "[DN] Attacker mellan USA och Iran – smällar i kuststad",
+      "[SR Ekot] Gazabor väntar på hjälp: ”Insekter och råttor överallt”",
+      "[SR Ekot] Fortsatta attacker mellan USA och Iran – tolfte natten i rad",
+      "[Världsnyheter] Wednesday briefing: How Trump’s Iran gamble has produced a crisis reshaping the ",
+      "[Världsnyheter] Trump orders new round of strikes to \"hold Iranian forces accountable,\" CENTCOM ",
+      "[SVT] Volvo Cars batterifabrik skulle öppna i år och ge 3 000 jobb – ligger öde"
     ]
   }
 ]
