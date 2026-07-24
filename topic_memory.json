@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-07-17T05:33:34.436857",
-    "episode": 1,
-    "headlines": [
-      "[DN] Förnyade amerikanska attacker mot Iran",
-      "[SR Ekot] Nya attacker mellan USA och Iran under natten",
-      "[DN] Karl Dalén: Trump pressar kongressen att ändra vallagarna",
-      "[Aftonbladet] Ukraina först i världen med amfibiskt robotanfall",
-      "[SR Ekot] Ebolautbrottet fortsätter skörda liv – 800 döda i Kongo-Kinshasa",
-      "[SVT] Trump anklagar Kina för att ha påverkat valet i USA",
-      "[DN] Oscar Jonsson: Europa har slutat hoppas på USA – men jobbet kvarstår",
-      "[DN] Stor kartläggning: Strypvåld i var tredje våldtäktsfall"
-    ]
-  },
-  {
-    "date": "2026-07-17T05:36:35.625886",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Fortnite is getting a bunch of AI-powered ‘personas’",
-      "[The Verge] Samsung’s 55-inch Frame art TV is $200 cheaper than usual",
-      "[The Verge] Netflix says around 300 titles used generative AI",
-      "[The Verge] Why are people buying so many CDs?",
-      "[Wired] Home Depot Promo Codes: 50% Off in July 2026",
-      "[Wired] Paramount+ Coupon Codes and Deals for July 2026",
-      "[Wired] LG Promo Codes and Coupons for July 2026",
-      "[Wired] Walmart Promo Codes: Up to 65% Off for July 2026"
-    ]
-  },
-  {
     "date": "2026-07-18T05:16:40.854432",
     "episode": 1,
     "headlines": [
@@ -137,6 +109,34 @@
       "[Världsnyheter] Wednesday briefing: How Trump’s Iran gamble has produced a crisis reshaping the ",
       "[Världsnyheter] Trump orders new round of strikes to \"hold Iranian forces accountable,\" CENTCOM ",
       "[SVT] Volvo Cars batterifabrik skulle öppna i år och ge 3 000 jobb – ligger öde"
+    ]
+  },
+  {
+    "date": "2026-07-24T05:42:13.739458",
+    "episode": 1,
+    "headlines": [
+      "[SVT] Trump inför nya tullar mot 60 länder",
+      "[Världsnyheter] US attacks Iran and Tehran retaliates across the Middle East as both vie for con",
+      "[SVT] Tiotusentals flyr bränderna i södra Europa – nödläge i Spanien",
+      "[DN] Tiotusentals evakuerade och nationellt nödläge – stora bränder bortom kontroll p",
+      "[Aftonbladet] Bränderna rasar – Spanien utlyser nödläge",
+      "[Aftonbladet] Bränder rasar i Spanien – nödläge utlyst",
+      "[Världsnyheter] Thousands flee wildfires in France and Spain as temperatures reach extreme level",
+      "[Aftonbladet] Norska ilskan mot nya tullarna: ”Starkt oense med USA”"
+    ]
+  },
+  {
+    "date": "2026-07-24T05:45:14.117710",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Alexa Plus is getting an AI update to handle more complicated instructions",
+      "[The Verge] The Echo Show 21 is a great smart home hub that’s $80 off",
+      "[The Verge] FCC Chairman Brendan Carr’s war on the First Amendment",
+      "[The Verge] Claude’s voice mode is now available for Opus and Sonnet",
+      "[Wired] An FDA Panel Just Endorsed These Unproven Peptides",
+      "[Wired] Meta’s New Feel-Good AI Ad Uses a Song About the World Ending",
+      "[Wired] For Taylor Swift, Madison Square Garden’s Controversial Cameras Briefly Went Dar",
+      "[Wired] The EU Fines Google $1 Billion for Prioritizing Its Own Services in Search"
     ]
   }
 ]
