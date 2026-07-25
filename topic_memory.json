@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-07-18T05:16:40.854432",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] Attacker mellan USA och Iran – för sjunde natten",
-      "[Världsnyheter] July 17, 2026 — Iran and US widen attacks as renewed conflict shows no sign of d",
-      "[Världsnyheter] Iran War Updates: Bridges and Water Plants Hit as Strikes Stretch to 7th Straigh",
-      "[Aftonbladet] Ryssland: 370 drönare mot Moskva i natt",
-      "[Aftonbladet] Dödstalet efter skalven i Venezuela passerar 5 000",
-      "[SR Ekot] Över 5 000 bekräftade döda efter jordskalven i Venezuela",
-      "[Världsnyheter] U.S. strikes bridges around key port in Iran, expanding campaign in battle over ",
-      "[SVT] Störningar av navigationssystem på Östersjön ökar"
-    ]
-  },
-  {
     "date": "2026-07-19T05:43:06.195651",
     "episode": 1,
     "headlines": [
@@ -137,6 +123,20 @@
       "[Wired] Meta’s New Feel-Good AI Ad Uses a Song About the World Ending",
       "[Wired] For Taylor Swift, Madison Square Garden’s Controversial Cameras Briefly Went Dar",
       "[Wired] The EU Fines Google $1 Billion for Prioritizing Its Own Services in Search"
+    ]
+  },
+  {
+    "date": "2026-07-25T05:35:26.618344",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] U.S. launches new strikes and Trump threatens ‘massive attack’ as Iran widens wa",
+      "[Världsnyheter] Exclusive | Bahrain, Kuwait Warplanes Struck Iran in Rare Gulf Retaliation - WSJ",
+      "[Världsnyheter] Trump renews Iran blockade and again threatens to take control of strait of Horm",
+      "[DN] Bränderna växer och hotar miljonstäder – delar av Bordeaux evakuerade",
+      "[SR Ekot] Frankrike kallar till krismöte efter skogsbränderna",
+      "[DN] Trump: Den här kvällen var värre än jag trodde",
+      "[Aftonbladet] OSSE skickar inga valobservatörer till Sverige",
+      "[Aftonbladet] USA: Beskjutit fartyg i Omanbukten"
     ]
   }
 ]
