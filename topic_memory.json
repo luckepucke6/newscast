@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-07-19T05:43:06.195651",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] Nya anfall mellan USA och Iran",
-      "[Världsnyheter] July 18, 2026 – US-Iran war news - CNN",
-      "[Världsnyheter] U.S. strikes Iran after 2 service members killed, 1 missing in attack on Jordan ",
-      "[Världsnyheter] Two U.S. service members killed in Jordan and another is missing after Iranian s",
-      "[Världsnyheter] Iran war updates: US launches strikes after killing of soldiers in Jordan - Al J",
-      "[Världsnyheter] Iran War Live Updates: 2 U.S. Service Members Killed and 1 Missing in Iranian At",
-      "[Sverige] Skjutningar störtdyker: ”Vi är klara i Sverige” - Svenska Dagbladet",
-      "[SR Ekot] Ryska attacker mot Kiev – minst sju skadade"
-    ]
-  },
-  {
     "date": "2026-07-20T05:59:42.057600",
     "episode": 1,
     "headlines": [
@@ -137,6 +123,20 @@
       "[DN] Trump: Den här kvällen var värre än jag trodde",
       "[Aftonbladet] OSSE skickar inga valobservatörer till Sverige",
       "[Aftonbladet] USA: Beskjutit fartyg i Omanbukten"
+    ]
+  },
+  {
+    "date": "2026-07-26T05:52:07.349291",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] Live updates: Spain and France battle raging wildfires as at least 250,000 peopl",
+      "[Aftonbladet] En död efter bilattack i Berlin – misstänkt jagas",
+      "[Aftonbladet] Explosioner i Kiev – ny robotattack",
+      "[Aftonbladet] Nya massevakueringar i Sydeuropa: ”Tuff natt”",
+      "[SR Ekot] Tyska polisen jagar 21-åring efter dådet i Berlin",
+      "[SR Ekot] Bil körde in i folkmassa i Berlin – en död och femtontal skadade",
+      "[SR Ekot] Direktrapport om bränderna i Sydeuropa",
+      "[Världsnyheter] One killed and 16 injured after van crashes into crowd at Berlin Pride - The Gua"
     ]
   }
 ]
