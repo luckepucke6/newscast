@@ -1,47 +1,5 @@
 [
   {
-    "date": "2026-07-21T05:41:44.107259",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] July 20, 2026 — US completes more strikes against Iran after Trump warning to Te",
-      "[Världsnyheter] Houthis announce Saudi naval blockade, threatening new front in US-Iran war - Re",
-      "[Världsnyheter] Nearly 100 U.S. troops injured in last two weeks of Iran war, Pentagon says - Th",
-      "[Världsnyheter] Donald Trump to impose 50% tariff on most Canadian goods, White House says - The",
-      "[Världsnyheter] Another U.S. Service Member Is Killed as Iran War Expands - The New York Times",
-      "[SVT] USA inför strafftullar – Kanada har 30 dagar på sig",
-      "[DN] Statsministern i blåsväder – förnekar korruption",
-      "[DN] Trumps nya tullar mot Kanada – ändrar sig om skälen"
-    ]
-  },
-  {
-    "date": "2026-07-22T05:40:01.947650",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] US and Iran exchange intensifying fire across Mideast, threatening ceasefire dea",
-      "[DN] USA: Attacker mot hangarer i Iran",
-      "[SR Ekot] Frankrike stoppar sociala medier för alla under 15 år",
-      "[SR Ekot] Zelenskyj byter ut Ukrainas militärchef",
-      "[Aftonbladet] Massiva bränder i södra Ryssland efter attacker",
-      "[SR Ekot] Nato utvecklar kognitiv krigföring",
-      "[Sverige] Jättesatsningarna stöper om Sverige: ”Enorm magnitud” - Dagens industri",
-      "[SVT] 190 miljoner till vätgasmackar – men bara fyra lastbilar kör på vätgas"
-    ]
-  },
-  {
-    "date": "2026-07-22T05:42:52.818263",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Samsung Galaxy Unpacked July 2026: How to watch",
-      "[The Verge] Neill Blomkamp’s new zombie AI ‘film’ is just slop warmed over",
-      "[The Verge] OpenAI says it accidentally hacked Hugging Face with a new AI system",
-      "[The Verge] Substack adds an AI detector to help spot blogs written by no one",
-      "[Wired] Is the All-New Range Rover GT Stepping on Jaguar’s Tail?",
-      "[Wired] OpenAI Models Escaped Containment and Hacked Hugging Face",
-      "[Wired] Shop Best Buy’s Black Friday in July Sale 2026 Before Fall Chaos",
-      "[Wired] Taylor Farms Spent Big on MAGA and Anti-Regulatory Lobbying Before Diarrhea Outb"
-    ]
-  },
-  {
     "date": "2026-07-23T05:44:44.154032",
     "episode": 1,
     "headlines": [
@@ -151,6 +109,34 @@
       "[SVT] Hoten mot AI-topparna ökar – bolagen satsar miljoner på personskydd",
       "[DN] Fakta i frågan: Har läget i utsatta bostadsområden blivit sämre eller bättre?",
       "[DN] Ledare: Detta är anledningen bakom Liberalernas och Sverigedemokraternas kärleks"
+    ]
+  },
+  {
+    "date": "2026-07-29T05:43:05.549641",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] Major earthquake rocks southern Japan, forcing hundreds of thousands to evacuate",
+      "[Världsnyheter] Watch: The clash between US and Iran for control of the Strait of Hormuz - BBC",
+      "[Världsnyheter] Iran and U.S. ramp up tit-for-tat strikes as Khamenei laid to rest - CBS News",
+      "[DN] Källor: USA har brist på luftförsvar",
+      "[Aftonbladet] Dödssiffran stiger i Japan – försvaret mobiliserat",
+      "[SR Ekot] Fed ger räntebesked – men fokus ligger på chefen",
+      "[SR Ekot] Tusentals fortsatt evakuerade i Spanien: ”Elden kom bara närmare”",
+      "[SR Ekot] Netanyahu nöjd med mötet med Trump: ”Ett av de bästa samtalen”"
+    ]
+  },
+  {
+    "date": "2026-07-29T05:45:55.960735",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] The US is banning foreign robots",
+      "[The Verge] Ariana Grande is suing the hackers who&#8217;ve been leaking her songs and video",
+      "[The Verge] The union drive at the Wikimedia Foundation is expanding",
+      "[The Verge] eBay&#8217;s bizarre cyberstalking saga ends with a $56 million settlement",
+      "[Wired] LG Promo Codes and Coupons for July 2026",
+      "[Wired] Therabody Promo Codes: 15% Off July 2026",
+      "[Wired] Zoro Coupon Codes: 55% Off July",
+      "[Wired] B&H Photo Promo Codes and Deals This July 2026"
     ]
   }
 ]
