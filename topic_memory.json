@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-07-25T05:35:26.618344",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] U.S. launches new strikes and Trump threatens ‘massive attack’ as Iran widens wa",
-      "[Världsnyheter] Exclusive | Bahrain, Kuwait Warplanes Struck Iran in Rare Gulf Retaliation - WSJ",
-      "[Världsnyheter] Trump renews Iran blockade and again threatens to take control of strait of Horm",
-      "[DN] Bränderna växer och hotar miljonstäder – delar av Bordeaux evakuerade",
-      "[SR Ekot] Frankrike kallar till krismöte efter skogsbränderna",
-      "[DN] Trump: Den här kvällen var värre än jag trodde",
-      "[Aftonbladet] OSSE skickar inga valobservatörer till Sverige",
-      "[Aftonbladet] USA: Beskjutit fartyg i Omanbukten"
-    ]
-  },
-  {
     "date": "2026-07-26T05:52:07.349291",
     "episode": 1,
     "headlines": [
@@ -137,6 +123,20 @@
       "[Wired] SelectBlinds Promo Codes & Coupons: Save on Custom Window Treatments",
       "[Wired] Alo Discount Code: Save on Activewear August 2026",
       "[Wired] Anthropic Says Claude Hacked 3 Organizations During Cybersecurity Tests"
+    ]
+  },
+  {
+    "date": "2026-08-01T05:46:57.464779",
+    "episode": 1,
+    "headlines": [
+      "[Aftonbladet] FN:s larm om extremvädret: ”Bara en förvarning”",
+      "[Aftonbladet] Europas storfloder nästan torrlagda: ”Chockerande\"",
+      "[SR Ekot] Minst nio döda i ryska attacker mot Kiev",
+      "[Världsnyheter] Iran war update: Trump says US to hit Iran ‘hard’, Gaza plan welcomed - Al Jazee",
+      "[Världsnyheter] Spain says migrants are returning from Ceuta after 57 die in border rush - Reute",
+      "[Världsnyheter] Italy says it’s temporarily suspending EU Schengen arrangement with Spain after ",
+      "[Världsnyheter] Live updates: US plans fresh strikes on Iran as soon as this weekend, officials ",
+      "[SVT] Ett år efter nya könslagen – reformen fortsätter splittra Tidölaget"
     ]
   }
 ]
