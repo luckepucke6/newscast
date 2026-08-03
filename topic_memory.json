@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-07-26T05:52:07.349291",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] Live updates: Spain and France battle raging wildfires as at least 250,000 peopl",
-      "[Aftonbladet] En död efter bilattack i Berlin – misstänkt jagas",
-      "[Aftonbladet] Explosioner i Kiev – ny robotattack",
-      "[Aftonbladet] Nya massevakueringar i Sydeuropa: ”Tuff natt”",
-      "[SR Ekot] Tyska polisen jagar 21-åring efter dådet i Berlin",
-      "[SR Ekot] Bil körde in i folkmassa i Berlin – en död och femtontal skadade",
-      "[SR Ekot] Direktrapport om bränderna i Sydeuropa",
-      "[Världsnyheter] One killed and 16 injured after van crashes into crowd at Berlin Pride - The Gua"
-    ]
-  },
-  {
     "date": "2026-07-27T06:18:13.795227",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,34 @@
       "[SVT] Uppgifter: Gängtoppen gripen i Jonas Falks hus",
       "[Aftonbladet] Ungern stänger kärnkraftverk – vattennivån kritisk",
       "[SR Ekot] AFD kan bli störst i öst – Merz parti splittrat"
+    ]
+  },
+  {
+    "date": "2026-08-03T06:10:21.578982",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] US attacks Iran and Tehran retaliates across the Middle East as both vie for con",
+      "[DN] Så hackade AI-systemet ett företag – på eget initiativ",
+      "[SR Ekot] Trump: Förhandlingar med Iran inleds idag",
+      "[SVT] Hela Kuba utan ström igen",
+      "[SVT] EU förbjöd ryskt stål – miljardhandel fortsätter genom undantag",
+      "[DN] Estland: Civila övar drönarkrig mot hotet i öst",
+      "[Aftonbladet] Hela Kuba mörklagt igen",
+      "[SR Ekot] Busch: Ny regering måste möta vårt krav om förstatligande om vården"
+    ]
+  },
+  {
+    "date": "2026-08-03T06:13:29.541473",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Rachika Nayar’s Heaven Come Crashing is an instrumental epic of desperate longin",
+      "[The Verge] Fender’s CEO seems to think your bandmates are just analog AI",
+      "[The Verge] Xbox prices are increasing by up to €200 or £170",
+      "[The Verge] Skylight&#8217;s smart calendars are up to $90 off during its back-to-school sal",
+      "[Wired] 8 Best Password Managers (2026), Tested and Reviewed",
+      "[Wired] The James Webb Telescope Is Changing Astronomers’ Understanding of the Ancient C",
+      "[Wired] Best Car Vacuums (2026): Handheld, Cordless, Shopping Tips",
+      "[Wired] There Are 2 Eclipses This August. Here’s How to See Them"
     ]
   }
 ]
