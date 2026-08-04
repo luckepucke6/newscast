@@ -1,47 +1,5 @@
 [
   {
-    "date": "2026-07-27T06:18:13.795227",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] USA och Iran pausar striderna",
-      "[Världsnyheter] Iran war live: Tehran halts retaliatory strikes after pause in US attacks - Al J",
-      "[Världsnyheter] Live updates: Trump administration signals that pause in Iran strikes will allow",
-      "[Världsnyheter] Iran says it will halt strikes as long as US bombing pause holds - Reuters",
-      "[Världsnyheter] U.S.-Iran War Pauses for 2nd Straight Day With Both Sides Holding Off on Strikes",
-      "[SR Ekot] Jurist sa upp sig i protest – efter Ivos stängningar av barnboenden",
-      "[SR Ekot] Största branden i Spaniens historia",
-      "[DN] Franska regeringen i krismöte om bränderna – 84 brandmän skadade"
-    ]
-  },
-  {
-    "date": "2026-07-27T06:21:19.454593",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Champagne and Bullets belongs on the Mount Rushmore of bad movies",
-      "[The Verge] Apple is banking on privacy to set its smart glasses apart",
-      "[The Verge] The US is charging an American citizen for wiping his phone at the border",
-      "[The Verge] Carrie is just trying to make a friend in the new trailer",
-      "[Wired] The Best Backpacking Sleeping Pads, Tested on the Trail (2026)",
-      "[Wired] All the Ways You Can Make Reading on Your Phone Easier",
-      "[Wired] The Solution to the Power Grid's Woes Might Just Be Sitting in Your Driveway",
-      "[Wired] The Best Motorola Phones, From Razr to Moto G (2026)"
-    ]
-  },
-  {
-    "date": "2026-07-28T05:38:11.499045",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] Zelenskyj och Netanyahu väntas möta Trump i Washington",
-      "[DN] Iransk nyhetsbyrå uppmanar till mord på Melania Trump",
-      "[Aftonbladet] Ryssland: 400 drönare mot Moskva",
-      "[Världsnyheter] Oil prices slide as U.S. and Iran pause strikes to give ‘space’ for diplomacy - ",
-      "[Världsnyheter] 'We don't need anybody's help': Trump renews Nato criticism - BBC",
-      "[SVT] Hoten mot AI-topparna ökar – bolagen satsar miljoner på personskydd",
-      "[DN] Fakta i frågan: Har läget i utsatta bostadsområden blivit sämre eller bättre?",
-      "[DN] Ledare: Detta är anledningen bakom Liberalernas och Sverigedemokraternas kärleks"
-    ]
-  },
-  {
     "date": "2026-07-29T05:43:05.549641",
     "episode": 1,
     "headlines": [
@@ -165,6 +123,20 @@
       "[Wired] The James Webb Telescope Is Changing Astronomers’ Understanding of the Ancient C",
       "[Wired] Best Car Vacuums (2026): Handheld, Cordless, Shopping Tips",
       "[Wired] There Are 2 Eclipses This August. Here’s How to See Them"
+    ]
+  },
+  {
+    "date": "2026-08-04T05:39:02.971905",
+    "episode": 1,
+    "headlines": [
+      "[SVT] Över 6 000 döda i jordbävningarna i Venezuela",
+      "[Sverige] ÖB manar: Var mentalt redo på ryskt angrepp - Svenska Dagbladet",
+      "[DN] Tyskt pansar ska försvara Litauen mot Ryssland",
+      "[SR Ekot] Dödssiffran i Venezuela fortsätter att stiga",
+      "[Sverige] Fotboll: Sverige stöttar inte Infantino: ”Det fick vågskålen att tippa över” - S",
+      "[Världsnyheter] Trump calls Iranian leadership ‘extremely duplicitous’ after Tehran denies new t",
+      "[Världsnyheter] Trump says U.S.-Iran talks will resume today after threatening attacks not seen ",
+      "[SVT] ”Startskottet har gått – nu börjar valrörelsen på allvar”"
     ]
   }
 ]
