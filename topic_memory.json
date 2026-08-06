@@ -1,47 +1,5 @@
 [
   {
-    "date": "2026-07-29T05:43:05.549641",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] Major earthquake rocks southern Japan, forcing hundreds of thousands to evacuate",
-      "[Världsnyheter] Watch: The clash between US and Iran for control of the Strait of Hormuz - BBC",
-      "[Världsnyheter] Iran and U.S. ramp up tit-for-tat strikes as Khamenei laid to rest - CBS News",
-      "[DN] Källor: USA har brist på luftförsvar",
-      "[Aftonbladet] Dödssiffran stiger i Japan – försvaret mobiliserat",
-      "[SR Ekot] Fed ger räntebesked – men fokus ligger på chefen",
-      "[SR Ekot] Tusentals fortsatt evakuerade i Spanien: ”Elden kom bara närmare”",
-      "[SR Ekot] Netanyahu nöjd med mötet med Trump: ”Ett av de bästa samtalen”"
-    ]
-  },
-  {
-    "date": "2026-07-29T05:45:55.960735",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] The US is banning foreign robots",
-      "[The Verge] Ariana Grande is suing the hackers who&#8217;ve been leaking her songs and video",
-      "[The Verge] The union drive at the Wikimedia Foundation is expanding",
-      "[The Verge] eBay&#8217;s bizarre cyberstalking saga ends with a $56 million settlement",
-      "[Wired] LG Promo Codes and Coupons for July 2026",
-      "[Wired] Therabody Promo Codes: 15% Off July 2026",
-      "[Wired] Zoro Coupon Codes: 55% Off July",
-      "[Wired] B&H Photo Promo Codes and Deals This July 2026"
-    ]
-  },
-  {
-    "date": "2026-07-30T05:31:45.555672",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] Iran ‘surprise attack’ ends ceasefire; US retaliates. What's next in the war - U",
-      "[Världsnyheter] Iran launched multiple missiles at American forces, U.S. military says - PBS",
-      "[SR Ekot] IS-anhängare hyllar dådet mot Pride i Berlin: ”En av oss”",
-      "[SVT] Fed lämnar styrräntan oförändrad igen",
-      "[DN] Gudrun Persson: Därför påverkar inte ryska bakslag på slagfältet Putins mål och ",
-      "[Aftonbladet] Minst 28 döda efter skalv i Japan",
-      "[SR Ekot] FN larmar om ökat bosättarvåld på Västbanken",
-      "[SR Ekot] Dödssiffran stiger – 28 döda i jordbävningen i Japan"
-    ]
-  },
-  {
     "date": "2026-07-31T05:56:13.674337",
     "episode": 1,
     "headlines": [
@@ -165,6 +123,20 @@
       "[Wired] Medicube Coupon Code: 40% Off for August 2026",
       "[Wired] Foreo Discount Codes and Deals: Up to 50% Off",
       "[Wired] Hoka Coupon Codes: 30% Off in August 2026"
+    ]
+  },
+  {
+    "date": "2026-08-06T05:39:32.559800",
+    "episode": 1,
+    "headlines": [
+      "[SVT] Allt fler överlever stroke – halvering av dödsfallen",
+      "[DN] Expert: Sinande vapenlager kan sakta ner kriget",
+      "[Aftonbladet] Nästan 4 000 fall av ebola i Kongo-Kinshasa",
+      "[Aftonbladet] Larm om explosioner vid tanker i Hormuz",
+      "[SR Ekot] Samtliga domar om stormningen av Kapitolium avskrivna",
+      "[Världsnyheter] Rubio says progress made in Strait of Hormuz talks after Trump threatens \"decapi",
+      "[Världsnyheter] Trump Seems Trapped by Iran War, Even as He Wields the World’s Biggest Hammer - ",
+      "[DN] Ligorna skyr Sverige – inbrott och stölder minskar"
     ]
   }
 ]
