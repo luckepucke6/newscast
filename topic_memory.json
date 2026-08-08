@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-07-31T05:56:13.674337",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] Trump: Överenskommelse för avväpning av Hamas",
-      "[Världsnyheter] July 30, 2026 — Egypt struck for first time as US-Iran conflict pulls in more co",
-      "[Världsnyheter] Iran vows to ‘punish the aggressor today’ after U.S. unleashes ‘heavy wave’ of s",
-      "[Världsnyheter] NATO Says Russian Missile Hit Poland During Ukraine Attack - The New York Times",
-      "[Aftonbladet] Trump ”inte säker” på ukrainsk Patriot",
-      "[Världsnyheter] Iran’s war with the US is not its only conflict as internal crises mount - The G",
-      "[DN] Ny rapport: Klimatförändringar driver på bränderna i Frankrike och Spanien",
-      "[Aftonbladet] Analys: Klimatförändringar gjorde bränderna värre"
-    ]
-  },
-  {
-    "date": "2026-07-31T05:59:21.273779",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Tim Cook hints at iCloud Plus tier for AI power users",
-      "[The Verge] Xbox CEO lays out priorities in memo after major &#8216;reset&#8217;",
-      "[The Verge] Apple&#8217;s iPhone and Mac sales keep growing despite RAM shortages",
-      "[The Verge] The loss of Situational Awareness",
-      "[Wired] Mattress Firm Coupons: Save up to $700 |",
-      "[Wired] SelectBlinds Promo Codes & Coupons: Save on Custom Window Treatments",
-      "[Wired] Alo Discount Code: Save on Activewear August 2026",
-      "[Wired] Anthropic Says Claude Hacked 3 Organizations During Cybersecurity Tests"
-    ]
-  },
-  {
     "date": "2026-08-01T05:46:57.464779",
     "episode": 1,
     "headlines": [
@@ -165,6 +137,20 @@
       "[Wired] Hackers Stalked Me by Hijacking a Smartwatch for Kids",
       "[Wired] Why Normal People Aren’t Using AI Agents",
       "[Wired] Flock Highlighted Police Departments Using Its Tech. Now 4 Face Allegations of M"
+    ]
+  },
+  {
+    "date": "2026-08-08T04:04:36.291462",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] The costs of the Iran war are rising as Trump and Tehran signal no letup in the ",
+      "[Världsnyheter] Trump orders new round of strikes to \"hold Iranian forces accountable,\" CENTCOM ",
+      "[SVT] Försvarsforskaren: Risken för valpåverkan i Sverige är 100 procent”",
+      "[SVT] Vita huset överväger att sparka Fed-topp",
+      "[SR Ekot] Bristen på luftvärnsrobotar i Ukraina blir alltmer akut",
+      "[Världsnyheter] US and Iran pause strikes for third night to make space for talks, US ambassador",
+      "[Världsnyheter] US military carries out strikes on Iran as both sides threaten civilian infrastr",
+      "[Aftonbladet] Minst tre döda i robotattack mot Kiev"
     ]
   }
 ]
