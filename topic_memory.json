@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-08-01T05:46:57.464779",
-    "episode": 1,
-    "headlines": [
-      "[Aftonbladet] FN:s larm om extremvädret: ”Bara en förvarning”",
-      "[Aftonbladet] Europas storfloder nästan torrlagda: ”Chockerande\"",
-      "[SR Ekot] Minst nio döda i ryska attacker mot Kiev",
-      "[Världsnyheter] Iran war update: Trump says US to hit Iran ‘hard’, Gaza plan welcomed - Al Jazee",
-      "[Världsnyheter] Spain says migrants are returning from Ceuta after 57 die in border rush - Reute",
-      "[Världsnyheter] Italy says it’s temporarily suspending EU Schengen arrangement with Spain after ",
-      "[Världsnyheter] Live updates: US plans fresh strikes on Iran as soon as this weekend, officials ",
-      "[SVT] Ett år efter nya könslagen – reformen fortsätter splittra Tidölaget"
-    ]
-  },
-  {
     "date": "2026-08-02T05:47:21.486697",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,20 @@
       "[Världsnyheter] US and Iran pause strikes for third night to make space for talks, US ambassador",
       "[Världsnyheter] US military carries out strikes on Iran as both sides threaten civilian infrastr",
       "[Aftonbladet] Minst tre döda i robotattack mot Kiev"
+    ]
+  },
+  {
+    "date": "2026-08-09T04:11:04.982077",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] Iran vows to ‘punish the aggressor today’ after U.S. unleashes ‘heavy wave’ of s",
+      "[Världsnyheter] Iran War Updates: Trump Meets With Cabinet Over Whether to Intensify Iran Strike",
+      "[Världsnyheter] U.S. launches new strikes and Trump threatens ‘massive attack’ as Iran widens wa",
+      "[DN] Högervindarna bland unga mojnar: ”Folk har det tufft”",
+      "[DN] Unga väljare har rört sig vänsterut",
+      "[DN] Svenska ”spökraketer” i amerikanska Pentagonfiler",
+      "[DN] Nathan Shachar: Planerade regimskifte i Iran – nu offras agenterna av Netanyahu",
+      "[SVT] Åkesson om väljarnas skepsis mot SD: ”Förstår det”"
     ]
   }
 ]
