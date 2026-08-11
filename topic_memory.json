@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-08-03T06:10:21.578982",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] US attacks Iran and Tehran retaliates across the Middle East as both vie for con",
-      "[DN] Så hackade AI-systemet ett företag – på eget initiativ",
-      "[SR Ekot] Trump: Förhandlingar med Iran inleds idag",
-      "[SVT] Hela Kuba utan ström igen",
-      "[SVT] EU förbjöd ryskt stål – miljardhandel fortsätter genom undantag",
-      "[DN] Estland: Civila övar drönarkrig mot hotet i öst",
-      "[Aftonbladet] Hela Kuba mörklagt igen",
-      "[SR Ekot] Busch: Ny regering måste möta vårt krav om förstatligande om vården"
-    ]
-  },
-  {
-    "date": "2026-08-03T06:13:29.541473",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Rachika Nayar’s Heaven Come Crashing is an instrumental epic of desperate longin",
-      "[The Verge] Fender’s CEO seems to think your bandmates are just analog AI",
-      "[The Verge] Xbox prices are increasing by up to €200 or £170",
-      "[The Verge] Skylight&#8217;s smart calendars are up to $90 off during its back-to-school sal",
-      "[Wired] 8 Best Password Managers (2026), Tested and Reviewed",
-      "[Wired] The James Webb Telescope Is Changing Astronomers’ Understanding of the Ancient C",
-      "[Wired] Best Car Vacuums (2026): Handheld, Cordless, Shopping Tips",
-      "[Wired] There Are 2 Eclipses This August. Here’s How to See Them"
-    ]
-  },
-  {
     "date": "2026-08-04T05:39:02.971905",
     "episode": 1,
     "headlines": [
@@ -165,6 +137,20 @@
       "[Wired] 4 Best Compression Boots: Therabody, Hyperice, and More (2026)",
       "[Wired] Meetily Lets You Transcribe and Summarize Meetings Without a Subscription—Here’s",
       "[Wired] TCL Note A1 Nxtpaper Review (2026): A Hybrid Tablet for Taking Notes and Watchin"
+    ]
+  },
+  {
+    "date": "2026-08-11T04:12:19.236861",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] US pauses Iran attacks after Trump advised to halt bombing - The Guardian",
+      "[DN] Ukraina: Kampanjen mot Krim har bara börjat",
+      "[SR Ekot] Flera döda i ryska robotattacker under natten",
+      "[Sverige] Säpo stoppade ryska spioner - Expressen",
+      "[Sverige] Rysk underrättelseofficer i hemligt möte med agent – på pub i Sverige - SVT Nyhe",
+      "[Världsnyheter] U.S. pauses Iran strikes for second straight night as talks move in positive dir",
+      "[Aftonbladet] Ungern: Orbánkritisk domare väntas bli president",
+      "[SR Ekot] Ensamma om att motsätta sig kriget – nu portas partiet"
     ]
   }
 ]
