@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-08-04T05:39:02.971905",
-    "episode": 1,
-    "headlines": [
-      "[SVT] Över 6 000 döda i jordbävningarna i Venezuela",
-      "[Sverige] ÖB manar: Var mentalt redo på ryskt angrepp - Svenska Dagbladet",
-      "[DN] Tyskt pansar ska försvara Litauen mot Ryssland",
-      "[SR Ekot] Dödssiffran i Venezuela fortsätter att stiga",
-      "[Sverige] Fotboll: Sverige stöttar inte Infantino: ”Det fick vågskålen att tippa över” - S",
-      "[Världsnyheter] Trump calls Iranian leadership ‘extremely duplicitous’ after Tehran denies new t",
-      "[Världsnyheter] Trump says U.S.-Iran talks will resume today after threatening attacks not seen ",
-      "[SVT] ”Startskottet har gått – nu börjar valrörelsen på allvar”"
-    ]
-  },
-  {
     "date": "2026-08-05T05:37:02.219484",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,34 @@
       "[Världsnyheter] U.S. pauses Iran strikes for second straight night as talks move in positive dir",
       "[Aftonbladet] Ungern: Orbánkritisk domare väntas bli president",
       "[SR Ekot] Ensamma om att motsätta sig kriget – nu portas partiet"
+    ]
+  },
+  {
+    "date": "2026-08-12T04:41:20.356114",
+    "episode": 1,
+    "headlines": [
+      "[SR Ekot] Zelenskyj: Har lämnat över förslag om krigsslut",
+      "[SR Ekot] Nya tullavgiften kan bli bluffälla: ”Finns ett fönster för bedragare”",
+      "[SR Ekot] Dödsiffran fortsätter att stiga i Colombia",
+      "[SR Ekot] Bashar al-Assad döms till döden",
+      "[Världsnyheter] U.S. thwarts Iranian missile attack on U.S. troops, strikes Iranian proxies in I",
+      "[Världsnyheter] Trump warns of return to ‘strong military action’ if Iran diplomacy fails - The ",
+      "[Politik] What Trump's vision of the new world order means for Europe - bbc.com",
+      "[SVT] Trump bekräftar flygbyte efter hot"
+    ]
+  },
+  {
+    "date": "2026-08-12T04:44:23.495431",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Saber denies replacing Rideshare Stimulator&#8217;s writers with ChatGPT",
+      "[The Verge] Xbox Elite 3 prototype pad leaks with tiny built-in screen",
+      "[The Verge] An FCC filing points to new Sonos headphones coming soon",
+      "[The Verge] ChatGPT and Gemini both just passed 1 billion users",
+      "[Wired] Is It Safe to Eat Lettuce Yet?",
+      "[Wired] How and When to View the Perseid Meteor Shower (August 2026)",
+      "[Wired] Razer Naga V3 Pro Review: Buttons Galore",
+      "[Wired] AI Could Help Fossil Fuel Companies Create More Emissions"
     ]
   }
 ]
