@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-08-05T05:37:02.219484",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] EXCLUSIVE: US has used 'virtually all' of its long-range precision missiles duri",
-      "[Världsnyheter] U.S. war with Iran risks spiraling as attacks intensify and diplomatic efforts s",
-      "[Aftonbladet] Explosioner i Kiev – minst 14 döda",
-      "[SR Ekot] Ryska attackerna mot Kiev fortsätter – minst 15 döda",
-      "[Världsnyheter] U.S. carries out more strikes as Trump threatens Iran, Houthis with \"major milit",
-      "[Världsnyheter] Trump: Strikes carried out 'in honour' of American soldiers killed - BBC",
-      "[Aftonbladet] Källor: Närmar sig ett avtal om Hormuzsundet",
-      "[SR Ekot] Iran trappar upp militärt mot irakiska Kurdistan"
-    ]
-  },
-  {
-    "date": "2026-08-05T05:40:01.991007",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Don’t screw this up, Marvel",
-      "[The Verge] Now you can securely link multiple phones to one Signal account",
-      "[The Verge] AMD&#8217;s data center business is booming while gaming takes a backseat",
-      "[The Verge] SpaceX made more revenue as an AI company than a space company",
-      "[Wired] Sportsman's Warehouse Promo Code: Save in August 2026",
-      "[Wired] Medicube Coupon Code: 40% Off for August 2026",
-      "[Wired] Foreo Discount Codes and Deals: Up to 50% Off",
-      "[Wired] Hoka Coupon Codes: 30% Off in August 2026"
-    ]
-  },
-  {
     "date": "2026-08-06T05:39:32.559800",
     "episode": 1,
     "headlines": [
@@ -165,6 +137,20 @@
       "[Wired] How and When to View the Perseid Meteor Shower (August 2026)",
       "[Wired] Razer Naga V3 Pro Review: Buttons Galore",
       "[Wired] AI Could Help Fossil Fuel Companies Create More Emissions"
+    ]
+  },
+  {
+    "date": "2026-08-13T04:44:55.496025",
+    "episode": 1,
+    "headlines": [
+      "[SR Ekot] Stort underskott av vatten inför vinterns elproduktion",
+      "[DN] Fick bolån med falska anställningsavtal: ”Systemhotande”",
+      "[DN] Därför minskar inte arbetslösheten snabbare",
+      "[Aftonbladet] Zelenskyj: Så många robotar behövs",
+      "[SR Ekot] Zelenskyj: Så många Patriotrobotar behövs i vinter",
+      "[SR Ekot] Hamnområde nära Odessa attackerat av Ryssland",
+      "[Världsnyheter] New attacks on shipping as Iran war talks hit fresh impasse - reuters.com",
+      "[Världsnyheter] Trump warns of return to ‘strong military action’ if Iran diplomacy fails - theg"
     ]
   }
 ]
