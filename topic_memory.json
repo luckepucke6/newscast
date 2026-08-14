@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-08-06T05:39:32.559800",
-    "episode": 1,
-    "headlines": [
-      "[SVT] Allt fler överlever stroke – halvering av dödsfallen",
-      "[DN] Expert: Sinande vapenlager kan sakta ner kriget",
-      "[Aftonbladet] Nästan 4 000 fall av ebola i Kongo-Kinshasa",
-      "[Aftonbladet] Larm om explosioner vid tanker i Hormuz",
-      "[SR Ekot] Samtliga domar om stormningen av Kapitolium avskrivna",
-      "[Världsnyheter] Rubio says progress made in Strait of Hormuz talks after Trump threatens \"decapi",
-      "[Världsnyheter] Trump Seems Trapped by Iran War, Even as He Wields the World’s Biggest Hammer - ",
-      "[DN] Ligorna skyr Sverige – inbrott och stölder minskar"
-    ]
-  },
-  {
     "date": "2026-08-07T04:47:04.790971",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,34 @@
       "[SR Ekot] Hamnområde nära Odessa attackerat av Ryssland",
       "[Världsnyheter] New attacks on shipping as Iran war talks hit fresh impasse - reuters.com",
       "[Världsnyheter] Trump warns of return to ‘strong military action’ if Iran diplomacy fails - theg"
+    ]
+  },
+  {
+    "date": "2026-08-14T04:42:32.732637",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] U.S. thwarts Iranian missile attack on U.S. troops, strikes Iranian proxies in I",
+      "[Världsnyheter] Iran, US make competing claims over control of Strait of Hormuz - Reuters",
+      "[Världsnyheter] Wednesday briefing: How Trump’s Iran gamble has produced a crisis reshaping the ",
+      "[DN] Sprickan i oppositionen: Så har de röstat om kriminalitet och invandring",
+      "[Aftonbladet] Farage utropar valseger – rösträkningen pågår",
+      "[SR Ekot] Nya protester i Ukraina – Zelenskyj pressad",
+      "[Sverige] Joyce, 78, utvisas efter 21 år i Sverige - Göteborgs-Posten",
+      "[Politik] What Trump's vision of the new world order means for Europe - BBC"
+    ]
+  },
+  {
+    "date": "2026-08-14T04:45:37.311394",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] Apple and Epic argue over how much Apple should get from purchases made outside ",
+      "[The Verge] ‘That is not acceptable’: Judge orders Google to make rival app store installs e",
+      "[The Verge] The fight over Flock and other ALPRs",
+      "[The Verge] Microsoft’s Clippy-like Mico character is no longer the face of Copilot",
+      "[Wired] The Safety Reckoning Inside OpenAI",
+      "[Wired] Mark Zuckerberg’s AI Manifesto Is 6,500 Words—and Barely Says Anything",
+      "[Wired] The Painful Truth of Exactly How ICE’s New Shock Gloves Work",
+      "[Wired] Why This Prediction Market Banned Teens"
     ]
   }
 ]
