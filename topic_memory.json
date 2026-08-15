@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-08-07T04:47:04.790971",
-    "episode": 1,
-    "headlines": [
-      "[DN] Över 850 rättsfall mot Vita huset: ”Sticker ut”",
-      "[Aftonbladet] Därför är elpriserna så höga just nu",
-      "[Världsnyheter] Iran Rejected a U.S. Cease-Fire Offer Delivered by Iraq, Officials Say - The New",
-      "[Världsnyheter] Iran Digs In After Latest Trump Threat on Civilian Targets - The New York Times",
-      "[DN] Tiotusentals delfiner i Svarta havet har dött av kriget",
-      "[DN] Venezuela väntar på oljemiljarderna – ingen vet var pengarna är",
-      "[Aftonbladet] Tyfon på väg mot Japan – tusentals evakueras",
-      "[SR Ekot] Mikaels golv täcktes av bajsvatten – var femte kommun har ingen skyfallsplan"
-    ]
-  },
-  {
-    "date": "2026-08-07T04:50:12.707404",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Trevor Noah is hosting Google’s Pixel 11 launch event",
-      "[The Verge] Jony Ive&#8217;s first OpenAI gadget is reportedly a hockey puck-sized smart spe",
-      "[The Verge] The AirPods Pro are $60 off, their best price since late June",
-      "[The Verge] The Zelda movie’s Ganondorf casting hints at more movies",
-      "[Wired] One of China’s Most Powerful AI Models Has Also Escaped Containment",
-      "[Wired] Hackers Stalked Me by Hijacking a Smartwatch for Kids",
-      "[Wired] Why Normal People Aren’t Using AI Agents",
-      "[Wired] Flock Highlighted Police Departments Using Its Tech. Now 4 Face Allegations of M"
-    ]
-  },
-  {
     "date": "2026-08-08T04:04:36.291462",
     "episode": 1,
     "headlines": [
@@ -165,6 +137,20 @@
       "[Wired] Mark Zuckerberg’s AI Manifesto Is 6,500 Words—and Barely Says Anything",
       "[Wired] The Painful Truth of Exactly How ICE’s New Shock Gloves Work",
       "[Wired] Why This Prediction Market Banned Teens"
+    ]
+  },
+  {
+    "date": "2026-08-15T03:30:58.777083",
+    "episode": 1,
+    "headlines": [
+      "[Aftonbladet] Trump: Ska förklara Hormuz som amerikanskt",
+      "[SR Ekot] Trump: Ska förklara Hormuzsundet som amerikanskt territorium",
+      "[SVT] Jordbävning i Indonesien – tsunamivarning utfärdades",
+      "[Aftonbladet] Iran efter Trumps hot: Sundet förblir vårt",
+      "[Aftonbladet] Förenade arabemiraten: Fartyg attackerat i Hormuz",
+      "[Aftonbladet] Kraftig jordbävning i Indonesien – minst två döda",
+      "[Världsnyheter] Tehran says Strait of Hormuz \"under Iran's control\" after Trump threatens U.S. m",
+      "[Världsnyheter] Trump Seems Trapped by Iran War, Even as He Wields the World’s Biggest Hammer - "
     ]
   }
 ]
