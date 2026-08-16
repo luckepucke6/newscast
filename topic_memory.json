@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-08-08T04:04:36.291462",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] The costs of the Iran war are rising as Trump and Tehran signal no letup in the ",
-      "[Världsnyheter] Trump orders new round of strikes to \"hold Iranian forces accountable,\" CENTCOM ",
-      "[SVT] Försvarsforskaren: Risken för valpåverkan i Sverige är 100 procent”",
-      "[SVT] Vita huset överväger att sparka Fed-topp",
-      "[SR Ekot] Bristen på luftvärnsrobotar i Ukraina blir alltmer akut",
-      "[Världsnyheter] US and Iran pause strikes for third night to make space for talks, US ambassador",
-      "[Världsnyheter] US military carries out strikes on Iran as both sides threaten civilian infrastr",
-      "[Aftonbladet] Minst tre döda i robotattack mot Kiev"
-    ]
-  },
-  {
     "date": "2026-08-09T04:11:04.982077",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,20 @@
       "[Aftonbladet] Kraftig jordbävning i Indonesien – minst två döda",
       "[Världsnyheter] Tehran says Strait of Hormuz \"under Iran's control\" after Trump threatens U.S. m",
       "[Världsnyheter] Trump Seems Trapped by Iran War, Even as He Wields the World’s Biggest Hammer - "
+    ]
+  },
+  {
+    "date": "2026-08-16T03:40:22.795825",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] Iran vows to ‘punish the aggressor today’ after U.S. unleashes ‘heavy wave’ of s",
+      "[Aftonbladet] Robotangrepp mot Kiev – nattliga explosioner",
+      "[SVT] ”Det handlar inte om oss” – rösterna från den värmländska glesbygden inför valet",
+      "[Aftonbladet] Över 45 döda efter jordbävning i Indonesien",
+      "[Aftonbladet] Källor: Hamas-topp till Kairo för samtal",
+      "[SR Ekot] Viktig hamn i Jemen stänger efter attacker",
+      "[Sverige] Nya kraven för svenskt medborgarskap – så gick första provet - SVT Nyheter",
+      "[Världsnyheter] Powerful earthquake kills dozens in eastern Indonesia - The Guardian"
     ]
   }
 ]
