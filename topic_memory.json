@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-08-09T04:11:04.982077",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] Iran vows to ‘punish the aggressor today’ after U.S. unleashes ‘heavy wave’ of s",
-      "[Världsnyheter] Iran War Updates: Trump Meets With Cabinet Over Whether to Intensify Iran Strike",
-      "[Världsnyheter] U.S. launches new strikes and Trump threatens ‘massive attack’ as Iran widens wa",
-      "[DN] Högervindarna bland unga mojnar: ”Folk har det tufft”",
-      "[DN] Unga väljare har rört sig vänsterut",
-      "[DN] Svenska ”spökraketer” i amerikanska Pentagonfiler",
-      "[DN] Nathan Shachar: Planerade regimskifte i Iran – nu offras agenterna av Netanyahu",
-      "[SVT] Åkesson om väljarnas skepsis mot SD: ”Förstår det”"
-    ]
-  },
-  {
     "date": "2026-08-10T04:22:44.238840",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,34 @@
       "[SR Ekot] Viktig hamn i Jemen stänger efter attacker",
       "[Sverige] Nya kraven för svenskt medborgarskap – så gick första provet - SVT Nyheter",
       "[Världsnyheter] Powerful earthquake kills dozens in eastern Indonesia - The Guardian"
+    ]
+  },
+  {
+    "date": "2026-08-17T03:40:25.580253",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] U.S. and Iran exchange intense new attacks after Trump says ceasefire is ‘over’ ",
+      "[Aftonbladet] Irans löfte: Belöning för att döda amerikaner",
+      "[SVT] Trump: Ska minska militära övningar med Sydkorea",
+      "[DN] DN Debatt. ”Gör om Sis från grunden – våra barn kan inte vänta”",
+      "[Aftonbladet] Dystert ebolarekord i Kongo-Kinshasa",
+      "[SR Ekot] Ebolautbrottet är dödligast i Kongo-Kinshasas historia",
+      "[SR Ekot] Nu testas nytt ebolavaccin på människor i Storbritannien",
+      "[SR Ekot] Huovinen om nattens attacker: ”Ryssland har svårt att försvara sig”"
+    ]
+  },
+  {
+    "date": "2026-08-17T03:43:33.756676",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] OpenAI reportedly disbanded its preparedness team",
+      "[The Verge] Open Mike Eagle and Kenny Segal crafted a hip hop breakup masterpiece",
+      "[The Verge] Amazon is trying to crush class-action suits before they get started",
+      "[The Verge] ChatGPT’s Computer History tracks your clicks and keystrokes",
+      "[Wired] Samsung Galaxy Z Fold8 and Galaxy Z Fold8 Ultra Review: The Right Shape",
+      "[Wired] Astronomers Discover the Existence of a Black Hole Star",
+      "[Wired] It’s Never Too Early to Start Planning for the Next Two Solar Eclipses",
+      "[Wired] Someone Finally Fixed Installing Apps on a Mac"
     ]
   }
 ]
