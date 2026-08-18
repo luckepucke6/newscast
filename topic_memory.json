@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-08-10T04:22:44.238840",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] Live updates: Pentagon asks defense companies to ramp up production as stockpile",
-      "[Världsnyheter] Iran War Updates: Iran says strait won't open until the U.S. \"corrects\" behavior",
-      "[SR Ekot] Syrien och Ryssland överens – det händer med militärbaserna",
-      "[Världsnyheter] Netanyahu rejects Trump’s Gaza plan and vows no withdrawal until Hamas disarms –",
-      "[Världsnyheter] Iran war updates: Trump says US ‘only semi-negotiating’ ⁠with Tehran - Al Jazeer",
-      "[Världsnyheter] Netanyahu rejects US-led 15-point Gaza peace plan in rare public break with Trum",
-      "[SVT] Extremvärme och torka drabbar Europas bönder – ”Exceptionellt”",
-      "[SVT] Transporter, livsmedel och energi – så kan torkan i Donau slå mot hela Europa"
-    ]
-  },
-  {
-    "date": "2026-08-10T04:25:54.892509",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] No Dogs in Space is a music history podcast for true obsessives",
-      "[The Verge] Zuckerberg&#8217;s yacht was closer, but someone else saved a stranded boat",
-      "[The Verge] 49ers coach says his Tesla was on Autopilot when he crashed",
-      "[The Verge] Dropbox is a PC builder’s best friend",
-      "[Wired] The Complicated Case of Passing On Your Digital Estate",
-      "[Wired] 4 Best Compression Boots: Therabody, Hyperice, and More (2026)",
-      "[Wired] Meetily Lets You Transcribe and Summarize Meetings Without a Subscription—Here’s",
-      "[Wired] TCL Note A1 Nxtpaper Review (2026): A Hybrid Tablet for Taking Notes and Watchin"
-    ]
-  },
-  {
     "date": "2026-08-11T04:12:19.236861",
     "episode": 1,
     "headlines": [
@@ -165,6 +137,20 @@
       "[Wired] Astronomers Discover the Existence of a Black Hole Star",
       "[Wired] It’s Never Too Early to Start Planning for the Next Two Solar Eclipses",
       "[Wired] Someone Finally Fixed Installing Apps on a Mac"
+    ]
+  },
+  {
+    "date": "2026-08-18T03:36:15.370039",
+    "episode": 1,
+    "headlines": [
+      "[Världsnyheter] Iran vows to ‘punish the aggressor today’ after U.S. unleashes ‘heavy wave’ of s",
+      "[SR Ekot] Stor attack mot Moskva – 180 drönare uppges ha skjutits ner",
+      "[Världsnyheter] Donald Trump threatens to bomb Oman if it ‘gets in the way’ of ending Iran war -",
+      "[Världsnyheter] US-Iran strikes risk regional war in Middle East - The Latest | World news - The",
+      "[SVT] Här är höjdpunkterna från partiledardebatten",
+      "[SVT] Över 2 300 döda i ebola – vaccin utvecklas",
+      "[Aftonbladet] Ryssland: Hundratals drönare mot Moskva i natt",
+      "[Aftonbladet] Trumps hot: ”Bomba skiten” ur allierade landet"
     ]
   }
 ]
