@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-08-11T04:12:19.236861",
-    "episode": 1,
-    "headlines": [
-      "[Världsnyheter] US pauses Iran attacks after Trump advised to halt bombing - The Guardian",
-      "[DN] Ukraina: Kampanjen mot Krim har bara börjat",
-      "[SR Ekot] Flera döda i ryska robotattacker under natten",
-      "[Sverige] Säpo stoppade ryska spioner - Expressen",
-      "[Sverige] Rysk underrättelseofficer i hemligt möte med agent – på pub i Sverige - SVT Nyhe",
-      "[Världsnyheter] U.S. pauses Iran strikes for second straight night as talks move in positive dir",
-      "[Aftonbladet] Ungern: Orbánkritisk domare väntas bli president",
-      "[SR Ekot] Ensamma om att motsätta sig kriget – nu portas partiet"
-    ]
-  },
-  {
     "date": "2026-08-12T04:41:20.356114",
     "episode": 1,
     "headlines": [
@@ -151,6 +137,34 @@
       "[SVT] Över 2 300 döda i ebola – vaccin utvecklas",
       "[Aftonbladet] Ryssland: Hundratals drönare mot Moskva i natt",
       "[Aftonbladet] Trumps hot: ”Bomba skiten” ur allierade landet"
+    ]
+  },
+  {
+    "date": "2026-08-19T03:38:52.591826",
+    "episode": 1,
+    "headlines": [
+      "[SVT] Tidsfristen för Irankriget har passerat – vad händer nu?",
+      "[Världsnyheter] US and Iran trade missile barrages as hopes dim for a quick resolution to the fi",
+      "[SVT] Ukrainas avsatte försvarsminister kräver val – trots kriget",
+      "[DN] Michael Winiarski: Ryssland fördjupar banden till Nordkorea",
+      "[DN] Expert: Trump beredd att kasta allierade under bussen",
+      "[SR Ekot] Ex-ministern Fedorov utmanar Zelenskyj – uppmanar till val",
+      "[SR Ekot] Tidskritisk smittspårning efter mässlingsutbrottet",
+      "[Sverige] Estland säger nej till svenska fångar - expressen.se"
+    ]
+  },
+  {
+    "date": "2026-08-19T03:42:08.336021",
+    "episode": 2,
+    "headlines": [
+      "[The Verge] SteelSeries’ comfy wireless gaming headset is nearly half off",
+      "[The Verge] Robin Williams’ Instagram account brought back to fight ‘AI abuse’",
+      "[The Verge] OpenAI lays out new security changes after its AI hacked Hugging Face",
+      "[The Verge] Samsung’s Galaxy Buds 3 Pro are almost half off today",
+      "[Wired] Squeeze More Juice Out of Your Dead Batteries—Using Physics",
+      "[Wired] Garmin Watches Are Up to $250 Off Right Now On Amazon (2026)",
+      "[Wired] OpenAI Overhauls Safety Protocols After Its AI Agents Went Rogue",
+      "[Wired] Viral Disneyland Content Creator Defends Her ‘Special Friendship’ With Peter Pan"
     ]
   }
 ]
