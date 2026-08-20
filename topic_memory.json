@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-08-12T04:41:20.356114",
-    "episode": 1,
-    "headlines": [
-      "[SR Ekot] Zelenskyj: Har lämnat över förslag om krigsslut",
-      "[SR Ekot] Nya tullavgiften kan bli bluffälla: ”Finns ett fönster för bedragare”",
-      "[SR Ekot] Dödsiffran fortsätter att stiga i Colombia",
-      "[SR Ekot] Bashar al-Assad döms till döden",
-      "[Världsnyheter] U.S. thwarts Iranian missile attack on U.S. troops, strikes Iranian proxies in I",
-      "[Världsnyheter] Trump warns of return to ‘strong military action’ if Iran diplomacy fails - The ",
-      "[Politik] What Trump's vision of the new world order means for Europe - bbc.com",
-      "[SVT] Trump bekräftar flygbyte efter hot"
-    ]
-  },
-  {
-    "date": "2026-08-12T04:44:23.495431",
-    "episode": 2,
-    "headlines": [
-      "[The Verge] Saber denies replacing Rideshare Stimulator&#8217;s writers with ChatGPT",
-      "[The Verge] Xbox Elite 3 prototype pad leaks with tiny built-in screen",
-      "[The Verge] An FCC filing points to new Sonos headphones coming soon",
-      "[The Verge] ChatGPT and Gemini both just passed 1 billion users",
-      "[Wired] Is It Safe to Eat Lettuce Yet?",
-      "[Wired] How and When to View the Perseid Meteor Shower (August 2026)",
-      "[Wired] Razer Naga V3 Pro Review: Buttons Galore",
-      "[Wired] AI Could Help Fossil Fuel Companies Create More Emissions"
-    ]
-  },
-  {
     "date": "2026-08-13T04:44:55.496025",
     "episode": 1,
     "headlines": [
@@ -165,6 +137,20 @@
       "[Wired] Garmin Watches Are Up to $250 Off Right Now On Amazon (2026)",
       "[Wired] OpenAI Overhauls Safety Protocols After Its AI Agents Went Rogue",
       "[Wired] Viral Disneyland Content Creator Defends Her ‘Special Friendship’ With Peter Pan"
+    ]
+  },
+  {
+    "date": "2026-08-20T03:39:10.729622",
+    "episode": 1,
+    "headlines": [
+      "[SVT] Proryskt trollnätverk riktar in sig på svenska valet",
+      "[SR Ekot] Robotattacker mot Kiev – minst fem döda",
+      "[Aftonbladet] Sydkorea: Nordkorea har runt 80–120 kärnvapen",
+      "[Aftonbladet] Ambassadör kallas upp efter Israels besked",
+      "[Aftonbladet] Ukraina: Flera döda i ryska attacker",
+      "[SR Ekot] Miljonutköp i Försvarsmakten – skyddas av sekretess",
+      "[SR Ekot] Ben-Gvir visar upp platsen där terrordömda ska hängas",
+      "[Världsnyheter] World may warm by 25 per cent more than current projections suggest - New Scient"
     ]
   }
 ]
